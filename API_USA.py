@@ -10,7 +10,7 @@ from Funciones_Especiales import Validar_Fecha_Hoy, comprobar_pick3,comprobar_pi
 class API():
 
     def __init__(self):
-        print("Se isntancio una clase")
+        print("Se Instancio una nueva clase")
 
     def Navegador(self,ARR):
         self.chrome_options = webdriver.ChromeOptions()

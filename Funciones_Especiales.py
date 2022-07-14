@@ -3,17 +3,17 @@ from Datos_Loterias.FLORIDA_AM import FLORIDA_LOTTERY_USA_AM
 from Datos_Loterias.FLORIDA_PM_ import FLORIDA_LOTTERY_USA_PM
 from Datos_Loterias.NY_AM import NEW_YORK_TARDE_LOTTERYUSA
 from Datos_Loterias.NY_PM import NEW_YORK_PM_LOTTERYUSA
-from Nombres_Loterias import *
+from VARIABLES import *
 
 #! Aqui tengo que agregar los diferentes arreglos
-def devolver_arreglo(loteria, sorteo):
-    if(loteria == LOTERIA_FLORIDA and sorteo == SORTEO_FLORIDA_AM):
+def devolver_arreglo(datos):
+    if(datos == OBJ_FL_AM):
         return FLORIDA_LOTTERY_USA_AM
-    elif(loteria == LOTERIA_FLORIDA and sorteo == SORTEO_FLORIDA_PM):
+    elif(datos == OBJ_FL_PM):
         return FLORIDA_LOTTERY_USA_PM
-    elif(loteria == LOTERIA_NEW_YORK and sorteo == SORTEO_NEW_YORK_AM ):
+    elif(datos == OBJ_NY_AM):
         return NEW_YORK_TARDE_LOTTERYUSA
-    elif(loteria == LOTERIA_NEW_YORK and sorteo == SORTEO_NEW_YORK_PM):
+    elif(datos == OBJ_NY_PM):
         return NEW_YORK_PM_LOTTERYUSA
     else:
         return False
