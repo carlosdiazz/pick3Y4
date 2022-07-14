@@ -22,6 +22,15 @@ class Buscar_Premio():
             numeros_ganadores = API().devolver_numeros(arreglo_loteria)
             if(numeros_ganadores):
                 self.intentos=0
+                print(
+                    {
+                        'LOTERIA'       : self.loteria,
+                        'SORTEO'        : self.sorteo,
+                        'NUMEROS'       : numeros_ganadores,
+                        'FECHA'         : fecha('%d-%m-%Y'),
+                        "AGREGADO_POR"  : "BOT"
+                    }
+                )
                 return {
                     'LOTERIA'       : self.loteria,
                     'SORTEO'        : self.sorteo,
@@ -45,21 +54,26 @@ class Buscar_Premio():
 
 
 
-LOTERY_FLORIDA_AM   =   (Buscar_Premio(VARIABLES.OBJ_FL_AM).Buscar_numeros_ganadores)
-LOTERY_FLORIDA_PM   =   (Buscar_Premio(VARIABLES.OBJ_FL_PM).Buscar_numeros_ganadores)
-LOTERY_NEW_YORK_AM  =   (Buscar_Premio(VARIABLES.OBJ_NY_AM).Buscar_numeros_ganadores)
-LOTERY_NEW_YORK_PM  =   (Buscar_Premio(VARIABLES.OBJ_NY_PM).Buscar_numeros_ganadores)
+LOTERY_FLORIDA_AM       =   (Buscar_Premio(VARIABLES.OBJ_FL_AM).Buscar_numeros_ganadores)
+LOTERY_FLORIDA_PM       =   (Buscar_Premio(VARIABLES.OBJ_FL_PM).Buscar_numeros_ganadores)
+
+LOTERY_NEW_YORK_AM      =   (Buscar_Premio(VARIABLES.OBJ_NY_AM).Buscar_numeros_ganadores)
+LOTERY_NEW_YORK_PM      =   (Buscar_Premio(VARIABLES.OBJ_NY_PM).Buscar_numeros_ganadores)
+
+LOTERY_NEW_JERSEY_AM    =   (Buscar_Premio(VARIABLES.OBJ_NJ_AM).Buscar_numeros_ganadores)
+LOTERY_NEW_JERSEY_PM    =   (Buscar_Premio(VARIABLES.OBJ_NJ_PM).Buscar_numeros_ganadores)
 
 def run_threaded(job_func):
     job_thread = threading.Thread(target=job_func)
     job_thread.start()
 
 #! HORARIO DE BUSCAR NUMEROS
-schedule.every().day.at("23:34:00").do(run_threaded, LOTERY_FLORIDA_AM)
-schedule.every().day.at("23:35:00").do(run_threaded, LOTERY_FLORIDA_PM)
-schedule.every().day.at("23:34:00").do(run_threaded, LOTERY_NEW_YORK_AM)
-schedule.every().day.at("23:34:00").do(run_threaded, LOTERY_NEW_YORK_PM)
-
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_FLORIDA_AM)
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_FLORIDA_PM)
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_NEW_YORK_AM)
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_NEW_YORK_PM)
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_NEW_JERSEY_AM)
+schedule.every().day.at("16:43:00").do(run_threaded, LOTERY_NEW_JERSEY_PM)
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
