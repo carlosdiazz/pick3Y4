@@ -1,26 +1,22 @@
 from datetime import datetime
-from Datos_Loterias.FLORIDA_AM import FLORIDA_LOTTERY_USA_AM
-from Datos_Loterias.FLORIDA_PM_ import FLORIDA_LOTTERY_USA_PM
-from Datos_Loterias.NY_AM import NEW_YORK_TARDE_LOTTERYUSA
-from Datos_Loterias.NY_PM import NEW_YORK_PM_LOTTERYUSA
-from Datos_Loterias.NJ_AM import NEW_JERSEY_AM_LOTTERYUSA
-from Datos_Loterias.NJ_PM import NEW_JERSEY_PM_LOTTERYUSA
+from Datos_Loterias.FLORIDA import FLORIDA_LOTTERYUSA
+from Datos_Loterias.NEW_YORK import NEW_YORK_LOTTERYUSA
+
+from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_LOTTERYUSA
+
 from VARIABLES import *
 
 #! Aqui tengo que agregar los diferentes arreglos
 def devolver_arreglo(datos):
-    if(datos == OBJ_FL_AM):
-        return FLORIDA_LOTTERY_USA_AM
-    elif(datos == OBJ_FL_PM):
-        return FLORIDA_LOTTERY_USA_PM
-    elif(datos == OBJ_NY_AM):
-        return NEW_YORK_TARDE_LOTTERYUSA
-    elif(datos == OBJ_NY_PM):
-        return NEW_YORK_PM_LOTTERYUSA
-    elif(datos == OBJ_NJ_AM):
-        return NEW_JERSEY_AM_LOTTERYUSA
-    elif(datos == OBJ_NJ_AM):
-            return NEW_JERSEY_PM_LOTTERYUSA
+    if(datos == OBJ_FL_AM or datos == OBJ_FL_PM):
+        return FLORIDA_LOTTERYUSA
+
+    elif(datos == OBJ_NY_AM or datos == OBJ_NY_PM):
+        return NEW_YORK_LOTTERYUSA
+
+    elif(datos == OBJ_NJ_AM or datos == OBJ_NJ_PM):
+        return NEW_JERSEY_LOTTERYUSA
+
     else:
         return False
 
