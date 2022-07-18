@@ -1,21 +1,12 @@
-NJ_AM_PAGES     = 'https://www.lotteryusa.com/'
-NJ_AM_PICK3 = 'https://www.lotteryusa.com/new-jersey/midday-pick-3/'
-NJ_AM_PICK4 = 'https://www.lotteryusa.com/new-jersey/midday-pick-4/'
+from Datos_Loterias.PAGINA_USA import *
 
-NJ_PM_PAGES     = 'https://www.lotteryusa.com/'
-NJ_PM_PICK3 = 'https://www.lotteryusa.com/new-jersey/pick-3/'
-NJ_PM_PICK4 = 'https://www.lotteryusa.com/new-jersey/pick-4/'
+NJ_AM_PAGES     = URL_BASE
+NJ_AM_PICK3     = 'https://www.lotteryusa.com/new-jersey/midday-pick-3/'
+NJ_AM_PICK4     = 'https://www.lotteryusa.com/new-jersey/midday-pick-4/'
 
-P3_FECHA = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/th/time'
-P3_NU1   = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[1]/span'
-P3_NU2   ='/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[2]/span'
-P3_NU3   ='/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[3]/span'
-
-P4_FECHA = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/th/time'
-P4_NU1 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[1]/span'
-P4_NU2 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[2]/span'
-P4_NU3 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[3]/span'
-P4_NU4 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[4]/span'
+NJ_PM_PAGES     = URL_BASE
+NJ_PM_PICK3     = 'https://www.lotteryusa.com/new-jersey/pick-3/'
+NJ_PM_PICK4     = 'https://www.lotteryusa.com/new-jersey/pick-4/'
 
 NEW_JERSEY_LOTTERYUSA = {
 

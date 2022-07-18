@@ -9,6 +9,7 @@ from Datos_Loterias.CONNECTICUT import CONNECTICUT_LOTTERYUSA
 from Datos_Loterias.VIRGINIA import VIRGINIA_LOTTERYUSA
 from Datos_Loterias.WASHINGTON_DC import WASHINGTON_DC_LOTTERYUSA
 from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
+from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_LOTTERYUSA
 
 
 #! Aqui tengo que agregar los diferentes arreglos
@@ -33,6 +34,9 @@ def devolver_arreglo(datos):
 
     elif(datos == OBJ_PA_AM or datos == OBJ_PA_PM):
         return PENNSYLVANIA_LOTTERYUSA
+
+    elif(datos == OBJ_SC_AM or datos == OBJ_SC_PM):
+        return SOUTH_CAROLINA_LOTTERYUSA
 
     else:
         return False
