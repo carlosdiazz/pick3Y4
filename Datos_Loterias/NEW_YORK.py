@@ -18,10 +18,13 @@ NY_P4_NU3 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/di
 NY_P4_NU4 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[4]/span'
 
 NEW_YORK_LOTTERYUSA = {
+
     'URL_MIDDAY' : [NY_AM_PAGES, NY_AM_PICK3, NY_AM_PICK4],
+    'URL_EVENING' : [NY_PM_PAGES, NY_PM_PICK3, NY_PM_PICK4],
+
     'PICK3_MIDDAY' : [NY_P3_FECHA,NY_P3_NU1,NY_P3_NU2,NY_P3_NU3 ],
     'PICK4_MIDDAY' : [NY_P4_FECHA,NY_P4_NU1,NY_P4_NU2,NY_P4_NU3,NY_P4_NU4 ],
-    'URL_EVENING' : [NY_AM_PAGES, NY_AM_PICK3, NY_AM_PICK4],
+
     'PICK3_EVENING' : [NY_P3_FECHA,NY_P3_NU1,NY_P3_NU2,NY_P3_NU3 ],
     'PICK4_EVENING' : [NY_P4_FECHA,NY_P4_NU1,NY_P4_NU2,NY_P4_NU3,NY_P4_NU4 ]
 }

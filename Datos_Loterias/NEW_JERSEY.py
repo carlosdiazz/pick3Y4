@@ -18,9 +18,11 @@ P4_NU3 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/u
 P4_NU4 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[4]/span'
 
 NEW_JERSEY_LOTTERYUSA = {
+
     'URL_MIDDAY' : [NJ_AM_PAGES, NJ_AM_PICK3, NJ_AM_PICK4],
     'PICK3_MIDDAY' : [P3_FECHA,P3_NU1,P3_NU2,P3_NU3 ],
     'PICK4_MIDDAY' : [P4_FECHA,P4_NU1,P4_NU2,P4_NU3,P4_NU4 ],
+
     'URL_EVENING' : [NJ_PM_PAGES, NJ_PM_PICK3, NJ_PM_PICK4],
     'PICK3_EVENING' : [P3_FECHA,P3_NU1,P3_NU2,P3_NU3 ],
     'PICK4_EVENING' : [P4_FECHA,P4_NU1,P4_NU2,P4_NU3,P4_NU4 ]

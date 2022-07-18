@@ -29,11 +29,13 @@ class API():
             pick4 = comprobar_pick4(self.PICK4(ARR))
 
             if(pick3 and pick4):
+                self.driver.quit()
                 return {
                     "PICK3":pick3,
                     "PICK4":pick4
                 }
             else:
+                self.driver.quit()
                 return False
         except:
             return False

@@ -1,10 +1,15 @@
+import threading
 from datetime import datetime
+from VARIABLES import *
+
 from Datos_Loterias.FLORIDA import FLORIDA_LOTTERYUSA
 from Datos_Loterias.NEW_YORK import NEW_YORK_LOTTERYUSA
-
 from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_LOTTERYUSA
+from Datos_Loterias.CONNECTICUT import CONNECTICUT_LOTTERYUSA
+from Datos_Loterias.VIRGINIA import VIRGINIA_LOTTERYUSA
+from Datos_Loterias.WASHINGTON_DC import WASHINGTON_DC_LOTTERYUSA
+from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
 
-from VARIABLES import *
 
 #! Aqui tengo que agregar los diferentes arreglos
 def devolver_arreglo(datos):
@@ -16,6 +21,18 @@ def devolver_arreglo(datos):
 
     elif(datos == OBJ_NJ_AM or datos == OBJ_NJ_PM):
         return NEW_JERSEY_LOTTERYUSA
+
+    elif(datos == OBJ_CT_AM or datos == OBJ_CT_PM):
+        return CONNECTICUT_LOTTERYUSA
+
+    elif(datos == OBJ_VA_AM or datos == OBJ_VA_PM):
+        return VIRGINIA_LOTTERYUSA
+
+    elif(datos == OBJ_DC_AM or datos == OBJ_DC_PM):
+        return WASHINGTON_DC_LOTTERYUSA
+
+    elif(datos == OBJ_PA_AM or datos == OBJ_PA_PM):
+        return PENNSYLVANIA_LOTTERYUSA
 
     else:
         return False
@@ -67,3 +84,7 @@ def comprobar_pick4(arr):
         return False
     else:
         return False
+
+def run(job_func):
+    job_thread = threading.Thread(target=job_func)
+    job_thread.start()
