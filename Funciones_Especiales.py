@@ -1,3 +1,4 @@
+import os
 import threading
 from datetime import datetime
 from VARIABLES import *
@@ -13,7 +14,7 @@ from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
 from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.GEORGIA import GEORGIA_LOTTERYUSA
-
+import time
 import config
 
 #! Aqui tengo que agregar los diferentes arreglos
@@ -182,8 +183,29 @@ def saber_sorteo(sorteo):
         return 'PM'
     elif(sorteo == 'NIGHT'):
         return 'NIGHT'
-    
-    
+
+def clearConsole():
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+        command = 'cls'
+    os.system(command)
 
 #print(CONSULTAR_NUMEROS_API( 'FLORIDA','MIDDAY','18-07-2022'))
 #Peticion_Post_Publicar(config.URL_API_NODE,'FLORIDA','MIDDAY',{'PICK3':'123','PICK4':'567'},'12-12-12')
+
+
+#! -------- ENVIAR NOTIFICACIONE DE LOS RESULTADOS
+
+def sendNotification(message,token ):
+    try:
+        bot_token = token
+        User='666666' #! HACER ALGO PARA OBNTRENER LOS USERS
+        for usuarios in User:
+            send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + usuarios + '&parse_mode=Markdown&text=' + message
+            requests.get(send_text)
+
+    except:
+        print('-----------------------------------------------------------------------')
+        print("NO SE PUEDO ENVIAR LA NOTIFICACION DE TELEGRAM")
+        print('-----------------------------------------------------------------------')
+        time.sleep(10)

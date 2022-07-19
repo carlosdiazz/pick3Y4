@@ -1,10 +1,10 @@
 import schedule
 import VARIABLES
 from PUBLICAR_NUMEROS import Publicar_En_Plataformas
-from Funciones_Especiales import fecha, run, CONSULTAR_NUMEROS_API, saber_sorteo
+from Funciones_Especiales import fecha, run, CONSULTAR_NUMEROS_API, saber_sorteo, clearConsole
 import time
 from config import user_desarrollo
-from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_DEV, PLATAFORMA_MEGA
+from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA
 
 class Buscar_Numeros_Premiar():
 
@@ -14,9 +14,8 @@ class Buscar_Numeros_Premiar():
 
     def buscar(self):
         #? Con esta funcion buscare los numeros ganadores
-        self.fecha = fecha('%d-%m-%Y')                                                  #! -------------- QUITAR ESTA FECHA MALA
+        self.fecha = fecha('%d-%m-%Y')
         numeros = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
-        #print(numeros['message'][0])
         if(numeros['error'] == False):
             loteria_a_publicar = numeros['message'][0]
 
@@ -62,6 +61,8 @@ NORTh_CAROLINA_MIDDAY   =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NC_AM).buscar
 hora_prueba =  '16:51:00'
 
 ###! HORARIO DE BUSCAR NUMEROS
+schedule.every().day.at('00:00:00').do(run, clearConsole)
+
 schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)

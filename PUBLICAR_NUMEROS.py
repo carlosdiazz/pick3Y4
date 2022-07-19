@@ -6,6 +6,8 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
 
+from Funciones_Especiales import fecha
+
 class Publicar_En_Plataformas():
 
     def __init__(self, user, plataforma, Loteria):
@@ -83,17 +85,21 @@ class Publicar_En_Plataformas():
     def publicar(self):
 
         try:
-            self.Navegador()
-            self.iniciar_seccion()
-            saber_premio = self.colocar_premios()
+            if(self.fecha == fecha('%d-%m-%Y')):
+                self.Navegador()
+                self.iniciar_seccion()
+                saber_premio = self.colocar_premios()
 
-            if(saber_premio):
-                #SE PREMIO CORRECTAMENTE
-                self.driver.quit()
-                return True
+                if(saber_premio):
+                    #SE PREMIO CORRECTAMENTE
+                    self.driver.quit()
+                    return True
 
+                else:
+                    self.driver.quit()
+                    return False
             else:
-                self.driver.quit()
+                #VINO CON UNA FECHA QUE NO ES DE HOY
                 return False
         except:
             return False
