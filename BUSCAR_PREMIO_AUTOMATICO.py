@@ -38,28 +38,39 @@ LOTERY_GEORGIA_NIGHT    =   (Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numero
 
 #!AGREGAR ALGO PARA BORRAR PANTALLA O LIMPIAR CACHE AL INIICO DE CADA DIA
 
-hora_prueba =  '15:38:00'
+hora_prueba =  '16:28:00'
 
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_PM)
+
 schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
+
+schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
+schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

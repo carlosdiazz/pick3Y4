@@ -59,7 +59,7 @@ NORTh_CAROLINA_MIDDAY   =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NC_AM).buscar
 
 ##!AGREGAR ALGO PARA BORRAR PANTALLA O LIMPIAR CACHE AL INIICO DE CADA DIA
 
-hora_prueba =  '15:48:00'
+hora_prueba =  '16:51:00'
 
 ###! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)

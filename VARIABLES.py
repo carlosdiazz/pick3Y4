@@ -24,7 +24,7 @@ SORTEO_VIRGINIA_AM = 'MIDDAY'
 SORTEO_VIRGINIA_PM = 'EVENING'
 #? ----------------------------------------------------------------------------
 
-LOTERIA_WASHINGTON_DC = 'WASHINGTON'
+LOTERIA_WASHINGTON_DC = 'WASHINGTON D.C'
 SORTEO_WASHINGTON_DC_AM = 'MIDDAY'
 SORTEO_WASHINGTON_DC_PM = 'EVENING'
 #? ----------------------------------------------------------------------------
