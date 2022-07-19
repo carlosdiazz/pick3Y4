@@ -38,7 +38,7 @@ LOTERY_GEORGIA_NIGHT    =   (Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numero
 
 #!AGREGAR ALGO PARA BORRAR PANTALLA O LIMPIAR CACHE AL INIICO DE CADA DIA
 
-hora_prueba =  '23:47:00'
+hora_prueba =  '15:38:00'
 
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)

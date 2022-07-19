@@ -142,4 +142,48 @@ def Peticion_Post_Publicar(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
         print(f'\n\n\nNO SE PREMIO ESTA LOTERIA: {Loteria[0]} CON ESTE SORTEO {Loteria[1]} -------> El SERVIDOR EXPRES NO RESPONDE' )
         return False
 
+
+def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
+    try:
+        urlAPI = config.URL_API_NODE
+        url = f'{urlAPI}?loteria={loteria}&sorteo={sorteo}&fecha={fecha}'
+        r=requests.get(url)
+        if(r.status_code == 200):
+            res=(r.json())
+            if(len(res['message']) == 1):
+                #Se encontro el numero
+                return {
+                    "error"    :   False,
+                    "message"   :   res['message']
+                }
+            else:
+                #No se encontro el numero
+                return {
+                    "error"    :   True,
+                    "message"   :   "NO SE ENCONTRO EL NUMERO"
+                }
+        else:
+            #Hubo un error en la peticion
+            return {
+                    "error"    :   True,
+                    "message"   :   "HUBO UN ERROR EN LA PETICION GET"
+                }
+    except:
+        #Fallo externo
+        return  {
+                    "error"    :   True,
+                    "message"   :   "HUBO UN FALLO EXTERNO CALLO EN EL EXCEPT"
+                }
+
+def saber_sorteo(sorteo):
+    if(sorteo == 'MIDDAY'):
+        return 'AM'
+    elif(sorteo == 'EVENING'):
+        return 'PM'
+    elif(sorteo == 'NIGHT'):
+        return 'NIGHT'
+    
+    
+
+#print(CONSULTAR_NUMEROS_API( 'FLORIDA','MIDDAY','18-07-2022'))
 #Peticion_Post_Publicar(config.URL_API_NODE,'FLORIDA','MIDDAY',{'PICK3':'123','PICK4':'567'},'12-12-12')

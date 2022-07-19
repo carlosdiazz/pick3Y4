@@ -25,13 +25,6 @@ class Buscar_Premio():
                 if(publicar == True):
                     self.intentos=0
                     print(f'Loteria: {self.loteria} con sorteo: {self.sorteo} y {numeros_ganadores} se publico Bien')
-                #return {
-                #    'LOTERIA'       : self.loteria,
-                #    'SORTEO'        : self.sorteo,
-                #    'NUMEROS'       : numeros_ganadores,
-                #    'FECHA'         : self.fecha,
-                #    "AGREGADO_POR"  : "BOT"
-                #}
                 else:
                     self.intentos=self.intentos+1
                     print(f"No se pudo publicar en NODE esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
