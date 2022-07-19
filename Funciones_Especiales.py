@@ -1,7 +1,8 @@
 import threading
 from datetime import datetime
 from VARIABLES import *
-
+import requests
+import json
 from Datos_Loterias.FLORIDA import FLORIDA_LOTTERYUSA
 from Datos_Loterias.NEW_YORK import NEW_YORK_LOTTERYUSA
 from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_LOTTERYUSA
@@ -12,6 +13,8 @@ from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
 from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.GEORGIA import GEORGIA_LOTTERYUSA
+
+import config
 
 #! Aqui tengo que agregar los diferentes arreglos
 def devolver_arreglo(datos):
@@ -99,3 +102,44 @@ def comprobar_pick4(arr):
 def run(job_func):
     job_thread = threading.Thread(target=job_func)
     job_thread.start()
+
+def VALIDAR_QUE_NO_EXISTAN(url,loteria,sorteo,fecha):
+    try:
+        url = f'{url}?loteria={loteria}&sorteo={sorteo}&fecha={fecha}'
+        r=requests.get(url)
+        if(r.status_code == 200):
+            res=(r.json())
+            if(len(res['message']) == 0):
+                print("Los numeros aun no estan publicados")
+                return True
+            else:
+                print("Los numeros ya estan publicados")
+                return 'Los Numeros ya estan Publicado'
+        else:
+            return 'El SERVIDOR no respondio'
+    except:
+        return('HUBO UN ERRORRRRRRR al Momento de la Petcion GET' )
+
+def Peticion_Post_Publicar(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
+    print(f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}')
+    try:
+        url = f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}'
+        headers = { 'Content-Type': 'application/json'}
+        body= json.dumps({
+            "loteria": Loteria,
+            "sorteo":Sorteo,
+            'numeros_ganadores':Numeros_ganadores,
+            "fecha" : Fecha,
+            "agregado_por": 'BOT'
+        })
+
+        Peticion_POST=requests.post(url, headers=headers, data= body)
+        if(Peticion_POST.status_code == 201):
+            return True
+        else:
+            return False
+    except:
+        print(f'\n\n\nNO SE PREMIO ESTA LOTERIA: {Loteria[0]} CON ESTE SORTEO {Loteria[1]} -------> El SERVIDOR EXPRES NO RESPONDE' )
+        return False
+
+#Peticion_Post_Publicar(config.URL_API_NODE,'FLORIDA','MIDDAY',{'PICK3':'123','PICK4':'567'},'12-12-12')
