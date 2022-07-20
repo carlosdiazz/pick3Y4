@@ -43,11 +43,42 @@ hora_prueba =  '23:50:00'
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
 
-schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
-schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_PM)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
+#
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
 
-schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
-schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
+schedule.every().day.at(VARIABLES.HORA_FL_MIDDAY).do(run, LOTERY_FLORIDA_AM)
+schedule.every().day.at(VARIABLES.HORA_FL_EVENING).do(run, LOTERY_FLORIDA_PM)
+
+schedule.every().day.at(VARIABLES.HORA_NY_AM).do(run, LOTERY_NEW_YORK_AM)
+schedule.every().day.at(VARIABLES.HORA_NY_PM).do(run, LOTERY_NEW_YORK_PM)
 
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_PM)

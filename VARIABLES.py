@@ -151,3 +151,16 @@ OBJ_GA_NIGHT = {
     'LOTERIA': LOTERIA_GEORGIA,
     "SORTEO" : SORTEO_GEORGIA_NIGHT
 }
+
+HORA_FL_MIDDAY          =   '13:50:00'
+HORA_FL_EVENING         =   '22:00:00'
+
+HORA_NY_MIDDAY          =   '14:50:00'
+HORA_NY_EVENING         =   '22:50:00'
+
+HORA_NJ_MIDDAY          =   '13:20:00'
+HORA_NJ_PM              =   '11:10:00'
+
+HORA_CT_MIDDAY          =   '14:10:00'
+HORA_CT_EVENING         =   '22:50:00'
+
