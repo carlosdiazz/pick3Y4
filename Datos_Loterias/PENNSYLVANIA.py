@@ -7,7 +7,7 @@ PA_AM_PICK4 = 'https://www.lotteryusa.com/pennsylvania/midday-pick-4/'
 
 PA_PM_PAGES = URL_BASE
 PA_PM_PICK3 = 'https://www.lotteryusa.com/pennsylvania/pick-3/'
-PA_PM_PICK4 = 'https://www.lotteryusa.com/pennsylvania/midday-pick-4/'
+PA_PM_PICK4 = 'https://www.lotteryusa.com/pennsylvania/pick-4/'
 
 
 PENNSYLVANIA_LOTTERYUSA = {

@@ -29,7 +29,6 @@ class Publicar_En_Plataformas():
         self.loteria = Loteria['loteria']
         self.sorteo = Loteria['sorteo']
         self.numeros_ganadores = Loteria['numeros_ganadores']
-                                                                                                        #! VALIDAR FECHA Y DATOS ANTES DE QUE LLEGUEN PARA PREMIAR
         self.fecha = Loteria['fecha']
 
         print("Se Instancio una nueva clase Para Premiar")
@@ -38,7 +37,7 @@ class Publicar_En_Plataformas():
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         self.chrome_options.accept_insecure_certs=True
-        #self.chrome_options.add_argument("--headless")
+        self.chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=self.chrome_options)
         self.driver.delete_all_cookies()
         self.driver.get(self.plataforma_url)

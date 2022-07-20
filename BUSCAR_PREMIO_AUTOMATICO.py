@@ -38,7 +38,7 @@ LOTERY_GEORGIA_NIGHT            =   (Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Busca
 
 #!AGREGAR ALGO PARA BORRAR PANTALLA O LIMPIAR CACHE AL INIICO DE CADA DIA
 
-hora_prueba =  '16:28:00'
+hora_prueba =  '23:50:00'
 
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
@@ -83,4 +83,4 @@ while True:
         pass
     else:
         print(schedule.run_pending())
-    time.sleep(1)
+    time.sleep(360)
