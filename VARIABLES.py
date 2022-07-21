@@ -1,166 +1,127 @@
-
-#! Aqui van el nombre de todas las variables a usar
-#?---------------------------
-LOTERIA_FLORIDA = 'FLORIDA'
-SORTEO_FLORIDA_AM = 'MIDDAY'
-SORTEO_FLORIDA_PM = 'EVENING'
-#?---------------------------
-LOTERIA_NEW_YORK = 'NEW YORK'
-SORTEO_NEW_YORK_AM = 'MIDDAY'
-SORTEO_NEW_YORK_PM = 'EVENING'
-
-#? ----------------------------------------------------------------------------
-LOTERIA_NEW_JERSEY = 'NEW JERSEY'
-SORTEO_NEW_JERSEY_AM = 'MIDDAY'
-SORTEO_NEW_JERSEY_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-LOTERIA_CONNECTICUT = 'CONNECTICUT'
-SORTEO_CONNECTICUT_AM = 'MIDDAY'
-SORTEO_CONNECTICUT_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-
-LOTERIA_VIRGINIA = 'VIRGINIA'
-SORTEO_VIRGINIA_AM = 'MIDDAY'
-SORTEO_VIRGINIA_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-
-LOTERIA_WASHINGTON_DC = 'WASHINGTON D.C'
-SORTEO_WASHINGTON_DC_AM = 'MIDDAY'
-SORTEO_WASHINGTON_DC_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-LOTERIA_PENNSYLVANIA = 'PENNSYLVANIA'
-SORTEO_PENNSYLVANIA_AM = 'MIDDAY'
-SORTEO_PENNSYLVANIA_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-LOTERIA_SOUTH_CAROLINA = 'SOUTH CAROLINA'
-SORTEO_SOUTH_CAROLINA_AM = 'MIDDAY'
-SORTEO_SOUTH_CAROLINA_PM = 'EVENING'
-#? ----------------------------------------------------------------------------
-LOTERIA_NORTH_CAROLINA = 'NORTH CAROLINA'
-SORTEO_NORTH_CAROLINA_AM = 'MIDDAY'
-SORTEO_NORTH_CAROLINA_PM = 'EVENING'
-#? ---------------------------------------------------------------------------
-LOTERIA_GEORGIA = 'GEORGIA'
-SORTEO_GEORGIA_AM = 'MIDDAY'
-SORTEO_GEORGIA_PM = 'EVENING'
-SORTEO_GEORGIA_NIGHT = 'NIGHT'
-#? ---------------------------------------------------------------------------
-
-
+EVENING = 'EVENING'
+MIDDAY = 'MIDDAY'
 #? ----------------------------------------
 OBJ_FL_AM = {
-    'LOTERIA': LOTERIA_FLORIDA,
-    "SORTEO" : SORTEO_FLORIDA_AM
+    'LOTERIA'   :   'FLORIDA',
+    'HORA'      :   '13:50:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_FL_PM = {
-    'LOTERIA': LOTERIA_FLORIDA,
-    "SORTEO" : SORTEO_FLORIDA_PM
+    'LOTERIA'   :   'FLORIDA',
+    'HORA'      :   '22:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_NY_AM = {
-    'LOTERIA': LOTERIA_NEW_YORK,
-    "SORTEO" : SORTEO_NEW_YORK_AM
+    'LOTERIA'   :   'NEW YORK',
+    'HORA'      :   '14:50:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_NY_PM = {
-    'LOTERIA': LOTERIA_NEW_YORK,
-    "SORTEO" : SORTEO_NEW_YORK_PM
+    'LOTERIA'   :   'NEW YORK',
+    'HORA'      :   '22:50:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_NJ_AM = {
-    'LOTERIA': LOTERIA_NEW_JERSEY,
-    "SORTEO" : SORTEO_NEW_JERSEY_AM
+    'LOTERIA'   :   'NEW JERSEY',
+    'HORA'      :   '13:20:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_NJ_PM = {
-    'LOTERIA': LOTERIA_NEW_JERSEY,
-    "SORTEO" : SORTEO_NEW_JERSEY_PM
+    'LOTERIA'   :   'NEW JERSEY',
+    'HORA'      :   '11:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_CT_AM = {
-    'LOTERIA': LOTERIA_CONNECTICUT,
-    "SORTEO" : SORTEO_CONNECTICUT_AM
+    'LOTERIA'   :   'CONNECTICUT',
+    'HORA'      :   '14:10:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_CT_PM = {
-    'LOTERIA': LOTERIA_CONNECTICUT,
-    "SORTEO" : SORTEO_CONNECTICUT_PM
+    'LOTERIA'   :   'CONNECTICUT',
+    'HORA'      :   '22:50:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_VA_AM = {
-    'LOTERIA': LOTERIA_VIRGINIA,
-    "SORTEO" : SORTEO_VIRGINIA_AM
+    'LOTERIA'   :   'VIRGINIA',
+    'HORA'      :   '14:10:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_VA_PM = {
-    'LOTERIA': LOTERIA_VIRGINIA,
-    "SORTEO" : SORTEO_VIRGINIA_PM
+    'LOTERIA'   :   'VIRGINIA',
+    'HORA'      :   '11:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_DC_AM = {
-    'LOTERIA': LOTERIA_WASHINGTON_DC,
-    "SORTEO" : SORTEO_WASHINGTON_DC_AM
+    'LOTERIA'   :   'WASHINGTON D.C',
+    'HORA'      :   '14:10:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_DC_PM = {
-    'LOTERIA': LOTERIA_WASHINGTON_DC,
-    "SORTEO" : SORTEO_WASHINGTON_DC_PM
+    'LOTERIA'   :   'WASHINGTON D.C',
+    'HORA'      :   '20:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_PA_AM = {
-    'LOTERIA': LOTERIA_PENNSYLVANIA,
-    "SORTEO" : SORTEO_PENNSYLVANIA_AM
+    'LOTERIA'   :   'PENNSYLVANIA',
+    'HORA'      :   '14:00:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_PA_PM = {
-    'LOTERIA': LOTERIA_PENNSYLVANIA,
-    "SORTEO" : SORTEO_PENNSYLVANIA_PM
+    'LOTERIA'   :   'PENNSYLVANIA',
+    'HORA'      :   '19:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_SC_AM = {
-    'LOTERIA': LOTERIA_SOUTH_CAROLINA,
-    "SORTEO" : SORTEO_SOUTH_CAROLINA_AM
+    'LOTERIA'   :   'SOUTH CAROLINA',
+    'HORA'      :   '13:10:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_SC_PM = {
-    'LOTERIA': LOTERIA_SOUTH_CAROLINA,
-    "SORTEO" : SORTEO_SOUTH_CAROLINA_PM
+    'LOTERIA'   :   'SOUTH CAROLINA',
+    'HORA'      :   '19:10:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_NC_AM = {
-    'LOTERIA': LOTERIA_NORTH_CAROLINA,
-    "SORTEO" : SORTEO_NORTH_CAROLINA_AM
+    'LOTERIA'   :   'NORTH CAROLINA',
+    'HORA'      :   '19:10:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_NC_PM = {
-    'LOTERIA': LOTERIA_NORTH_CAROLINA,
-    "SORTEO" : SORTEO_NORTH_CAROLINA_PM
+    'LOTERIA'   :   'NORTH CAROLINA',
+    'HORA'      :   '23:30:00',
+    "SORTEO"    :   EVENING
 }
 #? ----------------------------------------
 OBJ_GA_AM = {
-    'LOTERIA': LOTERIA_GEORGIA,
-    "SORTEO" : SORTEO_GEORGIA_AM
+    'LOTERIA'   :   'GEORGIA',
+    'HORA'      :   '12:50:00',
+    "SORTEO"    :   MIDDAY
 }
 
 OBJ_GA_PM = {
-    'LOTERIA': LOTERIA_GEORGIA,
-    "SORTEO" : SORTEO_GEORGIA_PM
+    'LOTERIA'   :   'GEORGIA',
+    'HORA'      :   '19:10:00',
+    "SORTEO"    :   EVENING
 }
 OBJ_GA_NIGHT = {
-    'LOTERIA': LOTERIA_GEORGIA,
-    "SORTEO" : SORTEO_GEORGIA_NIGHT
+    'LOTERIA'   :   'GEORGIA',
+    'HORA'      :   '23:30:00',
+    "SORTEO"    :   'NIGHT'
 }
-
-HORA_FL_MIDDAY          =   '13:50:00'
-HORA_FL_EVENING         =   '22:00:00'
-
-HORA_NY_MIDDAY          =   '14:50:00'
-HORA_NY_EVENING         =   '22:50:00'
-
-HORA_NJ_MIDDAY          =   '13:20:00'
-HORA_NJ_PM              =   '11:10:00'
-
-HORA_CT_MIDDAY          =   '14:10:00'
-HORA_CT_EVENING         =   '22:50:00'
-

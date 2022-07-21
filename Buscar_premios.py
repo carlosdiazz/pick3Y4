@@ -16,6 +16,7 @@ class Buscar_Premio():
     def Buscar_numeros_ganadores(self):
 
         publicar_numeros = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
+        #! ERROR AQUI MANDE YA LA LOTERIA EXISTEN SIN EXCISTIR
         if(publicar_numeros == True):
             arreglo_loteria = devolver_arreglo(self.datos)
             numeros_ganadores = API().devolver_numeros(arreglo_loteria,self.sorteo)
