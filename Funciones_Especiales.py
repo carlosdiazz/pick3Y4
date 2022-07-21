@@ -14,9 +14,8 @@ from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
 from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.GEORGIA import GEORGIA_LOTTERYUSA
-import time
 import config
-from config import API_KEY_MONGO_DB, BOT_NOTIFICACIONES
+from config import API_KEY_MONGO_DB
 #! Aqui tengo que agregar los diferentes arreglos
 def DEVOLVER_ARREGLO_XPATH(datos):
     if(datos == OBJ_FL_AM or datos == OBJ_FL_PM):

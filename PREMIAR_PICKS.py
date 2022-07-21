@@ -8,10 +8,6 @@ class PREMIAR_PICKS():
     def __init__(self, obj):
         self.loteria            =   obj['LOTERIA']
         self.sorteo             =   obj['SORTEO']
-        self.intentos           =   0
-        self.pick3_publicado    =   False
-        self.pick4_publicado    =   False
-        print("VOLVI AQUI ARRIBA")
 
     def PUBLICAR_PICK3(self):
         OBJ_3 = {
@@ -33,12 +29,43 @@ class PREMIAR_PICKS():
         return PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA ).publicar(arrp4)
 
 
-    def buscar(self):
-        #? Con esta funcion buscare los numeros ganadores
+    def premiar(self):
 
-        if(self.intentos<2):
-            print(f'# => {self.intentos}')
-            print(self.intentos<2)
+
+        #? Con esta funcion buscare los numeros ganadores
+        pick_3_premiar = False
+        pick_4_premiar = False
+
+        for i in range(5):
+
+            self.fecha = fecha('%d-%m-%Y') #! ? VALIDAR DATOS DESDE AQUI LA FECHA VALIDAR PREMIAR PICK #3Y PICK $4 --------------------------------------
+            CONSULTA = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
+
+            if(CONSULTA['ERROR'] == True):
+                print(CONSULTA['MESSAGE'])
+
+            else:
+                if(CONSULTA['NUMEROS']):
+                    # LOS NUMEROS ESTAN EN BASE DE DATOS
+                    print(CONSULTA['MESSAGE'])
+                    
+                
+                
+
+
+
+
+            if(pick_3_premiar == False):
+                pick_3_premiar = self.PUBLICAR_PICK3()
+
+            if(pick_4_premiar == False):
+                pick_4_premiar = self.PUBLICAR_PICK4()
+
+            if(pick_3_premiar and pick_4_premiar):
+                print('')
+                break
+
+
 
             self.fecha = fecha('%d-%m-%Y') #! ? VALIDAR DATOS DESDE AQUI LA FECHA VALIDAR PREMIAR PICK #3Y PICK $4 --------------------------------------
             CONSULTA = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
@@ -69,15 +96,3 @@ class PREMIAR_PICKS():
                     time.sleep(1)
                     self.buscar()
 
-            else:
-                print(CONSULTA['MESSAGE']+f' => LOTERIA : => {self.loteria} => SORTEO => {self.sorteo} INTENTANDO DE NUEVO #{self.intentos}')
-                self.intentos = self.intentos+1
-                time.sleep(1)
-                self.buscar()
-        else:
-            print(f'NO SE PUBLICO CON TODOS LOS INTENTOS VALIDOS EN LOTENET.... ESTA LOTERIA: => {self.loteria} CON SORTEO: => {self.sorteo} INTENTO #{self.intentos}')
-            self.intentos = 0
-            self.pick3_publicado = False
-            self.pick4_publicado = False
-            return False #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
-        print("BYE")
