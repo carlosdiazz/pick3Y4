@@ -36,9 +36,6 @@ LOTERY_NORTH_CAROLINA_PM        =   Buscar_Premio(VARIABLES.OBJ_NC_PM).Buscar_nu
 LOTERY_GEORGIA_PM               =   Buscar_Premio(VARIABLES.OBJ_GA_PM).Buscar_numeros_ganadores
 LOTERY_GEORGIA_NIGHT            =   Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numeros_ganadores
 
-
-hora_prueba =  '17:11:00'
-
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
 
@@ -70,7 +67,7 @@ schedule.every().day.at('00:00:00').do(run, clearConsole)
 
 
 
-
+hora_prueba =  '19:08:30'
 ###! BORRAR ESTO
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
@@ -102,7 +99,7 @@ schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
 
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
-#clearConsole()
+clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|----------> {fecha_actual} <----------|")

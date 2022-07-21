@@ -14,8 +14,10 @@ class Buscar_Premio():
         self.datos      = Datos
 
     def Buscar_numeros_ganadores(self):
-        validar = False
-        for intento in range (10):
+        validar     = False
+        publicar    = False
+        print(f'INICIANDO BUSCADOR DE PREMIO {self.loteria} {self.sorteo}')
+        for intento in range (3):
 
             self.fecha = fecha('%d-%m-%Y')
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
@@ -26,21 +28,33 @@ class Buscar_Premio():
                 sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
                 validar = True
                 break
+            else:
+                if(COMPROBAR_QUE_NO_ESTEN['ERROR'] == False):
+                    publicar = self.publicar()
 
-            publicar = self.publicar()
-            if(publicar['STATUS']):
-                message = publicar['MESSAGE']
-                print(message)
-                sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
-                validar = True
-                break
-            print(publicar['MESSAGE']+ f' INTENTO # {intento}\n')
-            time.sleep(10) #! AGREGA MAS TIEMPO AQUI
+                    if(publicar['STATUS']):
+                        message = publicar['MESSAGE']
+                        print(message)
+                        sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
+                        validar = True
+                        break
+                    else:
+                        print(publicar['MESSAGE']+ f' INTENTO # {intento}\n')
+
+                else:
+                    print(COMPROBAR_QUE_NO_ESTEN['MESSAGE'])
+                    time.sleep(1) #! AGREGA MAS TIEMPO AQUI
+
 
         if(validar == False):
-            message = publicar['MESSAGE']
-            print(message)
-            sendNotification(message,config.BOT_NOTIFICACIONES['TOKEN'])
+            if(publicar):
+                message = publicar['MESSAGE']
+                print(message)
+                sendNotification(message,config.BOT_NOTIFICACIONES['TOKEN'])
+            else:
+                message = f"NO SE PUBLICO\n\n\nERROR: {COMPROBAR_QUE_NO_ESTEN['MESSAGE']} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo}"
+                print(message)
+                sendNotification(message,config.BOT_NOTIFICACIONES['TOKEN'])
 
     def publicar(self):
 

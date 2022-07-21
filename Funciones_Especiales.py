@@ -134,7 +134,7 @@ def VALIDAR_QUE_NO_EXISTAN(url,loteria,sorteo,fecha):
         return {
                 "ERROR"     :   True,
                 'PUBLICADO' :   False,
-                "MESSAGE"   :   'HUBO UN ERRORRRRRRR AL MOMENTO DE LA PETIICON GET'
+                "MESSAGE"   :   'ERROR EN LA PETICION GET'
                 }
 
 def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
