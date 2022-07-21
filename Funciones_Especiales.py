@@ -50,6 +50,7 @@ def DEVOLVER_ARREGLO_XPATH(datos):
         return GEORGIA_LOTTERYUSA
 
     else:
+        print("HAY UN ERROR DESCONOCIDO")
         return False
 
 
@@ -111,13 +112,31 @@ def VALIDAR_QUE_NO_EXISTAN(url,loteria,sorteo,fecha):
         if(r.status_code == 200):
             res=(r.json())
             if(len(res['message']) == 0):
-                return True
+                return {
+                        "ERROR"     :   False,
+                        'PUBLICADO' :   False,
+                        "MESSAGE"   :   'LOS NUMEROS NO ESTAN PUBLICADOS EN MONGO AUN'
+                        }
             else:
-                return 'LOS NUMEROS YA ESTAN PUBLICADOS'
+                return {
+                        "ERROR"     :   False,
+                        'PUBLICADO' :   True,
+                        "MESSAGE"   :   'LOS NUMEROS YA ESTAN PUBLICADOS'
+                        }
+
         else:
-            return 'El SERVIDOR NO RESPONDIO'
+            return {
+                    "ERROR"     :   True,
+                    'PUBLICADO' :   False,
+                    "MESSAGE"   :   'El SERVIDOR NO RESPONDIO'
+                    }
+
     except:
-        return('HUBO UN ERRORRRRRRR AL MOMENTO DE LA PETIICON GET' )
+        return {
+                "ERROR"     :   True,
+                'PUBLICADO' :   False,
+                "MESSAGE"   :   'HUBO UN ERRORRRRRRR AL MOMENTO DE LA PETIICON GET'
+                }
 
 def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
     try:

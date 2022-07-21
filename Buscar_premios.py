@@ -19,7 +19,7 @@ class Buscar_Premio():
             self.fecha = fecha('%d-%m-%Y')
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
 
-            if(COMPROBAR_QUE_NO_ESTEN == True):
+            if(COMPROBAR_QUE_NO_ESTEN['PUBLICADO'] == False):
 
                 ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
                 NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
@@ -29,19 +29,19 @@ class Buscar_Premio():
                     if(publicar == True):
                         self.intentos=0
                         print(f'Loteria: {self.loteria} con sorteo: {self.sorteo} y {NUMEROS_VALIDOS_A_PUBLICAR} se publico Bien EN LA BASE DE DATOS')
-                        return True #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
-
+                        #return True #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
 
                     else:
                         self.intentos=self.intentos+1
                         print(f"No se pudo publicar en NODE esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
-                        time.sleep(60)
+                        time.sleep(1)
                         self.Buscar_numeros_ganadores()
                 else:
+                    print(NUMEROS_VALIDOS_A_PUBLICAR)
                     self.intentos=self.intentos+1
                     if(self.intentos<100):
                         print(f"No se encontro esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
-                        time.sleep(60)
+                        time.sleep(1)
                         self.Buscar_numeros_ganadores()
                     else:
                         print(f"ERROR PASARON TODOS LOS INTENTOS Y NO SE PUBLICO... LOTERIA: {self.loteria} SORTEO: {self.sorteo} INTENTO#: {self.intentos}")
@@ -49,12 +49,11 @@ class Buscar_Premio():
                         return False  #! ---- ME FALTA enviar NOTIFICACION TELEGRAM NO SE ENVIO -------------------------------------------------------------------------------
 
             else:
-                print(COMPROBAR_QUE_NO_ESTEN)
-                self.intentos=self.intentos+1
-                self.Buscar_numeros_ganadores()
-                time.sleep(60)
+                print(COMPROBAR_QUE_NO_ESTEN['MESSAGE'] +f' Para La LOTERIA: => {self.loteria} con el SORTEO => {self.sorteo}')
+
         except:
-            print('ERROR ENTRE EN EEXCEPT DEL ARCHIVO VUSCAR PREMIo')
+            print('ERROR ENTRE EN EXCEPT DEL ARCHIVO BUSCAR PREMIO')
+            time.sleep(1)
             self.intentos=self.intentos+1
             self.Buscar_numeros_ganadores()
-            time.sleep(60)
+

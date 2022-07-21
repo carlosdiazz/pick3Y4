@@ -31,6 +31,7 @@ class API_USA_PICK():
 
             if(pick3 and pick4):
                 self.driver.quit()
+                #print({ "PICK3":pick3,"PICK4":pick4})
                 return {
                     "PICK3":pick3,
                     "PICK4":pick4
@@ -39,6 +40,7 @@ class API_USA_PICK():
                 self.driver.quit()
                 return False
         except:
+            print('Paso una EXCEPT en el archivo API_USA_PICk')
             return False
 
     def PICK3(self,arrP3):
@@ -78,7 +80,7 @@ class API_USA_PICK():
                 num_p4_4 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][4]).text;self.driver.implicitly_wait(20)
                 pick4_arreglo = [num_p4_1,num_p4_2,num_p4_3,num_p4_4]
                 if(len(pick4_arreglo)==4):
-                    return True
+                    return pick4_arreglo
                 else:
                     return False
             else:

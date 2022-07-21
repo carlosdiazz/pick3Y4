@@ -1,6 +1,6 @@
 from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo
-from config import user_desarrollo
-from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA
+
+from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA, user_desarrollo
 from PUBLICAR_ORKAPI import PUBLICAR_EN_LOTENET_PICK
 
 class PREMIAR_PICKS():
@@ -11,6 +11,7 @@ class PREMIAR_PICKS():
 
     def buscar(self):
         #? Con esta funcion buscare los numeros ganadores
+        #! ? VALIDAR DATOS DESDE AQUI LA FECHA VALIDAR PREMIAR PICK #3Y PICK $4
         self.fecha = fecha('%d-%m-%Y')
         numeros = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
         if(numeros['error'] == False):
@@ -30,8 +31,8 @@ class PREMIAR_PICKS():
                 'numeros_ganadores' :   loteria_a_publicar['numeros_ganadores']['PICK4']
             }
 
-            publicar_P3 = PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA,arrp3 ).publicar()
-            publicar_P4 = PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA,arrp4 ).publicar()
+            publicar_P3 = PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA ).publicar(arrp3)
+            publicar_P4 = PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA ).publicar(arrp4)
             if(publicar_P3 and publicar_P4):
                 print(f"SE PREMIO CORRECTAMENTE LA LOTERIA: {self.loteria }CON EL SORTEO: {self.sorteo}")
             else:
