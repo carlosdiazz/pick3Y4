@@ -31,7 +31,6 @@ class API_USA_PICK():
 
             if(pick3 and pick4):
                 self.driver.quit()
-                #print({ "PICK3":pick3,"PICK4":pick4})
                 return {
                     "PICK3":pick3,
                     "PICK4":pick4

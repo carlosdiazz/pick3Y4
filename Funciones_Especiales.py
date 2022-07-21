@@ -16,7 +16,7 @@ from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.GEORGIA import GEORGIA_LOTTERYUSA
 import time
 import config
-
+from config import API_KEY_MONGO_DB, BOT_NOTIFICACIONES
 #! Aqui tengo que agregar los diferentes arreglos
 def DEVOLVER_ARREGLO_XPATH(datos):
     if(datos == OBJ_FL_AM or datos == OBJ_FL_PM):
@@ -156,7 +156,7 @@ def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
         else:
             return False
     except:
-        print(f'\n\n\nNO SE PREMIO ESTA LOTERIA: {Loteria[0]} CON ESTE SORTEO {Loteria[1]} -------> El SERVIDOR EXPRES NO RESPONDE' )
+        #print(f'\n\n\nNO SE PREMIO ESTA LOTERIA: {Loteria} CON ESTE SORTEO {Sorteo} -------> El SERVIDOR EXPRES NO RESPONDE' )
         return False
 
 
@@ -212,16 +212,49 @@ def clearConsole():
 
 #! -------- ENVIAR NOTIFICACIONE DE LOS RESULTADOS
 
+def Obtener_User_MONGO_NOTIFICACIONES():
+    try:
+        url = "https://data.mongodb-api.com/app/data-rrmjk/endpoint/data/v1/action/find"
+        payload = json.dumps({
+            "collection": "usuarios",
+            "database": "myFirstDatabase",
+            "dataSource": "LoteriasCluster",
+            "projection": {
+
+            }
+        })
+        headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Request-Headers': '*',
+            'api-key': API_KEY_MONGO_DB
+        }
+        response = requests.request("POST", url, headers=headers, data=payload)
+        arr=response.json()
+
+        New_Arr = []
+        for user in arr['documents']:
+            usuarios = user['user_id']
+            New_Arr.append(usuarios)
+        return New_Arr
+    except:
+        print("NO SE PUDO OBTENER LOS USUARIOS PARA ENVIAR LA NOTIFICACION")
+        return False
+
 def sendNotification(message,token ):
     try:
         bot_token = token
-        User='666666' #! HACER ALGO PARA OBNTRENER LOS USERS
-        for usuarios in User:
-            send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + usuarios + '&parse_mode=Markdown&text=' + message
-            requests.get(send_text)
+        User=Obtener_User_MONGO_NOTIFICACIONES()
+        if(User):
+            for usuarios in User:
+                send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + usuarios + '&parse_mode=Markdown&text=' + message
+                requests.get(send_text)
+            return True
+        else:
+            print('NO HAY USUARIO PARA PREMIAR')
+            return False
 
     except:
         print('-----------------------------------------------------------------------')
         print("NO SE PUEDO ENVIAR LA NOTIFICACION DE TELEGRAM")
         print('-----------------------------------------------------------------------')
-        time.sleep(10)
+        return False
