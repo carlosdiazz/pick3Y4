@@ -1,3 +1,5 @@
+# ESTE ARCHIVO ES QUIEN BUSCA LOS NUMEROS GANADORES VARIAS VECES HASTA ENCONTRARLO Y PUBLICARLO EN MONGODB
+
 from Funciones_Especiales import devolver_arreglo, fecha, VALIDAR_QUE_NO_EXISTAN, Peticion_Post_Publicar
 from API_USA import API
 import time

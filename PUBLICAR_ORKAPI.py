@@ -1,4 +1,4 @@
-# selenium 4
+# eSTE ARCHIVO ES QUIEN PUBLICA LOS NUMEROS GANAODRES SOLO EN LA PLATAFORMA DE LOTENET , SE LE MANDARA UN OBJECTO DE USER, PLATAFORMA, Y LOTERIA
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromiumService
 from webdriver_manager.chrome import ChromeDriverManager
@@ -6,10 +6,9 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
 
-from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo
-from config import user_desarrollo
-from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA
-class Publicar_En_Plataformas():
+from Funciones_Especiales import fecha
+
+class PUBLICAR_EN_LOTENET_PICK():
 
     def __init__(self, user, plataforma, Loteria):
         self.plataforma_url = plataforma['URL']
@@ -105,39 +104,3 @@ class Publicar_En_Plataformas():
             return False
 
 
-class Buscar_Numeros_Premiar():
-    
-    def __init__(self, obj):
-        self.loteria = obj['LOTERIA']
-        self.sorteo = obj['SORTEO']
-
-    def buscar(self):
-        #? Con esta funcion buscare los numeros ganadores
-        self.fecha = fecha('%d-%m-%Y')
-        numeros = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
-        if(numeros['error'] == False):
-            loteria_a_publicar = numeros['message'][0]
-
-            arrp3 = {
-                'loteria'           :   'PICK 3',
-                'fecha'             :   loteria_a_publicar['fecha'],
-                "sorteo"            :   loteria_a_publicar['loteria'] +" "+saber_sorteo(loteria_a_publicar['sorteo']),
-                'numeros_ganadores' :   loteria_a_publicar['numeros_ganadores']['PICK3']
-            }
-
-            arrp4 = {
-                'loteria'           :   'PICK 4',
-                'fecha'             :   loteria_a_publicar['fecha'],
-                "sorteo"            :   loteria_a_publicar['loteria'] +" "+saber_sorteo(loteria_a_publicar['sorteo']),
-                'numeros_ganadores' :   loteria_a_publicar['numeros_ganadores']['PICK4']
-            }
-
-            publicar_P3 = Publicar_En_Plataformas(user_desarrollo, PLATAFORMA_MEGA,arrp3 ).publicar()
-            publicar_P4 = Publicar_En_Plataformas(user_desarrollo, PLATAFORMA_MEGA,arrp4 ).publicar()
-            if(publicar_P3 and publicar_P4):
-                print(f"SE PREMIO CORRECTAMENTE LA LOTERIA: {self.loteria }CON EL SORTEO: {self.sorteo}")
-            else:
-                print(f"NOOOOOOOO SE PREMIO LA LOTERIA: {self.loteria }CON EL SORTEO: {self.sorteo}")
-
-        else:
-            print(f"NO SE PREMIO ESTA LOTERIA: {self.loteria} COn este sorteo {self.sorteo}")

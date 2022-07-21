@@ -1,32 +1,34 @@
+# ESTE SCRIPT SE DEJARA EJUCTANDO SIEMPRE QUE ES QUIEN PREMIA EN LA DIFERENTES PLATAFORMAS
+
 import schedule
 import VARIABLES
 import time
 from Funciones_Especiales import run, clearConsole, fecha
-from PUBLICAR_NUMEROS import Buscar_Numeros_Premiar
+from PREMIAR_PICKS import PREMIAR_PICKS
 
 #LOTERIAS AM
-FLORIDA_MIDDAY              =   Buscar_Numeros_Premiar(VARIABLES.OBJ_FL_AM).buscar
-NEW_YORK_MIDDAY             =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NY_AM).buscar
-VIRGINIA_MIDDAY             =   Buscar_Numeros_Premiar(VARIABLES.OBJ_VA_AM).buscar
-GEORGIA_MIDDAY              =   Buscar_Numeros_Premiar(VARIABLES.OBJ_GA_AM).buscar
-NEW_JERSEY_MIDDAY           =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NJ_AM).buscar
-SOUTH_CAROLINA_MIDDAY       =   Buscar_Numeros_Premiar(VARIABLES.OBJ_SC_AM).buscar
-PENNSYLVANIA_MIDDAY         =   Buscar_Numeros_Premiar(VARIABLES.OBJ_PA_AM).buscar
-WASHINGTON_DC_MIDDAY        =   Buscar_Numeros_Premiar(VARIABLES.OBJ_DC_AM).buscar
-CONNECTICUT_MIDDAY          =   Buscar_Numeros_Premiar(VARIABLES.OBJ_CT_AM).buscar
-NORTH_CAROLINA_MIDDAY       =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NC_AM).buscar
+FLORIDA_MIDDAY              =   PREMIAR_PICKS(VARIABLES.OBJ_FL_AM).buscar
+NEW_YORK_MIDDAY             =   PREMIAR_PICKS(VARIABLES.OBJ_NY_AM).buscar
+VIRGINIA_MIDDAY             =   PREMIAR_PICKS(VARIABLES.OBJ_VA_AM).buscar
+GEORGIA_MIDDAY              =   PREMIAR_PICKS(VARIABLES.OBJ_GA_AM).buscar
+NEW_JERSEY_MIDDAY           =   PREMIAR_PICKS(VARIABLES.OBJ_NJ_AM).buscar
+SOUTH_CAROLINA_MIDDAY       =   PREMIAR_PICKS(VARIABLES.OBJ_SC_AM).buscar
+PENNSYLVANIA_MIDDAY         =   PREMIAR_PICKS(VARIABLES.OBJ_PA_AM).buscar
+WASHINGTON_DC_MIDDAY        =   PREMIAR_PICKS(VARIABLES.OBJ_DC_AM).buscar
+CONNECTICUT_MIDDAY          =   PREMIAR_PICKS(VARIABLES.OBJ_CT_AM).buscar
+NORTH_CAROLINA_MIDDAY       =   PREMIAR_PICKS(VARIABLES.OBJ_NC_AM).buscar
 #LOTERIAS PM
-SOUTH_CAROLINA_EVENING      =   Buscar_Numeros_Premiar(VARIABLES.OBJ_SC_PM).buscar
-GEORGIA_EVENING             =   Buscar_Numeros_Premiar(VARIABLES.OBJ_GA_PM).buscar
-PENNSYLVANIA_EVENING        =   Buscar_Numeros_Premiar(VARIABLES.OBJ_PA_PM).buscar
-WASHINGTON_DC_EVENING       =   Buscar_Numeros_Premiar(VARIABLES.OBJ_DC_PM).buscar
-FLORIDA_EVENING             =   Buscar_Numeros_Premiar(VARIABLES.OBJ_FL_PM).buscar
-CONNECTICUT_EVENING         =   Buscar_Numeros_Premiar(VARIABLES.OBJ_CT_PM).buscar
-NEW_YORK_EVENING            =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NY_PM).buscar
-VIRGINIA_EVENING            =   Buscar_Numeros_Premiar(VARIABLES.OBJ_VA_PM).buscar
-NEW_JERSEY_EVENING          =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NJ_PM).buscar
-NORTH_CAROLINA_EVENING      =   Buscar_Numeros_Premiar(VARIABLES.OBJ_NC_PM).buscar
-GEORGIA_NIGHT               =   Buscar_Numeros_Premiar(VARIABLES.OBJ_GA_NIGHT).buscar
+SOUTH_CAROLINA_EVENING      =   PREMIAR_PICKS(VARIABLES.OBJ_SC_PM).buscar
+GEORGIA_EVENING             =   PREMIAR_PICKS(VARIABLES.OBJ_GA_PM).buscar
+PENNSYLVANIA_EVENING        =   PREMIAR_PICKS(VARIABLES.OBJ_PA_PM).buscar
+WASHINGTON_DC_EVENING       =   PREMIAR_PICKS(VARIABLES.OBJ_DC_PM).buscar
+FLORIDA_EVENING             =   PREMIAR_PICKS(VARIABLES.OBJ_FL_PM).buscar
+CONNECTICUT_EVENING         =   PREMIAR_PICKS(VARIABLES.OBJ_CT_PM).buscar
+NEW_YORK_EVENING            =   PREMIAR_PICKS(VARIABLES.OBJ_NY_PM).buscar
+VIRGINIA_EVENING            =   PREMIAR_PICKS(VARIABLES.OBJ_VA_PM).buscar
+NEW_JERSEY_EVENING          =   PREMIAR_PICKS(VARIABLES.OBJ_NJ_PM).buscar
+NORTH_CAROLINA_EVENING      =   PREMIAR_PICKS(VARIABLES.OBJ_NC_PM).buscar
+GEORGIA_NIGHT               =   PREMIAR_PICKS(VARIABLES.OBJ_GA_NIGHT).buscar
 
 hora_prueba =  '20:10:00'
 

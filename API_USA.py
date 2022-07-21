@@ -1,4 +1,5 @@
-# selenium 4
+# ESTE ES EL ARCHIVO QUE FUNCIONA COMO UNA API PARA BUSCAR LOS NUMEROS GANADORES DEL PICK 3 Y PICK 4
+#CUANDO SE INSTANCIA UNA CLASE SE MANDA UN ARREGLO DE LA LOTERIA A BUCAR CON SUS PAXTH Y SE USA LA FUNCION DE DECOLVER NUMEROS DE ESTA CLASE
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromiumService
 from webdriver_manager.chrome import ChromeDriverManager
