@@ -192,7 +192,7 @@ def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
         #Fallo externo
         return  {
                     "ERROR"     :   True,
-                    "MESSAGE"   :   "HUBO UN FALLO EXTERNO CALLO EN EL EXCEPT DE LA FUNCION CONSULTAR_NUMEROS_API DE FUNCIONES ESPECIALES ",
+                    "MESSAGE"   :   "HUBO UN FALLO EXTERNO EN EL EXCEPT DE LA FUNCION CONSULTAR_NUMEROS_API DE FUNCIONES ESPECIALES ",
                     'NUMEROS'   :   False
                 }
 
