@@ -170,26 +170,30 @@ def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
             if(len(res['message']) == 1):
                 #Se encontro el numero
                 return {
-                    "error"    :   False,
-                    "message"   :   res['message']
+                    "ERROR"     :   False,
+                    "MESSAGE"   :   'LOS NUMEROS ESTAN EN LA BASE DATOS',
+                    'NUMEROS'   :   res['message']
                 }
             else:
                 #No se encontro el numero
                 return {
-                    "error"    :   True,
-                    "message"   :   "NO SE ENCONTRO EL NUMERO"
+                    "ERROR"     :   False,
+                    "MESSAGE"   :   "AUN EL NUMERO NO ESTA PUBLICADO EN LA BASE DE DATOS",
+                    'NUMEROS'   :   False
                 }
         else:
             #Hubo un error en la peticion
             return {
-                    "error"    :   True,
-                    "message"   :   "HUBO UN ERROR EN LA PETICION GET"
+                    "ERROR"     :   True,
+                    "MESSAGE"   :   "HUBO UN ERROR EN LA PETICION GET",
+                    'NUMEROS'   :   False
                 }
     except:
         #Fallo externo
         return  {
-                    "error"    :   True,
-                    "message"   :   "HUBO UN FALLO EXTERNO CALLO EN EL EXCEPT"
+                    "ERROR"     :   True,
+                    "MESSAGE"   :   "HUBO UN FALLO EXTERNO CALLO EN EL EXCEPT DE LA FUNCION CONSULTAR_NUMEROS_API DE FUNCIONES ESPECIALES ",
+                    'NUMEROS'   :   False
                 }
 
 def saber_sorteo(sorteo):

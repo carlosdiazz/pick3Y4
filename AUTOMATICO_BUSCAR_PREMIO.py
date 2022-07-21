@@ -7,6 +7,9 @@ from Funciones_Especiales import fecha, run, clearConsole
 import time
 
 
+#! ME FALTA ....  TENGO QUE ENVIAR UNA FECHA DEL SORTEO QUE BUSCO Y ESA MISMA FECHA PUBLICARALA
+#! EN VEZ DE COLOCAR LA FECHA DEL ARCHIVO API< TENMGO QUE ENVBIAR UNA FECHA A BUSCAR SOBRE TODO PARA CUANDP SE PASE DE LAS 12 DE LA NOCHE
+
 #LOTERIAS AM ----------------------------------------------------------------
 
 LOTERY_FLORIDA_AM               =   (Buscar_Premio(VARIABLES.OBJ_FL_AM).Buscar_numeros_ganadores)

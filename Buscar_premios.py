@@ -29,7 +29,7 @@ class Buscar_Premio():
                     if(publicar == True):
                         self.intentos=0
                         print(f'Loteria: {self.loteria} con sorteo: {self.sorteo} y {NUMEROS_VALIDOS_A_PUBLICAR} se publico Bien EN LA BASE DE DATOS')
-                        #return True #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
+                        return True #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
 
                     else:
                         self.intentos=self.intentos+1

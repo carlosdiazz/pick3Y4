@@ -30,7 +30,7 @@ NEW_JERSEY_EVENING          =   PREMIAR_PICKS(VARIABLES.OBJ_NJ_PM).buscar
 NORTH_CAROLINA_EVENING      =   PREMIAR_PICKS(VARIABLES.OBJ_NC_PM).buscar
 GEORGIA_NIGHT               =   PREMIAR_PICKS(VARIABLES.OBJ_GA_NIGHT).buscar
 
-hora_prueba =  '23:52:00'
+hora_prueba =  '00:07:40'
 
 ###! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
@@ -61,7 +61,7 @@ schedule.every().day.at('00:00:00').do(run, clearConsole)
 #  schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, GEORGIA_NIGHT)
 #  
 ###! BORRAR ESTO
-##  schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
+schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 ##  schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 ##  schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
 ##  schedule.every().day.at(hora_prueba).do(run, GEORGIA_MIDDAY)
@@ -81,8 +81,8 @@ schedule.every().day.at('00:00:00').do(run, clearConsole)
 #schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, VIRGINIA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_EVENING)
-schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
-schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
+#schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
+#schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
 
 
 while True:
