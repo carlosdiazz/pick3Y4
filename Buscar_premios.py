@@ -1,7 +1,7 @@
 # ESTE ARCHIVO ES QUIEN BUSCA LOS NUMEROS GANADORES VARIAS VECES HASTA ENCONTRARLO Y PUBLICARLO EN MONGODB
 
-from Funciones_Especiales import devolver_arreglo, fecha, VALIDAR_QUE_NO_EXISTAN, Peticion_Post_Publicar
-from API_USA import API
+from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR
+from API_USA_PICK import API_USA_PICK
 import time
 import config
 
@@ -9,38 +9,52 @@ import config
 class Buscar_Premio():
 
     def __init__(self, Datos):
-        self.loteria = Datos['LOTERIA']
-        self.sorteo = Datos['SORTEO']
-        self.fecha = fecha('%d-%m-%Y')
-        self.datos = Datos
-        self.intentos=0
+        self.loteria    = Datos['LOTERIA']
+        self.sorteo     = Datos['SORTEO']
+        self.datos      = Datos
+        self.intentos   = 0
 
     def Buscar_numeros_ganadores(self):
+        try:
+            self.fecha = fecha('%d-%m-%Y')
+            COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
 
-        publicar_numeros = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
-        #! ERROR AQUI MANDE YA LA LOTERIA EXISTEN SIN EXCISTIR
-        if(publicar_numeros == True):
-            arreglo_loteria = devolver_arreglo(self.datos)
-            numeros_ganadores = API().devolver_numeros(arreglo_loteria,self.sorteo)
-            if(numeros_ganadores):
-                publicar = Peticion_Post_Publicar(config.URL_API_NODE,self.loteria,self.sorteo,numeros_ganadores,self.fecha)
-                if(publicar == True):
-                    self.intentos=0
-                    print(f'Loteria: {self.loteria} con sorteo: {self.sorteo} y {numeros_ganadores} se publico Bien EN LA BASE DE DATOS')
+            if(COMPROBAR_QUE_NO_ESTEN == True):
+
+                ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
+                NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
+
+                if(NUMEROS_VALIDOS_A_PUBLICAR):
+                    publicar = PETICION_POST_PUBLICAR(config.URL_API_NODE,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
+                    if(publicar == True):
+                        self.intentos=0
+                        print(f'Loteria: {self.loteria} con sorteo: {self.sorteo} y {NUMEROS_VALIDOS_A_PUBLICAR} se publico Bien EN LA BASE DE DATOS')
+                        return True #! ----ME FALTA enviar NOTIFICACION TELEGRAM -------------------------------------------------------------------------------
+
+
+                    else:
+                        self.intentos=self.intentos+1
+                        print(f"No se pudo publicar en NODE esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
+                        time.sleep(60)
+                        self.Buscar_numeros_ganadores()
                 else:
                     self.intentos=self.intentos+1
-                    print(f"No se pudo publicar en NODE esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
-                    time.sleep(30)
-                    self.Buscar_numeros_ganadores()
+                    if(self.intentos<100):
+                        print(f"No se encontro esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
+                        time.sleep(60)
+                        self.Buscar_numeros_ganadores()
+                    else:
+                        print(f"ERROR PASARON TODOS LOS INTENTOS Y NO SE PUBLICO... LOTERIA: {self.loteria} SORTEO: {self.sorteo} INTENTO#: {self.intentos}")
+                        self.intentos=0
+                        return False  #! ---- ME FALTA enviar NOTIFICACION TELEGRAM NO SE ENVIO -------------------------------------------------------------------------------
+
             else:
+                print(COMPROBAR_QUE_NO_ESTEN)
                 self.intentos=self.intentos+1
-                if(self.intentos<150):
-                    print(f"No se encontro esta loteria:{self.loteria} con este sorteo: {self.sorteo} intento #:{self.intentos}")
-                    time.sleep(30)
-                    self.Buscar_numeros_ganadores()
-                else:
-                    print("No se encontro esta loteria")
-                    return False
-        else:
-            print("Ya la loteria existe")
-            return False
+                self.Buscar_numeros_ganadores()
+                time.sleep(60)
+        except:
+            print('ERROR ENTRE EN EEXCEPT DEL ARCHIVO VUSCAR PREMIo')
+            self.intentos=self.intentos+1
+            self.Buscar_numeros_ganadores()
+            time.sleep(60)

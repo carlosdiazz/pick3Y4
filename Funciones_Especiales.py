@@ -18,7 +18,7 @@ import time
 import config
 
 #! Aqui tengo que agregar los diferentes arreglos
-def devolver_arreglo(datos):
+def DEVOLVER_ARREGLO_XPATH(datos):
     if(datos == OBJ_FL_AM or datos == OBJ_FL_PM):
         return FLORIDA_LOTTERYUSA
 
@@ -111,18 +111,15 @@ def VALIDAR_QUE_NO_EXISTAN(url,loteria,sorteo,fecha):
         if(r.status_code == 200):
             res=(r.json())
             if(len(res['message']) == 0):
-                print("Los numeros aun no estan publicados")
                 return True
             else:
-                print("Los numeros ya estan publicados")
-                return 'Los Numeros ya estan Publicado'
+                return 'LOS NUMEROS YA ESTAN PUBLICADOS'
         else:
-            return 'El SERVIDOR no respondio'
+            return 'El SERVIDOR NO RESPONDIO'
     except:
-        return('HUBO UN ERRORRRRRRR al Momento de la Petcion GET' )
+        return('HUBO UN ERRORRRRRRR AL MOMENTO DE LA PETIICON GET' )
 
-def Peticion_Post_Publicar(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
-    print(f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}')
+def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
     try:
         url = f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}'
         headers = { 'Content-Type': 'application/json'}
@@ -189,10 +186,6 @@ def clearConsole():
     if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
         command = 'cls'
     os.system(command)
-
-#print(CONSULTAR_NUMEROS_API( 'FLORIDA','MIDDAY','18-07-2022'))
-#Peticion_Post_Publicar(config.URL_API_NODE,'FLORIDA','MIDDAY',{'PICK3':'123','PICK4':'567'},'12-12-12')
-
 
 #! -------- ENVIAR NOTIFICACIONE DE LOS RESULTADOS
 

@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 from Funciones_Especiales import Validar_Fecha_Hoy, comprobar_pick3,comprobar_pick4
 
-class API():
+class API_USA_PICK():
 
     def __init__(self):
         print("Se Instancio una nueva clase DE API PARA BUSCAR NUMEROS")
@@ -53,7 +53,11 @@ class API():
                 nu_p3_1 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][1]).text;self.driver.implicitly_wait(20)
                 nu_p3_2 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][2]).text;self.driver.implicitly_wait(20)
                 nu_p3_3 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][3]).text;self.driver.implicitly_wait(20)
-                return [nu_p3_1,nu_p3_2,nu_p3_3]
+                pick3_arreglo = [nu_p3_1,nu_p3_2,nu_p3_3]
+                if(len(pick3_arreglo)==3):
+                    return pick3_arreglo
+                else:
+                    return False
             else:
                 return False
         except:
@@ -72,7 +76,11 @@ class API():
                 num_p4_2 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][2]).text;self.driver.implicitly_wait(20)
                 num_p4_3 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][3]).text;self.driver.implicitly_wait(20)
                 num_p4_4 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][4]).text;self.driver.implicitly_wait(20)
-                return [num_p4_1,num_p4_2,num_p4_3,num_p4_4]
+                pick4_arreglo = [num_p4_1,num_p4_2,num_p4_3,num_p4_4]
+                if(len(pick4_arreglo)==4):
+                    return True
+                else:
+                    return False
             else:
                 return False
         except:
