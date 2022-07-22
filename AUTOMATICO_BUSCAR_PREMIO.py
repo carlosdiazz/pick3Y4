@@ -67,7 +67,7 @@ schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_N
 
 
 
-#hora_prueba =  '20:18:10'
+hora_prueba =  '22:53:00'
 ####! BORRAR ESTO
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)

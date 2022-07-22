@@ -59,7 +59,7 @@ schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, NORTH_CAROLINA_EVEN
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, GEORGIA_NIGHT)
 #  
 ## 
-## hora_prueba =  '20:20:00'
+#hora_prueba =  '22:57:00'
 ## ###! BORRAR ESTO
 ## schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 ## schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)

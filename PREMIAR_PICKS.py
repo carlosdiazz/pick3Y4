@@ -36,7 +36,7 @@ class PREMIAR_PICKS():
         pick_3_premiar = False
         pick_4_premiar = False
         message = ''
-        for intentos in range(10):
+        for intentos in range(40):
 
             self.fecha = fecha('%d-%m-%Y') #! ? VALIDAR DATOS DESDE AQUI LA FECHA VALIDAR PREMIAR PICK #3Y PICK $4 --------------------------------------
             CONSULTA = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)

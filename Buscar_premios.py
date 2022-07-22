@@ -17,7 +17,7 @@ class Buscar_Premio():
         validar     = False
         publicar    = False
         print(f'INICIANDO BUSCADOR DE PREMIO {self.loteria} {self.sorteo}')
-        for intento in range (10):
+        for intento in range (40):
 
             self.fecha = fecha('%d-%m-%Y')
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)

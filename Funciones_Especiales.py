@@ -56,8 +56,39 @@ def DEVOLVER_ARREGLO_XPATH(datos):
 def fecha(tipo_fecha):
     return datetime.today().strftime(tipo_fecha)
 
+mesesDic = {
+    "01":'Enero',
+    "02":'Febrero',
+    "03":'Marzo',
+    "04":'Abril',
+    "05":'Mayo',
+    "06":'Junio',
+    "07":'Julio',
+    "08":'Agosto',
+    "09":'Septiembre',
+    "10":'Octubre',
+    "11":'Noviembre',
+    "12":'Diciembre'
+}
+
+diasSemanaEso = {
+    'Monday' : 'LUNES',
+    'Tuesday' : 'MARTES',
+    'Wednesday' : 'MIÉRCOLES',
+    'Thursday' : 'JUEVES',
+    'Friday' : 'VIERNES',
+    'Saturday' : 'SÁBADO',
+    'Sunday' : 'DOMINGO'
+}
+
 def Validar_Fecha_Hoy(fecha_comprobar):
 
+    ANGUILA_MANANA = 'Draw 10:00AM. '+fecha('%d/%m/%Y')
+    ANGUILA_MEDIO_DIA = 'Draw 1:00PM. '+fecha('%d/%m/%Y')
+    ANGUILA_TARDE = 'Draw 6:00PM. '+fecha('%d/%m/%Y')
+    ANGUILA_NOCHE = 'Draw 9:00PM. '+fecha('%d/%m/%Y')
+    mes_espanol=mesesDic[fecha('%m')]
+    dia_espanol=diasSemanaEso[fecha('%A')]
     fecha_dia_un_digito = fecha('%d')
     fecha_dia_un_digito=fecha_dia_un_digito.lstrip('0')
 
@@ -76,13 +107,40 @@ def Validar_Fecha_Hoy(fecha_comprobar):
     fecha('%d-%m-%Y'),
     fecha('%d/%m/%Y'),
     fecha('%Y-%m-%d'),
-
+    fecha(f'Sorteo: %d de {mes_espanol} del %Y.'),
+    fecha(f'{dia_espanol}, %d-%m-%Y'),
+    fecha('Resultados %d/%m/%Y'),
+    ANGUILA_MANANA,
+    ANGUILA_MEDIO_DIA,
+    ANGUILA_TARDE,
+    ANGUILA_NOCHE
     ]
     if fecha_comprobar in Todas_las_Fechas:
         return True
     else:
         #! AQUI TENGO QUE DEVOLVER FALSO ES UNA PRUEBA
         return False
+
+def solo_Numero(numero):
+    if(len(numero)>=2):
+        numero=numero[len(numero)-2:]
+        caracteres = ['1','2','3','4','5','6','7','8','9','0']
+        newNumero = ""
+        for i in numero:
+            if(i in caracteres):
+                newNumero+=i
+        return newNumero
+    else:
+        return numero
+
+
+def solo_undigito(numero):
+    numero=solo_Numero(numero)
+    if(len(numero) == 1):
+        return f'0{numero}'
+    else:
+        return numero
+
 
 def comprobar_pick3(arr):
     if(type(arr)==list):
