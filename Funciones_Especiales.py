@@ -4,6 +4,7 @@ from datetime import datetime
 from VARIABLES import *
 import requests
 import json
+#! ARREGLO LOTERIAS AMERICANAs
 from Datos_Loterias.FLORIDA import FLORIDA_LOTTERYUSA
 from Datos_Loterias.NEW_YORK import NEW_YORK_LOTTERYUSA
 from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_LOTTERYUSA
@@ -14,6 +15,20 @@ from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_LOTTERYUSA
 from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_LOTTERYUSA
 from Datos_Loterias.GEORGIA import GEORGIA_LOTTERYUSA
+
+#!ARREGLO LOTERIAS DOMINICANAS
+from DATOS_Loterias_Dominicana.GANAMAS import GANAMAS
+from DATOS_Loterias_Dominicana.KING_LOTTERY_DIA import KING_LOTTERY_DIA
+from DATOS_Loterias_Dominicana.KING_LOTTERY_NOCHE import KING_LOTTERY_NOCHE
+from DATOS_Loterias_Dominicana.LA_SUERTE import LA_SUERTE
+from DATOS_Loterias_Dominicana.LEIDSA import LEIDSA
+from DATOS_Loterias_Dominicana.LOTEDOM import LOTEDOM
+from DATOS_Loterias_Dominicana.LOTEKA import LOTEKA
+from DATOS_Loterias_Dominicana.NACIONAL import NACIONAL
+from DATOS_Loterias_Dominicana.PRIMERA_DIA import PRIMERA_DIA
+from DATOS_Loterias_Dominicana.PRIMERA_NOCHE import PRIMERA_NOCHE
+from DATOS_Loterias_Dominicana.REAL import REAL
+
 import config
 from config import API_KEY_MONGO_DB
 #! Aqui tengo que agregar los diferentes arreglos
@@ -47,6 +62,39 @@ def DEVOLVER_ARREGLO_XPATH(datos):
 
     elif(datos == OBJ_GA_AM or datos == OBJ_GA_PM or datos == OBJ_GA_NIGHT):
         return GEORGIA_LOTTERYUSA
+
+    elif(datos == OBJ_GANAMAS):
+        return GANAMAS
+
+    elif(datos == OBJ_KING_AM):
+        return KING_LOTTERY_DIA
+
+    elif(datos == OBJ_KING_PM):
+        return KING_LOTTERY_NOCHE
+
+    elif(datos == OBJ_LA_SUERTE):
+        return LA_SUERTE
+
+    elif(datos == OBJ_LEIDSA):
+        return LEIDSA
+
+    elif(datos == OBJ_LOTEDOM):
+        return LOTEDOM
+
+    elif(datos == OBJ_LOTEKA):
+        return LOTEKA
+
+    elif(datos == OBJ_NACIONAL):
+        return NACIONAL
+
+    elif(datos == OBJ_PRIMERA_AM):
+        return PRIMERA_DIA
+
+    elif(datos == OBJ_PRIMERA_PM):
+        return PRIMERA_NOCHE
+
+    elif(datos == OBJ_REAL):
+        return REAL
 
     else:
         print("HAY UN ERROR DESCONOCIDO")
