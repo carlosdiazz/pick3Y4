@@ -36,7 +36,7 @@ class PREMIAR_PICKS():
         pick_3_premiar = False
         pick_4_premiar = False
         message = ''
-        for intentos in range(3):
+        for intentos in range(10):
 
             self.fecha = fecha('%d-%m-%Y') #! ? VALIDAR DATOS DESDE AQUI LA FECHA VALIDAR PREMIAR PICK #3Y PICK $4 --------------------------------------
             CONSULTA = CONSULTAR_NUMEROS_API(self.loteria,self.sorteo,self.fecha)
@@ -61,11 +61,11 @@ class PREMIAR_PICKS():
                 else:
                     message = CONSULTA['MESSAGE']
                     print(message + f' INTENTOS #: {intentos}')
-                    time.sleep(1)
+                    time.sleep(60)
             else:
                 message = CONSULTA['MESSAGE']
                 print(message + f' INTENTOS #: {intentos}')
-                time.sleep(1) #! AGREGA MAS TIEMPO AQUI
+                time.sleep(60) #! AGREGA MAS TIEMPO AQUI
 
         if(pick_3_premiar == False or pick_4_premiar == False):
             message_a_enviar = f'NO SE PREMIO EN PLATAFORMA \n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
