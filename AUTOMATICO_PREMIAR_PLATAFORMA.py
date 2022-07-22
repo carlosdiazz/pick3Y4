@@ -30,8 +30,6 @@ NEW_JERSEY_EVENING          =   PREMIAR_PICKS(VARIABLES.OBJ_NJ_PM).premiar
 NORTH_CAROLINA_EVENING      =   PREMIAR_PICKS(VARIABLES.OBJ_NC_PM).premiar
 GEORGIA_NIGHT               =   PREMIAR_PICKS(VARIABLES.OBJ_GA_NIGHT).premiar
 
-hora_prueba =  '01:19:00'
-
 ###! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
 
@@ -60,28 +58,30 @@ schedule.every().day.at('00:00:00').do(run, clearConsole)
 #  schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, NORTH_CAROLINA_EVENING)
 #  schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, GEORGIA_NIGHT)
 #  
+hora_prueba =  '20:20:00'
 ###! BORRAR ESTO
-schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, GEORGIA_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, WASHINGTON_DC_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, GEORGIA_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, WASHINGTON_DC_MIDDAY)
+# schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, WASHINGTON_DC_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, FLORIDA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, NEW_YORK_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, VIRGINIA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
+schedule.every().day.at(hora_prueba).do(run, WASHINGTON_DC_EVENING)
+
+## schedule.every().day.at(hora_prueba).do(run, FLORIDA_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, NEW_YORK_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, VIRGINIA_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
+## schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
 
 
 while True:

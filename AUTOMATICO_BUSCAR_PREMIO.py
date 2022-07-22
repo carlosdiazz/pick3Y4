@@ -67,7 +67,7 @@ schedule.every().day.at('00:00:00').do(run, clearConsole)
 
 
 
-hora_prueba =  '19:08:30'
+hora_prueba =  '20:18:10'
 ###! BORRAR ESTO
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)

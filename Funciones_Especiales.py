@@ -171,7 +171,7 @@ def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
                 return {
                     "ERROR"     :   False,
                     "MESSAGE"   :   'LOS NUMEROS ESTAN EN LA BASE DATOS',
-                    'NUMEROS'   :   res['message']
+                    'NUMEROS'   :   res['message'][0]
                 }
             else:
                 #No se encontro el numero
@@ -191,7 +191,7 @@ def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
         #Fallo externo
         return  {
                     "ERROR"     :   True,
-                    "MESSAGE"   :   "HUBO UN FALLO EXTERNO EN EL EXCEPT DE LA FUNCION CONSULTAR_NUMEROS_API DE FUNCIONES ESPECIALES ",
+                    "MESSAGE"   :   "NO SE PUDO HACER LA PETICION GET",
                     'NUMEROS'   :   False
                 }
 

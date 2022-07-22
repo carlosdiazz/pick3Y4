@@ -23,7 +23,7 @@ class Buscar_Premio():
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
 
             if(COMPROBAR_QUE_NO_ESTEN['PUBLICADO'] == True):
-                message = f"LOTERIA: {self.loteria} SORTEO: {self.sorteo} FECHA: {self.fecha} ==> {COMPROBAR_QUE_NO_ESTEN['MESSAGE']}"
+                message = f"\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\n{COMPROBAR_QUE_NO_ESTEN['MESSAGE']}"
                 print(message)
                 sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
                 validar = True
