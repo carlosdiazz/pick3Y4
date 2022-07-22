@@ -119,7 +119,7 @@ OBJ_SC_PM = {
 #? ----------------------------------------
 OBJ_NC_AM = {
     'LOTERIA'       :   'NORTH CAROLINA',
-    'HORA'          :   '19:10:00',
+    'HORA'          :   '15:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD
 }

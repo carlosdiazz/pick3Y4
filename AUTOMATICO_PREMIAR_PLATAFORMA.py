@@ -59,6 +59,7 @@ schedule.every().day.at(VARIABLES.OBJ_NJ_PM['HORA']).do(run, NEW_JERSEY_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, NORTH_CAROLINA_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, GEORGIA_NIGHT)
 
+clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|----------> {fecha_actual} <----------|")
