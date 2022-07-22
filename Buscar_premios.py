@@ -98,4 +98,4 @@ class Buscar_Premio():
                 return {'STATUS': False,  'MESSAGE':message}
 
 
-Buscar_Premio(OBJ_GANAMAS).Buscar_numeros_ganadores()
+#Buscar_Premio(OBJ_GANAMAS).Buscar_numeros_ganadores()

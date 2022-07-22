@@ -42,7 +42,7 @@ OBJ_NJ_AM = {
 
 OBJ_NJ_PM = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '11:10:00',
+    'HORA'          :   '23:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD
 }
@@ -70,21 +70,21 @@ OBJ_VA_AM = {
 
 OBJ_VA_PM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '11:10:00',
+    'HORA'          :   '23:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD
 }
 #? ----------------------------------------
 OBJ_DC_AM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '14:00:00',
+    'HORA'          :   '14:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD
 }
 
 OBJ_DC_PM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '20:00:00',
+    'HORA'          :   '20:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD
 }
