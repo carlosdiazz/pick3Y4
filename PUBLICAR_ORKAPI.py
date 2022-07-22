@@ -34,7 +34,7 @@ class PUBLICAR_EN_LOTENET_PICK():
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         self.chrome_options.accept_insecure_certs=True
-        self.chrome_options.add_argument("--headless")
+        #self.chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=self.chrome_options)
         self.driver.delete_all_cookies()
         self.driver.get(self.plataforma_url)

@@ -64,41 +64,6 @@ schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)
 
-
-
-
-hora_prueba =  '22:53:00'
-####! BORRAR ESTO
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_PM)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_PM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
-#
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
