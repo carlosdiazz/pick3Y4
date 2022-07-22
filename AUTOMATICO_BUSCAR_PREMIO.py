@@ -5,7 +5,7 @@ import VARIABLES
 from Buscar_premios import Buscar_Premio
 from Funciones_Especiales import fecha, run, clearConsole
 import time
-
+from config import TIEMPO_A_BUSCAR
 
 #! ME FALTA ....  TENGO QUE ENVIAR UNA FECHA DEL SORTEO QUE BUSCO Y ESA MISMA FECHA PUBLICARALA
 #! EN VEZ DE COLOCAR LA FECHA DEL ARCHIVO API< TENMGO QUE ENVBIAR UNA FECHA A BUSCAR SOBRE TODO PARA CUANDP SE PASE DE LAS 12 DE LA NOCHE
@@ -108,4 +108,4 @@ while True:
         pass
     else:
         print(schedule.run_pending())
-    time.sleep(60)
+    time.sleep(TIEMPO_A_BUSCAR)

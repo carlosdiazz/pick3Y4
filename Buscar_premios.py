@@ -4,20 +4,21 @@ from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_E
 from API_USA_PICK import API_USA_PICK
 import time
 import config
-
+from config import TIEMPO_A_ESPERAR, INTENTOS
 #? Con esta clase Obtengo los numeros
 class Buscar_Premio():
 
     def __init__(self, Datos):
         self.loteria    = Datos['LOTERIA']
         self.sorteo     = Datos['SORTEO']
+        self.MODALIDAD  = Datos['MODALIDAD']
         self.datos      = Datos
 
     def Buscar_numeros_ganadores(self):
         validar     = False
         publicar    = False
         print(f'INICIANDO BUSCADOR DE PREMIO {self.loteria} {self.sorteo}')
-        for intento in range (40):
+        for intento in range (INTENTOS):
 
             self.fecha = fecha('%d-%m-%Y')
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(config.URL_API_NODE,self.loteria,self.sorteo,self.fecha)
@@ -43,7 +44,7 @@ class Buscar_Premio():
 
                 else:
                     print(COMPROBAR_QUE_NO_ESTEN['MESSAGE'])
-                    time.sleep(60) #! AGREGA MAS TIEMPO AQUI
+                    time.sleep(TIEMPO_A_ESPERAR)
 
 
         if(validar == False):
@@ -58,17 +59,22 @@ class Buscar_Premio():
 
     def publicar(self):
 
-        ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
-        NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
+        if(self.MODALIDAD == 'AMERICANA'):
 
-        if(NUMEROS_VALIDOS_A_PUBLICAR):
-            publicar = PETICION_POST_PUBLICAR(config.URL_API_NODE,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
-            if(publicar == True):
-                message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
-                return {'STATUS': True, 'MESSAGE':message}
+            ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
+            NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
+
+            if(NUMEROS_VALIDOS_A_PUBLICAR):
+                publicar = PETICION_POST_PUBLICAR(config.URL_API_NODE,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
+                if(publicar == True):
+                    message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
+                    return {'STATUS': True, 'MESSAGE':message}
+                else:
+                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                    return {'STATUS': False,  'MESSAGE':message}
             else:
-                message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
                 return {'STATUS': False,  'MESSAGE':message}
+
         else:
-            message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
-            return {'STATUS': False,  'MESSAGE':message}
+            print("AQUI VA EL CODIGO PARA ABUSCAR LOTERIAS DOMINICANA")

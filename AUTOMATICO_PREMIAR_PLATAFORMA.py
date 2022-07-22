@@ -5,6 +5,7 @@ import VARIABLES
 import time
 from Funciones_Especiales import run, clearConsole, fecha
 from PREMIAR_PICKS import PREMIAR_PICKS
+from config import TIEMPO_A_BUSCAR
 
 #LOTERIAS AM
 FLORIDA_MIDDAY              =   PREMIAR_PICKS(VARIABLES.OBJ_FL_AM).premiar
@@ -92,4 +93,4 @@ while True:
         pass
     else:
         print(schedule.run_pending())
-    time.sleep(60)
+    time.sleep(TIEMPO_A_BUSCAR)
