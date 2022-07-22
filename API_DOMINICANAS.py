@@ -16,7 +16,7 @@ class API_DOMINICANA():
     def Navegador(self,ARR):
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-        #self.chrome_options.add_argument("--headless")
+        self.chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=self.chrome_options)
         self.driver.delete_all_cookies()
         self.driver.get(ARR['URL'][0])
@@ -25,15 +25,15 @@ class API_DOMINICANA():
     def devolver_numeros(self, ARR):
         try:
             self.Navegador(ARR)
-            time.sleep(1) #AQUI DURO $) SEGUNDO PARA ESPERAR QUE LOS ANUNCIONS SE CIERREN EN LA SUERTE Y LEIDSA
+            time.sleep(40) #AQUI DURO $) SEGUNDO PARA ESPERAR QUE LOS ANUNCIONS SE CIERREN EN LA SUERTE Y LEIDSA
             NUMEROS = self.BUSCAR_NUMEROS(ARR)
 
             if(NUMEROS):
                 self.driver.quit()
                 return {
-                    "NU_1"   :   NUMEROS[0],
-                    "NU_2"   :   NUMEROS[1],
-                    "NU_3"   :   NUMEROS[2],
+                    "NU1"   :   NUMEROS[0],
+                    "NU2"   :   NUMEROS[1],
+                    "NU3"   :   NUMEROS[2],
                 }
             else:
                 self.driver.quit()
@@ -45,7 +45,7 @@ class API_DOMINICANA():
     def BUSCAR_NUMEROS(self,ARR):
         try:
             self.driver.get(ARR['URL'][1])
-            time.sleep(1)
+            time.sleep(40)
 
             FECHA = self.driver.find_element(By.XPATH, ARR['NUMEROS'][0]).text;self.driver.implicitly_wait(20)
             if(Validar_Fecha_Hoy(FECHA)):

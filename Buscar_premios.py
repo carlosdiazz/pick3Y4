@@ -44,7 +44,7 @@ class Buscar_Premio():
                         validar = True
                         break
                     else:
-                        print(publicar['MESSAGE']+ f'INTENTO # {intento}\n')
+                        print(publicar['MESSAGE']+ f' INTENTO # {intento}')
 
                 else:
                     print(COMPROBAR_QUE_NO_ESTEN['MESSAGE'])
@@ -71,13 +71,13 @@ class Buscar_Premio():
             if(NUMEROS_VALIDOS_A_PUBLICAR):
                 publicar = PETICION_POST_PUBLICAR(config.URL_API_NODE,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
                 if(publicar == True):
-                    message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}\n\n'
+                    message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
                     return {'STATUS': True, 'MESSAGE':message}
                 else:
-                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
                     return {'STATUS': False,  'MESSAGE':message}
             else:
-                message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
                 return {'STATUS': False,  'MESSAGE':message}
 
         else:
@@ -87,13 +87,13 @@ class Buscar_Premio():
             if(NUMEROS_VALIDOS_A_PUBLICAR):
                 publicar = PETICION_POST_PUBLICAR(config.URL_API_NODE,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
                 if(publicar == True):
-                    message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}\n\n'
+                    message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
                     return {'STATUS': True, 'MESSAGE':message}
                 else:
-                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
                     return {'STATUS': False,  'MESSAGE':message}
             else:
-                message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}\n\n"
+                message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
                 return {'STATUS': False,  'MESSAGE':message}
 
 
