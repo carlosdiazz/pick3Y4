@@ -5,7 +5,7 @@ import VARIABLES
 from Buscar_premios import Buscar_Premio
 from Funciones_Especiales import fecha, run
 import time
-from config import TIEMPO_A_BUSCAR
+from config import TIEMPO_A_BUSCAR, hora_prueba
 from PREMIAR_PICKS import PREMIAR_PICKS
 
 
@@ -67,9 +67,6 @@ VIRGINIA_EVENING            =   PREMIAR_PICKS(VARIABLES.OBJ_VA_PM).premiar
 NEW_JERSEY_EVENING          =   PREMIAR_PICKS(VARIABLES.OBJ_NJ_PM).premiar
 NORTH_CAROLINA_EVENING      =   PREMIAR_PICKS(VARIABLES.OBJ_NC_PM).premiar
 GEORGIA_NIGHT               =   PREMIAR_PICKS(VARIABLES.OBJ_GA_NIGHT).premiar
-
-
-hora_prueba =  '15:43:00' ##! HORARIO DE BUSCAR NUMEROS
 
 
 ####! AQUI PRUEBO BUSCAR LOS NUMEROS AUTOMATICO
