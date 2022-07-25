@@ -56,7 +56,7 @@ OBJ_CT_AM = {
 
 OBJ_CT_PM = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '22:50:00',
+    'HORA'          :   '23:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD
 }
@@ -70,7 +70,7 @@ OBJ_VA_AM = {
 
 OBJ_VA_PM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '23:10:00',
+    'HORA'          :   '23:20:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD
 }

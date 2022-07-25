@@ -69,9 +69,6 @@ NORTH_CAROLINA_EVENING      =   PREMIAR(VARIABLES.OBJ_NC_PM).premiar
 GEORGIA_NIGHT               =   PREMIAR(VARIABLES.OBJ_GA_NIGHT).premiar
 
 
-hora_prueba =  '15:43:00' ##! HORARIO DE BUSCAR NUMEROS
-
-
 ####! AQUI PRUEBO BUSCAR LOS NUMEROS AUTOMATICO
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)

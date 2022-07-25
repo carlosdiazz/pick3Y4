@@ -45,7 +45,7 @@ class Buscar_Premio():
                         break
                     else:
                         print(publicar['MESSAGE']+ f' INTENTO # {intento}')
-
+                        time.sleep(TIEMPO_A_ESPERAR)
                 else:
                     print(COMPROBAR_QUE_NO_ESTEN['MESSAGE'])
                     time.sleep(TIEMPO_A_ESPERAR)
