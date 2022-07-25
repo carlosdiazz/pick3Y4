@@ -76,7 +76,7 @@ class Buscar_Premio():
         if(NUMEROS_VALIDOS_A_PUBLICAR):
             publicar = PETICION_POST_PUBLICAR(self.URI_PETICION,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
             if(publicar == True):
-                message = f'SE PUBLICO BIEN \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
+                message = f'SE PUBLICO BIEN EN B.D \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
                 return {'STATUS': True, 'MESSAGE':message}
             else:
                 message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
