@@ -72,7 +72,7 @@ class Buscar_Premio():
 
         else:
             ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
-            NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH)
+            NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
 
         if(NUMEROS_VALIDOS_A_PUBLICAR):
 

@@ -22,11 +22,11 @@ class API_DOMINICANA():
         self.driver.get(ARR['URL'][0])
         self.driver.set_page_load_timeout(360)
 
-    def devolver_numeros(self, ARR):
+    def devolver_numeros(self, ARR, SORTEO):
         try:
             self.Navegador(ARR)
             time.sleep(40) #AQUI DURO $) SEGUNDO PARA ESPERAR QUE LOS ANUNCIONS SE CIERREN EN LA SUERTE Y LEIDSA
-            NUMEROS = self.BUSCAR_NUMEROS(ARR)
+            NUMEROS = self.BUSCAR_NUMEROS(ARR, SORTEO)
 
             if(NUMEROS):
                 self.driver.quit()
@@ -42,7 +42,7 @@ class API_DOMINICANA():
             print('Paso una EXCEPT en el archivo API_DOMINICANA_PICk')
             return False
 
-    def BUSCAR_NUMEROS(self,ARR):
+    def BUSCAR_NUMEROS(self,ARR, SORTEO):
         try:
             self.driver.get(ARR['URL'][1])
             time.sleep(40)
@@ -56,6 +56,20 @@ class API_DOMINICANA():
                 NUMERO_1 = solo_undigito(NUMERO_1)
                 NUMERO_2 = solo_undigito(NUMERO_2)
                 NUMERO_3 = solo_undigito(NUMERO_3)
+
+                # ASI MANJEO LA LOTERIA DE ANGUILA QUE VIENE EN UN MISMO LUGAR
+                if(SORTEO == 'ANGUILLA AM'):
+                    if(not FECHA.startswith('Draw 10:00AM.')):
+                        return False
+                elif(SORTEO == 'ANGUILLA MEDIO DIA'):
+                    if(not FECHA.startswith('Draw 1:00PM.')):
+                        return False
+                elif(SORTEO == 'ANGUILLA TARDE'):
+                    if(not FECHA.startswith('Draw 6:00PM.')):
+                        return False
+                elif(SORTEO == 'ANGUILLA PM'):
+                    if(not FECHA.startswith('Draw 9:00PM.')):
+                        return False
 
                 #! FUNCION para impedir que me publique 00 00 00, es un error de ANGUILA ------------------------------
                 if(NUMERO_1 == '00' and NUMERO_2 == '00' and NUMERO_3 == '00'):

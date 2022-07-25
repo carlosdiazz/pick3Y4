@@ -56,6 +56,11 @@ LOTTERY_LOTEKA                  =   Buscar_Premio(VARIABLES.OBJ_LOTEKA).Buscar_n
 
 LOTTERY_LEIDSA                  =   Buscar_Premio(VARIABLES.OBJ_LEIDSA).Buscar_numeros_ganadores
 
+LOTTERY_ANGUILLA_AM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_AM).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_MD             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_MD).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_TARDE          =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_TARDE).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Buscar_numeros_ganadores
+
 #LOTERIAS DOMINICANA ------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run,LOTTERY_PRIMERA_AM )
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, LOTTERY_PRIMERA_PM)
@@ -68,6 +73,10 @@ schedule.every().day.at(VARIABLES.OBJ_GANAMAS['HORA']).do(run,LOTTERY_GANAMAS )
 schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run,LOTTERY_NACIONAL )
 schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, LOTTERY_LOTEKA)
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run,LOTTERY_LEIDSA )
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_AM['HORA']).do(run,LOTTERY_ANGUILLA_AM )
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_MD['HORA']).do(run,LOTTERY_ANGUILLA_MD )
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run,LOTTERY_ANGUILLA_TARDE )
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run,LOTTERY_ANGUILLA_PM )
 
 
 ##! HORARIO DE BUSCAR NUMEROS

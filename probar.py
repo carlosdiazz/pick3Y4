@@ -3,7 +3,7 @@
 import schedule
 import VARIABLES
 from Buscar_premios import Buscar_Premio
-from Funciones_Especiales import fecha, run
+from Funciones_Especiales import fecha, run, clearConsole
 import time
 from config import TIEMPO_A_BUSCAR, hora_prueba
 from PREMIAR_PICKS import PREMIAR
@@ -56,6 +56,11 @@ LOTTERY_LOTEKA                  =   Buscar_Premio(VARIABLES.OBJ_LOTEKA).Buscar_n
 
 LOTTERY_LEIDSA                  =   Buscar_Premio(VARIABLES.OBJ_LEIDSA).Buscar_numeros_ganadores
 
+LOTTERY_ANGUILLA_AM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_AM).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_MD             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_MD).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_TARDE          =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_TARDE).Buscar_numeros_ganadores
+LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Buscar_numeros_ganadores
+
 #LOTERIAS DOMINICANA BUSCAR NUMEROS------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
 #schedule.every().day.at(hora_prueba).do(run, LOTTERY_PRIMERA_PM)
@@ -69,8 +74,10 @@ LOTTERY_LEIDSA                  =   Buscar_Premio(VARIABLES.OBJ_LEIDSA).Buscar_n
 #schedule.every().day.at(hora_prueba).do(run, LOTTERY_LOTEKA)
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_LEIDSA )
 
-
-
+#schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )
+#schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_MD )
+#schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_TARDE )
+#schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_PM )
 
 
 #! -------------------------------------------------------------------------------------------------
@@ -146,7 +153,7 @@ GEORGIA_NIGHT               =   PREMIAR(VARIABLES.OBJ_GA_NIGHT).premiar
 ## schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_EVENING)
 ## schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
 ## schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
-
+clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|----------> {fecha_actual} <----------|")

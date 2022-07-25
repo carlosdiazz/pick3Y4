@@ -28,6 +28,7 @@ from DATOS_Loterias_Dominicana.NACIONAL import NACIONAL
 from DATOS_Loterias_Dominicana.PRIMERA_DIA import PRIMERA_DIA
 from DATOS_Loterias_Dominicana.PRIMERA_NOCHE import PRIMERA_NOCHE
 from DATOS_Loterias_Dominicana.REAL import REAL
+from DATOS_Loterias_Dominicana.ANGUILA import ANGUILA
 
 import config
 from config import API_KEY_MONGO_DB
@@ -96,8 +97,11 @@ def DEVOLVER_ARREGLO_XPATH(datos):
     elif(datos == OBJ_REAL):
         return REAL
 
+    elif(datos == OBJ_ANGUILLA_AM or datos == OBJ_ANGUILLA_MD or datos == OBJ_ANGUILLA_TARDE or datos == OBJ_ANGUILLA_PM):
+        return ANGUILA
+
     else:
-        print("HAY UN ERROR DESCONOCIDO")
+        print("HAY UN ERROR DESCONOCIDO EN LA FUNCION DE DEVOLVER_ARREGLO_XPATH del archivo de FUNCIONES ESPECIALES")
         return False
 
 

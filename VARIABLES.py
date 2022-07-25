@@ -240,7 +240,7 @@ OBJ_NACIONAL = {
 OBJ_PRIMERA_AM = {
     'LOTERIA'       :   'PRIMERA',
     'SORTEO'        :   'PRIMERA DIA',
-    'HORA'          :   '12:30:00',
+    'HORA'          :   '12:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
@@ -257,6 +257,38 @@ OBJ_REAL = {
     'LOTERIA'       :   'REAL',
     'SORTEO'        :   'REAL',
     'HORA'          :   '13:00:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+#? ----------------------------------------
+OBJ_ANGUILLA_AM = {
+    'LOTERIA'       :   'ANGUILLA',
+    'SORTEO'        :   'ANGUILLA AM',
+    'HORA'          :   '10:00:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_ANGUILLA_MD = {
+    'LOTERIA'       :   'ANGUILLA',
+    'SORTEO'        :   'ANGUILLA MEDIO DIA',
+    'HORA'          :   '13:00:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_ANGUILLA_TARDE = {
+    'LOTERIA'       :   'ANGUILLA',
+    'SORTEO'        :   'ANGUILLA TARDE',
+    'HORA'          :   '18:00:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_ANGUILLA_PM = {
+    'LOTERIA'       :   'ANGUILLA',
+    'SORTEO'        :   'ANGUILLA PM',
+    'HORA'          :   '21:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
