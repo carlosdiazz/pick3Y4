@@ -1,7 +1,7 @@
 import time
 from VARIABLES import MODALIDAD, MODALIDAD_RD
 from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo, sendNotification, Convertir_nombre_loteria, Convertir_nombre_sorteo
-from PUBLICAR_ORKAPI import PUBLICAR_EN_LOTENET_PICK
+from PUBLICAR_EN_LOTENET import PUBLICAR_EN_LOTENET
 from config import BOT_PREMIAR_MEGALOTTERY as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
 class PREMIAR():
 
@@ -21,7 +21,7 @@ class PREMIAR():
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK3'],
                 'MODALIDAD'         :   self.MODALIDAD
                 }
-        return PUBLICAR_EN_LOTENET_PICK(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(OBJ_3)
+        return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(OBJ_3)
 
 
     def PUBLICAR_PICK4(self):
@@ -32,7 +32,7 @@ class PREMIAR():
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK4'],
                 'MODALIDAD'         :   self.MODALIDAD
             }
-        return PUBLICAR_EN_LOTENET_PICK(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(arrp4)
+        return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(arrp4)
 
 
     def PUBLICAR_TRADICIONALES(self):
@@ -44,7 +44,7 @@ class PREMIAR():
                 'MODALIDAD'         :   self.MODALIDAD
             }
         print('AQUI MANDO A PUBLICAR TRADICIONALES')
-        return PUBLICAR_EN_LOTENET_PICK(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(tradicionales)
+        return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(tradicionales)
 
 
     def premiar(self): #Controlar desde aqui la diferente manera de premiar loteria Dominicana y Americana

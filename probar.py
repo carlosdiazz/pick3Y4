@@ -6,7 +6,7 @@ from Buscar_premios import Buscar_Premio
 from Funciones_Especiales import fecha, run, clearConsole
 import time
 from config import TIEMPO_A_BUSCAR, hora_prueba
-from PREMIAR_PICKS import PREMIAR
+from PREMIAR import PREMIAR
 from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_DEV, PLATAFORMA_MEGA, USER_DESARROLLO, USER_MEGALOTTERY, PLATAFORMA_DEV
 
 

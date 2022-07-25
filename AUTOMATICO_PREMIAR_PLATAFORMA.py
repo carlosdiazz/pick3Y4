@@ -4,7 +4,7 @@ import schedule
 import VARIABLES
 import time
 from Funciones_Especiales import run, clearConsole, fecha
-from PREMIAR_PICKS import PREMIAR
+from PREMIAR import PREMIAR
 from config import TIEMPO_A_BUSCAR
 
 #LOTERIAS AM
@@ -75,7 +75,7 @@ schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLA
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
-    print(f"|----------> PREMIAR PLATAFORMA {fecha_actual} <----------|")
+    print(f"|---------- PREMIAR PLATAFORMA -----> {fecha_actual} <----------|")
     saber = schedule.run_pending()
     if(saber == None):
         pass
