@@ -5,7 +5,7 @@ import VARIABLES
 from Buscar_premios import Buscar_Premio
 from Funciones_Especiales import fecha, run
 import time
-from config import TIEMPO_A_BUSCAR
+from config import TIEMPO_A_BUSCAR, hora_prueba
 from PREMIAR_PICKS import PREMIAR
 
 
@@ -36,7 +36,39 @@ LOTERY_GEORGIA_PM               =   Buscar_Premio(VARIABLES.OBJ_GA_PM).Buscar_nu
 LOTERY_GEORGIA_NIGHT            =   Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numeros_ganadores
 
 #LOTERIAS DOMINICANA AM ------------------------------------------------------------- BUSCAR NUMEROS
-#LOTERY_
+#LOTERIAS DOMINICANA --------------------------------------------------------
+
+LOTTERY_PRIMERA_AM              =   Buscar_Premio(VARIABLES.OBJ_PRIMERA_AM).Buscar_numeros_ganadores
+LOTTERY_PRIMERA_PM              =   Buscar_Premio(VARIABLES.OBJ_PRIMERA_PM).Buscar_numeros_ganadores
+
+LOTTERY_KING_LOTTERY_AM         =   Buscar_Premio(VARIABLES.OBJ_KING_AM).Buscar_numeros_ganadores
+LOTTERY_KING_LOTTERY_PM         =   Buscar_Premio(VARIABLES.OBJ_KING_PM).Buscar_numeros_ganadores
+
+LOTTERY_LA_SUERTE               =   Buscar_Premio(VARIABLES.OBJ_LA_SUERTE).Buscar_numeros_ganadores
+
+LOTTERY_REAL                    =   Buscar_Premio(VARIABLES.OBJ_REAL).Buscar_numeros_ganadores
+LOTTERY_LOTEDOM                 =   Buscar_Premio(VARIABLES.OBJ_LOTEDOM).Buscar_numeros_ganadores
+
+LOTTERY_GANAMAS                 =   Buscar_Premio(VARIABLES.OBJ_GANAMAS).Buscar_numeros_ganadores
+LOTTERY_NACIONAL                =   Buscar_Premio(VARIABLES.OBJ_NACIONAL).Buscar_numeros_ganadores
+
+LOTTERY_LOTEKA                  =   Buscar_Premio(VARIABLES.OBJ_LOTEKA).Buscar_numeros_ganadores
+
+LOTTERY_LEIDSA                  =   Buscar_Premio(VARIABLES.OBJ_LEIDSA).Buscar_numeros_ganadores
+
+#LOTERIAS DOMINICANA BUSCAR NUMEROS------------------------------------------------------
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_PRIMERA_PM)
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_AM)
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_PM)
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_LA_SUERTE)
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_NACIONAL )
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_LOTEKA)
+schedule.every().day.at(hora_prueba).do(run,LOTTERY_LEIDSA )
+
 
 
 

@@ -167,7 +167,7 @@ def Validar_Fecha_Hoy(fecha_comprobar):
         return True
     else:
         #! AQUI TENGO QUE DEVOLVER FALSO ES UNA PRUEBA
-        return False
+        return True
 
 def solo_Numero(numero):
     if(len(numero)>=2):
@@ -267,7 +267,7 @@ def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
 
 def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
     try:
-        urlAPI = config.URL_API_NODE
+        urlAPI = config.URL_API_NODE_LAMERICANA
         url = f'{urlAPI}?loteria={loteria}&sorteo={sorteo}&fecha={fecha}'
         r=requests.get(url)
         if(r.status_code == 200):
