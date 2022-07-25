@@ -3,11 +3,12 @@ from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo, sen
 from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA, user_desarrollo
 from PUBLICAR_ORKAPI import PUBLICAR_EN_LOTENET_PICK
 from config import BOT_PREMIAR_MEGALOTTERY as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR
-class PREMIAR_PICKS():
+class PREMIAR():
 
     def __init__(self, obj):
         self.loteria            =   obj['LOTERIA']
         self.sorteo             =   obj['SORTEO']
+        print('SE Instancio una clase Para premiar PICKS ---')
 
     def PUBLICAR_PICK3(self):
         OBJ_3 = {
@@ -29,7 +30,7 @@ class PREMIAR_PICKS():
         return PUBLICAR_EN_LOTENET_PICK(user_desarrollo, PLATAFORMA_MEGA ).publicar(arrp4)
 
 
-    def premiar(self):
+    def premiar(self): #COntrolar desde aqui la diferente manera de premiar loteria dominicana y amaericana
 
         print(f'SE ESTA INICIALIZANDO LA PREMIACION DE PLATAFORMAS PARA {self.loteria} {self.sorteo}')
         #? Con esta funcion buscare los numeros ganadores

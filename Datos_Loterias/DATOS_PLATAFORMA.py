@@ -7,6 +7,9 @@ Input_Loteria               =   '/html/body/div[2]/div/div/div/div[2]/div[1]/div
 Input_Sorteo                =   '/html/body/div[2]/div/div/div/div[2]/div[1]/div[2]/div/table/thead/tr[2]/th[4]/div/input'
 Seleccionar_Loteria         =   '/html/body/div[2]/div/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr[1]/td[1]'
 Input_premio                =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div/div/div[2]/div/table/tbody/tr/td[2]/div/input'
+Input_premio_Nu1            =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[1]/td[2]/div/input'
+Input_premio_Nu2            =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[2]/td[2]/div/input'
+Input_premio_Nu3            =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div/div/div[2]/div/table/tbody/tr[3]/td[2]/div/input'
 Boton_Premiar               =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[2]/div/button'
 Loteria_que_se_selecciono   =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div[3]/form/div[1]/div/div/div/div/div[1]/div/h4'
 Input_fecha                 =   '/html/body/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div[3]/input'
@@ -23,7 +26,10 @@ PLATAFORMA_DEV = {
     'Input_premio'              :   Input_premio,
     'Boton_Premiar'             :   Boton_Premiar,
     'Loteria_que_se_selecciono' :   Loteria_que_se_selecciono,
-    'Input_fecha'               :   Input_fecha
+    'Input_fecha'               :   Input_fecha,
+    'Input_premio_Nu1'          :   Input_premio_Nu1,
+    'Input_premio_Nu2'          :   Input_premio_Nu2,
+    'Input_premio_Nu3'          :   Input_premio_Nu3
 
 }
 
@@ -39,7 +45,10 @@ PLATAFORMA_MEGA = {
     'Input_premio'              :   Input_premio,
     'Boton_Premiar'             :   Boton_Premiar,
     'Loteria_que_se_selecciono' :   Loteria_que_se_selecciono,
-    'Input_fecha'               :   Input_fecha
+    'Input_fecha'               :   Input_fecha,
+    'Input_premio_Nu1'          :   Input_premio_Nu1,
+    'Input_premio_Nu2'          :   Input_premio_Nu2,
+    'Input_premio_Nu3'          :   Input_premio_Nu3
 
 }
 
