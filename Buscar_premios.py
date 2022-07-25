@@ -1,6 +1,6 @@
 # ESTE ARCHIVO ES QUIEN BUSCA LOS NUMEROS GANADORES VARIAS VECES HASTA ENCONTRARLO Y PUBLICARLO EN MONGODB
 from VARIABLES import MODALIDAD, MODALIDAD_RD
-from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification
+from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification, convertir_a_DOMINICANO
 from API_USA_PICK import API_USA_PICK
 from API_DOMINICANAS import API_DOMINICANA
 import time
@@ -14,6 +14,7 @@ class Buscar_Premio():
         self.sorteo     = Datos['SORTEO']
         self.MODALIDAD  = Datos['MODALIDAD']
         self.datos      = Datos
+        self.mezclada   = Datos['MEZCLADA']
 
     def Buscar_numeros_ganadores(self):
         print(f'INICIANDO BUSCADOR DE PREMIO {self.loteria} {self.sorteo}')
@@ -74,13 +75,25 @@ class Buscar_Premio():
             NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH)
 
         if(NUMEROS_VALIDOS_A_PUBLICAR):
-            publicar = PETICION_POST_PUBLICAR(self.URI_PETICION,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
-            if(publicar == True):
-                message = f'SE PUBLICO BIEN EN B.D \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
-                return {'STATUS': True, 'MESSAGE':message}
+
+            if(self.mezclada):
+                publicar_BD_AMERICANA = PETICION_POST_PUBLICAR(config.URL_API_NODE_LAMERICANA,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
+                publicar_BD_DOMINICANA = PETICION_POST_PUBLICAR(config.URL_API_NODE_LDOMINICANA,self.loteria,self.sorteo,convertir_a_DOMINICANO(NUMEROS_VALIDOS_A_PUBLICAR),self.fecha)
+                if(publicar_BD_AMERICANA == True and publicar_BD_DOMINICANA == True):
+                    message = f'SE PUBLICO BIEN EN B.D \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
+                    return {'STATUS': True, 'MESSAGE':message}
+                else:
+                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
+                    return {'STATUS': False,  'MESSAGE':message}
+
             else:
-                message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
-                return {'STATUS': False,  'MESSAGE':message}
+                publicar = PETICION_POST_PUBLICAR(self.URI_PETICION,self.loteria,self.sorteo,NUMEROS_VALIDOS_A_PUBLICAR,self.fecha)
+                if(publicar == True):
+                    message = f'SE PUBLICO BIEN EN B.D \n\nLoteria: {self.loteria} \n\nSorteo: {self.sorteo} \n\nNUMEROS GANADORES: {NUMEROS_VALIDOS_A_PUBLICAR}'
+                    return {'STATUS': True, 'MESSAGE':message}
+                else:
+                    message = f"NO SE PUDO PUBLICAR EN NODE\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
+                    return {'STATUS': False,  'MESSAGE':message}
         else:
             message = f"NO SE ENCONTRARON EN LA PAGINA OFICIALES LOS NUMEROS PARA\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo}"
             return {'STATUS': False,  'MESSAGE':message}

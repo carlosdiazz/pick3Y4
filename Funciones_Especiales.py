@@ -167,7 +167,7 @@ def Validar_Fecha_Hoy(fecha_comprobar):
         return True
     else:
         #! AQUI TENGO QUE DEVOLVER FALSO ES UNA PRUEBA
-        return True
+        return False
 
 def solo_Numero(numero):
     if(len(numero)>=2):
@@ -245,19 +245,25 @@ def VALIDAR_QUE_NO_EXISTAN(url,loteria,sorteo,fecha):
 
 def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
     try:
-        url = f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}'
-        headers = { 'Content-Type': 'application/json'}
-        body= json.dumps({
-            "loteria": Loteria,
-            "sorteo":Sorteo,
-            'numeros_ganadores':Numeros_ganadores,
-            "fecha" : Fecha,
-            "agregado_por": 'BOT'
-        })
+        saber_publicado = CONSULTAR_NUMEROS_API(url,Loteria,Sorteo,Fecha)
 
-        Peticion_POST=requests.post(url, headers=headers, data= body)
-        if(Peticion_POST.status_code == 201):
-            return True
+        if(saber_publicado['MESSAGE'] == 'AUN EL NUMERO NO ESTA PUBLICADO EN LA BASE DE DATOS'):
+
+            url = f'{url}?loteria={Loteria}&sorteo={Sorteo}&fecha={Fecha}'
+            headers = { 'Content-Type': 'application/json'}
+            body= json.dumps({
+                "loteria": Loteria,
+                "sorteo":Sorteo,
+                'numeros_ganadores':Numeros_ganadores,
+                "fecha" : Fecha,
+                "agregado_por": 'BOT'
+            })
+
+            Peticion_POST=requests.post(url, headers=headers, data= body)
+            if(Peticion_POST.status_code == 201):
+                return True
+            else:
+                return False
         else:
             return False
     except:
@@ -265,9 +271,8 @@ def PETICION_POST_PUBLICAR(url, Loteria, Sorteo, Numeros_ganadores, Fecha):
         return False
 
 
-def CONSULTAR_NUMEROS_API(loteria,sorteo,fecha):
+def CONSULTAR_NUMEROS_API(urlAPI, loteria,sorteo,fecha):
     try:
-        urlAPI = config.URL_API_NODE_LAMERICANA
         url = f'{urlAPI}?loteria={loteria}&sorteo={sorteo}&fecha={fecha}'
         r=requests.get(url)
         if(r.status_code == 200):
@@ -363,3 +368,10 @@ def sendNotification(message,token ):
         print("NO SE PUEDO ENVIAR LA NOTIFICACION DE TELEGRAM")
         print('-----------------------------------------------------------------------')
         return False
+
+def convertir_a_DOMINICANO(obj):
+    return{
+        'NU1'   :   obj['PICK3'][1:3],
+        'NU2'   :   obj['PICK4'][0:2],
+        'NU3'   :   obj['PICK4'][2:4]
+    }

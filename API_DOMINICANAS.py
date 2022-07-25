@@ -69,5 +69,3 @@ class API_DOMINICANA():
                 return False
         except:
             return False
-
-#print(API_DOMINICANA().devolver_numeros(LOTEKA))
