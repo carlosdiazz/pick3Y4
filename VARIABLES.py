@@ -2,8 +2,8 @@
 #?SI MEZCLADA ES TRUE, MEZCLARA LAS LOTERIAS AMERICANA EN DOMINICANA TAMBIEN
 EVENING         =   'EVENING'
 MIDDAY          =   'MIDDAY'
-MODALIDAD       =   'AMERICANA'
-MODALIDAD_RD    =   'DOMINICANA'
+MODALIDAD       =   'AMERICANA'  #Esta variable la uso para identificar en varias parte del codigo que esta loteria es Pick3 y Pick4
+MODALIDAD_RD    =   'DOMINICANA' #Esta variable la uso para identificar en varias parte del codigo que esta loteria es Dominicana
 
 #? ----------------------------------------
 OBJ_FL_AM = {

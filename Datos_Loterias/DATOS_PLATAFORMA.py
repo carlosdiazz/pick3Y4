@@ -15,6 +15,7 @@ Loteria_que_se_selecciono   =   '/html/body/div[2]/div/div/div/div[2]/div[2]/div
 Input_fecha                 =   '/html/body/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div[3]/input'
 
 PLATAFORMA_DEV = {
+    'NAME'                      :   'DESARROLLO',
     'URL'                       :   'https://192.168.70.106/',
     "URL_PREMIOS"               :   URL_PREMIOS,
     "Input_User"                :   Input_User,
@@ -34,6 +35,7 @@ PLATAFORMA_DEV = {
 }
 
 PLATAFORMA_MEGA = {
+    'NAME'                      :   'MEGALOTTERY',
     'URL'                       :   'https://admin.megalottery.cc/',
     "URL_PREMIOS"               :   URL_PREMIOS,
     "Input_User"                :   Input_User,
@@ -52,7 +54,37 @@ PLATAFORMA_MEGA = {
 
 }
 
-user_desarrollo = {
+PLATAFORMA_RAPI = {
+    'NAME'                      :   'RAPIDITA',
+    'URL'                       :   'http://admin.larapidita.com.do/',
+    "URL_PREMIOS"               :   URL_PREMIOS,
+    "Input_User"                :   Input_User,
+    "Input_Password"            :   Input_Password,
+    "Boton_Login"               :   boton_Login,
+    "Input_Loteria"             :   Input_Loteria,
+    "Input_Sorteo"              :   Input_Sorteo,
+    'Seleccionar_Loteria'       :   Seleccionar_Loteria,
+    'Input_premio'              :   Input_premio,
+    'Boton_Premiar'             :   Boton_Premiar,
+    'Loteria_que_se_selecciono' :   Loteria_que_se_selecciono,
+    'Input_fecha'               :   Input_fecha,
+    'Input_premio_Nu1'          :   Input_premio_Nu1,
+    'Input_premio_Nu2'          :   Input_premio_Nu2,
+    'Input_premio_Nu3'          :   Input_premio_Nu3
+
+}
+
+USER_MEGALOTTERY = {
+    'USER':'bot@pick',
+    'PASS':'951951'
+}
+
+USER_DESARROLLO = {
+    'USER':'bot@pick',
+    'PASS':'951951'
+}
+
+USER_RAPIDITA = {
     'USER':'bot@pick',
     'PASS':'951951'
 }

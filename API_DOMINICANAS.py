@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 from Funciones_Especiales import Validar_Fecha_Hoy, solo_undigito
 
-class API_DOMINICANA():
+class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
 
     def __init__(self):
         print("Se Instancio una nueva clase DE API DOMINICANAS PARA BUSCAR NUMEROS")

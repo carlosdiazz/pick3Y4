@@ -30,7 +30,6 @@ from DATOS_Loterias_Dominicana.PRIMERA_NOCHE import PRIMERA_NOCHE
 from DATOS_Loterias_Dominicana.REAL import REAL
 from DATOS_Loterias_Dominicana.ANGUILA import ANGUILA
 
-import config
 from config import API_KEY_MONGO_DB
 #! Aqui tengo que agregar los diferentes arreglos
 def DEVOLVER_ARREGLO_XPATH(datos):
@@ -379,3 +378,25 @@ def convertir_a_DOMINICANO(obj):
         'NU2'   :   obj['PICK4'][0:2],
         'NU3'   :   obj['PICK4'][2:4]
     }
+
+#? AGREGAR LOS DEMAS NOMBRES A CAMBIAR
+def Convertir_nombre_sorteo(namePlataforma,sorteo):
+
+    if(namePlataforma == 'RAPIDITA'):
+        if(sorteo == OBJ_PRIMERA_PM['SORTEO']):
+            return 'NOCHE'
+        else:
+            return sorteo
+    else:
+        return sorteo
+
+#? AGREGAR LOS DEMAS NOMBRES A CAMBIAR
+def Convertir_nombre_loteria(namePlataforma,loteria):
+
+    if(namePlataforma == 'RAPIDITA'):
+        if(loteria == OBJ_PRIMERA_PM['LOTERIA']):
+            return '12M'
+        else:
+            return loteria
+    else:
+        return loteria

@@ -8,7 +8,6 @@ import time
 from config import TIEMPO_A_BUSCAR
 
 #! ME FALTA ....  TENGO QUE ENVIAR UNA FECHA DEL SORTEO QUE BUSCO Y ESA MISMA FECHA PUBLICARALA
-#! EN VEZ DE COLOCAR LA FECHA DEL ARCHIVO API< TENMGO QUE ENVBIAR UNA FECHA A BUSCAR SOBRE TODO PARA CUANDP SE PASE DE LAS 12 DE LA NOCHE
 
 #LOTERIAS AM ----------------------------------------------------------------
 
@@ -110,7 +109,7 @@ schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_N
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
-    print(f"|----------> {fecha_actual} <----------|")
+    print(f"|----------> BUSCAR PREMIO {fecha_actual} <----------|")
     saber = schedule.run_pending()
     if(saber == None):
         pass
