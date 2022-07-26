@@ -128,7 +128,7 @@ OBJ_SC_AM = {
 
 OBJ_SC_PM = {
     'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '19:10:00',
+    'HORA'          :   '19:20:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False

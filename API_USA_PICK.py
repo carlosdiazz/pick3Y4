@@ -11,7 +11,7 @@ from Funciones_Especiales import Validar_Fecha_Hoy, comprobar_pick3,comprobar_pi
 class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
 
     def __init__(self):
-        print("Se Instancio una nueva clase DE API PARA BUSCAR NUMEROS")
+        print("Se Instancio una nueva clase DE API AMERICANOS PARA BUSCAR NUMEROS")
 
     def Navegador(self,ARR):
         self.chrome_options = webdriver.ChromeOptions()

@@ -6,8 +6,8 @@ from config import BOT_PREMIAR_MEGALOTTERY as BOT_MEGA, INTENTOS, TIEMPO_A_ESPER
 class PREMIAR():
 
     def __init__(self, obj, PLATAFORMA, USER):
-        self.loteria            =   Convertir_nombre_loteria(PLATAFORMA['NAME'],obj['LOTERIA'])
-        self.sorteo             =   Convertir_nombre_sorteo(PLATAFORMA['NAME'], obj['SORTEO'])
+        self.loteria            =   obj['LOTERIA']
+        self.sorteo             =   obj['SORTEO']
         self.MODALIDAD          =   obj['MODALIDAD']
         self.USER_PLATAFORMA    =   USER
         self.PLATAFORMA         =   PLATAFORMA
@@ -37,9 +37,9 @@ class PREMIAR():
 
     def PUBLICAR_TRADICIONALES(self):
         tradicionales = {
-                'loteria'           :   self.loteria,
+                'loteria'           :   Convertir_nombre_loteria(self.PLATAFORMA['NAME'],self.loteria),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   self.sorteo,
+                "sorteo"            :   Convertir_nombre_sorteo(self.PLATAFORMA['NAME'], self.sorteo),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores'],
                 'MODALIDAD'         :   self.MODALIDAD
             }
@@ -94,7 +94,7 @@ class PREMIAR():
                             premios_dominicanos = self.PUBLICAR_TRADICIONALES()
 
                         if(premios_dominicanos):
-                            message = f'SE PREMIO CORRECTAMENTE \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha}'
+                            message = f'SE PREMIO CORRECTAMENTE\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha}'
                             print(message)
                             sendNotification(message, BOT_MEGA['TOKEN'] )
                             break
@@ -113,11 +113,11 @@ class PREMIAR():
 
         if(self.MODALIDAD == MODALIDAD):
             if(pick_3_premiar == False or pick_4_premiar == False):
-                message_a_enviar = f'NO SE PREMIO EN PLATAFORMA \n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
+                message_a_enviar = f'NO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
                 sendNotification(message_a_enviar, BOT_MEGA['TOKEN'])
 
         elif(self.MODALIDAD == MODALIDAD_RD):
             if(premios_dominicanos == False):
-                message_a_enviar = f'NO SE PREMIO EN PLATAFORMA \n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
+                message_a_enviar = f'NO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
                 sendNotification(message_a_enviar, BOT_MEGA['TOKEN'])
 

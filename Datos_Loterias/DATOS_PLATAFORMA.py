@@ -30,7 +30,8 @@ PLATAFORMA_DEV = {
     'Input_fecha'               :   Input_fecha,
     'Input_premio_Nu1'          :   Input_premio_Nu1,
     'Input_premio_Nu2'          :   Input_premio_Nu2,
-    'Input_premio_Nu3'          :   Input_premio_Nu3
+    'Input_premio_Nu3'          :   Input_premio_Nu3,
+    'TOKEN_BOT_TELEGRAM'        :   ''
 
 }
 
@@ -50,7 +51,8 @@ PLATAFORMA_MEGA = {
     'Input_fecha'               :   Input_fecha,
     'Input_premio_Nu1'          :   Input_premio_Nu1,
     'Input_premio_Nu2'          :   Input_premio_Nu2,
-    'Input_premio_Nu3'          :   Input_premio_Nu3
+    'Input_premio_Nu3'          :   Input_premio_Nu3,
+    'TOKEN_BOT_TELEGRAM'        :   ''
 
 }
 
@@ -70,7 +72,8 @@ PLATAFORMA_RAPI = {
     'Input_fecha'               :   Input_fecha,
     'Input_premio_Nu1'          :   Input_premio_Nu1,
     'Input_premio_Nu2'          :   Input_premio_Nu2,
-    'Input_premio_Nu3'          :   Input_premio_Nu3
+    'Input_premio_Nu3'          :   Input_premio_Nu3,
+    'TOKEN_BOT_TELEGRAM'        :   ''
 
 }
 
