@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
-from Funciones_Especiales import Validar_Fecha_Hoy, comprobar_pick3,comprobar_pick4
+from Funciones_Especiales import Validar_Fecha_Hoy, comprobar_pick3,comprobar_pick4, Validar_Fecha_hoy2
 
 class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
 
@@ -22,8 +22,9 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
         self.driver.get(ARR[f'URL_{self.sorteo}'][0])
         self.driver.set_page_load_timeout(30)
 
-    def devolver_numeros(self, ARR,SORTEO):
-        self.sorteo = SORTEO
+    def devolver_numeros(self, ARR,SORTEO,ARR_FECHA):
+        self.sorteo     =   SORTEO
+        self.ARR_FECHA  =   ARR_FECHA
         try:
             self.Navegador(ARR)
             pick3 = comprobar_pick3(self.PICK3(ARR))
@@ -50,7 +51,8 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
             time.sleep(4)
             fecha_p3 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][0]).text;self.driver.implicitly_wait(20)
             time.sleep(4)
-            if(Validar_Fecha_Hoy(fecha_p3)):
+            #if(Validar_Fecha_Hoy(fecha_p3)): #?Antes validaba aqui
+            if(Validar_Fecha_hoy2(fecha_p3, self.ARR_FECHA)):
                 nu_p3_1 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][1]).text;self.driver.implicitly_wait(20)
                 nu_p3_2 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][2]).text;self.driver.implicitly_wait(20)
                 nu_p3_3 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][3]).text;self.driver.implicitly_wait(20)
@@ -69,10 +71,10 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
             self.driver.get(arrP4[f'URL_{self.sorteo}'][2])
             self.driver.implicitly_wait(20)
             time.sleep(4)
-            fecha_p3 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][0]).text;self.driver.implicitly_wait(20)
+            fecha_p4 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][0]).text;self.driver.implicitly_wait(20)
             time.sleep(4)
-            if(Validar_Fecha_Hoy(fecha_p3)):
-
+            #if(Validar_Fecha_Hoy(fecha_p4 )):#?Antes validaba aqui
+            if(Validar_Fecha_hoy2(self.ARR_FECHA,fecha_p4 )):
                 num_p4_1 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][1]).text;self.driver.implicitly_wait(20)
                 num_p4_2 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][2]).text;self.driver.implicitly_wait(20)
                 num_p4_3 = self.driver.find_element(By.XPATH, arrP4[f'PICK4_{self.sorteo}'][3]).text;self.driver.implicitly_wait(20)

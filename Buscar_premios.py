@@ -1,6 +1,6 @@
 # ESTE ARCHIVO ES QUIEN BUSCA LOS NUMEROS GANADORES VARIAS VECES HASTA ENCONTRARLO Y PUBLICARLO EN MONGODB
 from VARIABLES import MODALIDAD, MODALIDAD_RD
-from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification, convertir_a_DOMINICANO
+from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification, convertir_a_DOMINICANO, Fechas_hoy
 from API_USA_PICK import API_USA_PICK
 from API_DOMINICANAS import API_DOMINICANA
 import time
@@ -21,6 +21,7 @@ class Buscar_Premio():
         validar     = False
         publicar    = False
         self.fecha = fecha('%d-%m-%Y')
+        self.ARR_FECHA = Fechas_hoy()
 
         if(self.MODALIDAD == MODALIDAD):
             self.URI_PETICION = config.URL_API_NODE_LAMERICANA
@@ -68,11 +69,11 @@ class Buscar_Premio():
 
         if(self.MODALIDAD == 'AMERICANA'):
             ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
-            NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
+            NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo,self.ARR_FECHA)
 
         else:
             ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
-            NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo)
+            NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo,self.ARR_FECHA)
 
         if(NUMEROS_VALIDOS_A_PUBLICAR):
 

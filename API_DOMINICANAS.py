@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
-from Funciones_Especiales import Validar_Fecha_Hoy, solo_undigito
+from Funciones_Especiales import Validar_Fecha_Hoy, solo_undigito, Validar_Fecha_hoy2
 
 class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
 
@@ -22,7 +22,8 @@ class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENV
         self.driver.get(ARR['URL'][0])
         self.driver.set_page_load_timeout(360)
 
-    def devolver_numeros(self, ARR, SORTEO):
+    def devolver_numeros(self, ARR, SORTEO,ARR_FECHA):
+        self.ARR_FECHA = ARR_FECHA
         try:
             self.Navegador(ARR)
             time.sleep(40) #AQUI DURO $) SEGUNDO PARA ESPERAR QUE LOS ANUNCIONS SE CIERREN EN LA SUERTE Y LEIDSA
@@ -48,7 +49,8 @@ class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENV
             time.sleep(40)
 
             FECHA = self.driver.find_element(By.XPATH, ARR['NUMEROS'][0]).text;self.driver.implicitly_wait(20)
-            if(Validar_Fecha_Hoy(FECHA)):
+            #if(Validar_Fecha_Hoy(FECHA)): #?Antes validaba fecha aqui
+            if(Validar_Fecha_hoy2(self.ARR_FECHA, FECHA)):
                 NUMERO_1 = self.driver.find_element(By.XPATH, ARR['NUMEROS'][1]).text;self.driver.implicitly_wait(20);time.sleep(3)
                 NUMERO_2 = self.driver.find_element(By.XPATH, ARR['NUMEROS'][2]).text;self.driver.implicitly_wait(20);time.sleep(3)
                 NUMERO_3 = self.driver.find_element(By.XPATH, ARR['NUMEROS'][3]).text;self.driver.implicitly_wait(20);time.sleep(3)

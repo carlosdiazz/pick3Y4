@@ -7,7 +7,7 @@ from Funciones_Especiales import fecha, run, clearConsole
 import time
 from config import TIEMPO_A_BUSCAR, hora_prueba
 from PREMIAR import PREMIAR
-from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_DEV, PLATAFORMA_MEGA, USER_DESARROLLO, USER_MEGALOTTERY, PLATAFORMA_DEV
+from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_MEGA, USER_MEGALOTTERY, PLATAFORMA_RAPI, USER_RAPIDITA
 
 
 #LOTERIAS AMERICANA AM ---------------------------------------------------------------- BUSCAR NUMEROS
@@ -106,8 +106,12 @@ NEW_JERSEY_EVENING          =   PREMIAR(VARIABLES.OBJ_NJ_PM, PLATAFORMA_MEGA, US
 NORTH_CAROLINA_EVENING      =   PREMIAR(VARIABLES.OBJ_NC_PM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 GEORGIA_NIGHT               =   PREMIAR(VARIABLES.OBJ_GA_NIGHT, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 
-#LOTERIAS TRADICIONALES
-PRIMERA_NOCHE_PLATAFORMA      =   PREMIAR(VARIABLES.OBJ_PRIMERA_PM, PLATAFORMA_DEV, USER_DESARROLLO).premiar
+#LOTERIAS TRADICIONALES MEGALOTTERY -------------------------------------------------------------------
+PRIMERA_PM_PLATATAFORMA_MEGA        = PREMIAR(VARIABLES.OBJ_PRIMERA_PM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
+
+#LOTERIAS TRADICIONALES RAPIDITA -------------------------------------------------------------------
+PRIMERA_PM_PLATATAFORMA_RAPI        = PREMIAR(VARIABLES.OBJ_PRIMERA_PM, PLATAFORMA_RAPI, USER_RAPIDITA).premiar
+
 
 
 ####! AQUI PRUEBO BUSCAR LOS NUMEROS AUTOMATICO
@@ -156,8 +160,10 @@ PRIMERA_NOCHE_PLATAFORMA      =   PREMIAR(VARIABLES.OBJ_PRIMERA_PM, PLATAFORMA_D
 ## schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
 ## schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
 
-##LOTERIAS DOMINICAS
-#schedule.every().day.at(hora_prueba).do(run, PRIMERA_NOCHE_PLATAFORMA)
+# OTRAS LOTERIA PARA PREMIAR ---------------------------------------------------------
+## schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
+## schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
+
 
 clearConsole()
 while True:

@@ -172,6 +172,50 @@ def Validar_Fecha_Hoy(fecha_comprobar):
         #! AQUI TENGO QUE DEVOLVER FALSO ES UNA PRUEBA
         return False
 
+def Validar_Fecha_hoy2(ArrFECHAS, fecha):
+    if fecha in ArrFECHAS:
+        return True
+    else:
+        #! AQUI TENGO QUE DEVOLVER FALSO ES UNA PRUEBA
+        return False
+
+
+def Fechas_hoy():
+
+    ANGUILA_MANANA = 'Draw 10:00AM. '+fecha('%d/%m/%Y')
+    ANGUILA_MEDIO_DIA = 'Draw 1:00PM. '+fecha('%d/%m/%Y')
+    ANGUILA_TARDE = 'Draw 6:00PM. '+fecha('%d/%m/%Y')
+    ANGUILA_NOCHE = 'Draw 9:00PM. '+fecha('%d/%m/%Y')
+    mes_espanol=mesesDic[fecha('%m')]
+    dia_espanol=diasSemanaEso[fecha('%A')]
+    fecha_dia_un_digito = fecha('%d')
+    fecha_dia_un_digito=fecha_dia_un_digito.lstrip('0')
+
+    Todas_las_Fechas = [
+
+    fecha(f'%A, %B {fecha_dia_un_digito}, %Y'),
+    fecha('%A, %b %d, %Y'),
+    fecha(f'%A, %b {fecha_dia_un_digito}, %Y'),
+    fecha(f'%A %B {fecha_dia_un_digito}th %Y'),
+    fecha(f'%A %B {fecha_dia_un_digito}st %Y'),
+    fecha(f'%A %B {fecha_dia_un_digito}nd %Y'),
+    fecha(f'%A %B {fecha_dia_un_digito}rd %Y'),
+    fecha('%A %B %dth %Y'),
+    fecha('%a %m/%d/%y'),
+    fecha('%A, %B %d, %Y'),
+    fecha('%d-%m-%Y'),
+    fecha('%d/%m/%Y'),
+    fecha('%Y-%m-%d'),
+    fecha(f'Sorteo: %d de {mes_espanol} del %Y.'),
+    fecha(f'{dia_espanol}, %d-%m-%Y'),
+    fecha('Resultados %d/%m/%Y'),
+    ANGUILA_MANANA,
+    ANGUILA_MEDIO_DIA,
+    ANGUILA_TARDE,
+    ANGUILA_NOCHE
+    ]
+    return Todas_las_Fechas
+
 def solo_Numero(numero):
     if(len(numero)>=2):
         numero=numero[len(numero)-2:]
