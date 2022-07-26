@@ -292,3 +292,20 @@ OBJ_ANGUILLA_PM = {
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
+
+#! PREMIAR LOTERIA AMERICANA EN PLATAFORMA
+OBJ_NEW_YORK_RD_AM = {
+    'LOTERIA'       :   'NEW YORK',
+    'SORTEO'        :   MIDDAY,
+    'HORA'          :   '14:30:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_FLORIDA_RD_AM = {
+    'LOTERIA'       :   'FLORIDA',
+    'SORTEO'        :   MIDDAY,
+    'HORA'          :   '14:30:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}

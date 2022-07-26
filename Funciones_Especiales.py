@@ -424,11 +424,18 @@ def convertir_a_DOMINICANO(obj):
     }
 
 #? AGREGAR LOS DEMAS NOMBRES A CAMBIAR
-def Convertir_nombre_sorteo(namePlataforma,sorteo):
+def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
 
     if(namePlataforma == 'RAPIDITA'):
         if(sorteo == OBJ_PRIMERA_PM['SORTEO']):
             return 'NOCHE'
+        else:
+            return sorteo
+    elif(namePlataforma == 'DESARROLLO'):
+        if(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
+            return 'NEW YORK AM'
+        elif(sorteo == OBJ_FLORIDA_RD_AM['SORTEO'] and loteria == OBJ_FLORIDA_RD_AM['LOTERIA']):
+            return 'FLORIDA'
         else:
             return sorteo
     else:

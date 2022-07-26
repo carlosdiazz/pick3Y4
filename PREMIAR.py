@@ -40,14 +40,14 @@ class PREMIAR():
         tradicionales = {
                 'loteria'           :   Convertir_nombre_loteria(self.PLATAFORMA['NAME'],self.loteria),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   Convertir_nombre_sorteo(self.PLATAFORMA['NAME'], self.sorteo),
+                "sorteo"            :   Convertir_nombre_sorteo(self.PLATAFORMA['NAME'], self.sorteo, self.loteria),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores'],
                 'MODALIDAD'         :   self.MODALIDAD
             }
         return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(tradicionales)
 
 
-    def premiar(self): #Controlar desde aqui la diferente manera de premiar loteria Dominicana y Americana
+    def premiar(self):
 
         print(f'SE ESTA INICIALIZANDO LA PREMIACION DE PLATAFORMAS PARA {self.loteria} {self.sorteo}')
         #? Con esta funcion buscare los numeros ganadores
@@ -55,6 +55,7 @@ class PREMIAR():
         pick_4_premiar = False
         premios_dominicanos = False
         message = ''
+        message_picks = ''
         self.fecha = fecha('%d-%m-%Y')
 
         if(self.MODALIDAD == MODALIDAD):
@@ -76,7 +77,7 @@ class PREMIAR():
                         if(pick_3_premiar == False):
                             publicar_pick_3 = self.PUBLICAR_PICK3()
                             if(publicar_pick_3['StatusError'] == False and publicar_pick_3['Status'] == True):
-                                message = publicar_pick_3['Message']
+                                message_picks += publicar_pick_3['Message']
                                 pick_3_premiar = True
                             else:
                                 message = publicar_pick_3['Message']
@@ -85,15 +86,15 @@ class PREMIAR():
                         if(pick_4_premiar == False):
                             publicar_pick_4 = self.PUBLICAR_PICK4()
                             if(publicar_pick_4['StatusError'] == False and publicar_pick_4['Status'] == True):
-                                message = publicar_pick_3['Message']
+                                message_picks += publicar_pick_4['Message']
                                 pick_4_premiar = True
                             else:
-                                message = publicar_pick_3['Message']
+                                message = publicar_pick_4['Message']
                                 print(message)
 
 
                         if(pick_3_premiar and pick_4_premiar):
-                            message_enviar = f'SE PREMIO CORRECTAMENTE \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha}\nMessage: {message}'
+                            message_enviar = f'SE PREMIO CORRECTAMENTE EN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha}\n\MESSAGE:\n\n{message_picks}'
                             print(message_enviar)
                             sendNotification(message_enviar, BOT_MEGA['TOKEN'] )
                             break
@@ -106,21 +107,23 @@ class PREMIAR():
                         if(premios_dominicanos == False):
                             premiar_dominicanos =self.PUBLICAR_TRADICIONALES()
                             if(premiar_dominicanos['StatusError'] == False and premiar_dominicanos['Status'] == True):
-                                message = premiar_dominicanos['Message']
+                                message_picks = premiar_dominicanos['Message']
                                 premios_dominicanos = True
                             else:
                                 message = premiar_dominicanos['Message']
                                 print(message)
 
                         if(premios_dominicanos):
-                            message_a_enviar = f'SE PREMIO CORRECTAMENTE\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\nMessage: {message}'
+                            message_a_enviar = f'SE PREMIO CORRECTAMENTE EN PLATAFORMA: {self.PLATAFORMA["NAME"]} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\nMESSAGE:\n\n{message_picks}'
                             print(message_a_enviar)
                             sendNotification(message_a_enviar, BOT_MEGA['TOKEN'] )
                             break
                         else:
                             print("PREMIOS DOMINICANO NO SE PREMIO SE INTETARA DE NUEVO")
                             time.sleep(TIEMPO_A_ESPERAR)
-
+                    else:
+                        print("NO DEBERIA DE LLEGAR AQUI ES UNA NUEVA MODALIDAD DE NUEMROS")
+                        time.sleep(TIEMPO_A_ESPERAR)
                 else:
                     message = CONSULTA['MESSAGE']
                     print(message + f' INTENTOS #: {intentos}')

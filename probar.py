@@ -80,6 +80,9 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
 #schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 
+schedule.every().day.at(hora_prueba).do(run, NEW_YORK_AM_PLATAFORMA_DEV)
+schedule.every().day.at(hora_prueba).do(run, FLORIDA_AM_PLATAFORMA_DEV)
+
 
 clearConsole()
 while True:

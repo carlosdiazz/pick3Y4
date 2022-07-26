@@ -117,7 +117,7 @@ class PUBLICAR_EN_LOTENET():
                 boton_premiar = self.driver.find_element(by=By.XPATH, value=self.boton_premiar );self.driver.implicitly_wait(20)
                 boton_premiar.click()
                 time.sleep(4)
-                message=(f"SE PREMIO CORRECTAMENTE... LOTERIA => : {self.loteria} SORTEO => : {self.sorteo}\n")
+                message=(f"\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\nNUMEROS => {self.numeros_ganadores}\n")
                 self.driver.quit()
                 return Response(False, message, True)
             else:
@@ -144,12 +144,12 @@ class PUBLICAR_EN_LOTENET():
                 boton_premiar = self.driver.find_element(by=By.XPATH, value=self.boton_premiar );self.driver.implicitly_wait(20)
                 boton_premiar.click()
                 time.sleep(4)
-                message=(f"SE PREMIO CORRECTAMENTE... LOTERIA => : {self.loteria} SORTEO => : {self.sorteo}\n")
+                message=(f"\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\nNUMEROS => {self.numeros_ganadores}\n")
                 self.driver.quit()
                 return Response(False, message, True)
             else:
                 self.driver.quit()
-                return Response(True, f'Esta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n', False)
+                return Response(False, f'Esta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n', True)
         except:
             return Response(True, f'No se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}', False)
 
