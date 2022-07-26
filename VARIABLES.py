@@ -8,7 +8,7 @@ MODALIDAD_RD    =   'DOMINICANA' #Esta variable la uso para identificar en varia
 #? ----------------------------------------
 OBJ_FL_AM = {
     'LOTERIA'       :   'FLORIDA',
-    'HORA'          :   '13:40:00',
+    'HORA'          :   '13:30:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True
@@ -16,7 +16,7 @@ OBJ_FL_AM = {
 
 OBJ_FL_PM = {
     'LOTERIA'       :   'FLORIDA',
-    'HORA'          :   '22:00:00',
+    'HORA'          :   '21:50:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True
@@ -24,7 +24,7 @@ OBJ_FL_PM = {
 #? ----------------------------------------
 OBJ_NY_AM = {
     'LOTERIA'       :   'NEW YORK',
-    'HORA'          :   '14:40:00',
+    'HORA'          :   '14:30:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True
@@ -32,7 +32,7 @@ OBJ_NY_AM = {
 
 OBJ_NY_PM = {
     'LOTERIA'       :   'NEW YORK',
-    'HORA'          :   '22:40:00',
+    'HORA'          :   '22:30:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True
@@ -48,7 +48,7 @@ OBJ_NJ_AM = {
 
 OBJ_NJ_PM = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '23:10:00',
+    'HORA'          :   '23:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -56,7 +56,7 @@ OBJ_NJ_PM = {
 #? ----------------------------------------
 OBJ_CT_AM = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -72,7 +72,7 @@ OBJ_CT_PM = {
 #? ----------------------------------------
 OBJ_VA_AM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -80,7 +80,7 @@ OBJ_VA_AM = {
 
 OBJ_VA_PM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '23:20:00',
+    'HORA'          :   '23:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -88,7 +88,7 @@ OBJ_VA_PM = {
 #? ----------------------------------------
 OBJ_DC_AM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -96,7 +96,7 @@ OBJ_DC_AM = {
 
 OBJ_DC_PM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '20:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -112,7 +112,7 @@ OBJ_PA_AM = {
 
 OBJ_PA_PM = {
     'LOTERIA'       :   'PENNSYLVANIA',
-    'HORA'          :   '19:10:00',
+    'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -120,7 +120,7 @@ OBJ_PA_PM = {
 #? ----------------------------------------
 OBJ_SC_AM = {
     'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '13:10:00',
+    'HORA'          :   '13:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -128,7 +128,7 @@ OBJ_SC_AM = {
 
 OBJ_SC_PM = {
     'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '19:20:00',
+    'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -136,7 +136,7 @@ OBJ_SC_PM = {
 #? ----------------------------------------
 OBJ_NC_AM = {
     'LOTERIA'       :   'NORTH CAROLINA',
-    'HORA'          :   '15:10:00',
+    'HORA'          :   '15:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
@@ -160,7 +160,7 @@ OBJ_GA_AM = {
 
 OBJ_GA_PM = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '19:10:00',
+    'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
