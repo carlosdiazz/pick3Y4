@@ -16,7 +16,7 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
-schedule.every().day.at(hora_prueba).do(run,LOTTERY_NACIONAL )
+#schedule.every().day.at(hora_prueba).do(run,LOTTERY_NACIONAL )
 #schedule.every().day.at(hora_prueba).do(run, LOTTERY_LOTEKA)
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_LEIDSA )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )

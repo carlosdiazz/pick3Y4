@@ -24,7 +24,7 @@ OBJ_FL_PM = {
 #? ----------------------------------------
 OBJ_NY_AM = {
     'LOTERIA'       :   'NEW YORK',
-    'HORA'          :   '14:30:00',
+    'HORA'          :   '14:35:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True
@@ -176,7 +176,7 @@ OBJ_GA_NIGHT = {
 OBJ_GANAMAS = {
     'LOTERIA'       :   'GANAMAS',
     'SORTEO'        :   'GANAMAS',
-    'HORA'          :   '14:30:00',
+    'HORA'          :   '14:35:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }

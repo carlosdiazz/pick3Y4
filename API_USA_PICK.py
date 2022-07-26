@@ -20,7 +20,7 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
         self.driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=self.chrome_options)
         self.driver.delete_all_cookies()
         self.driver.get(ARR[f'URL_{self.sorteo}'][0])
-        self.driver.set_page_load_timeout(30)
+        self.driver.set_page_load_timeout(360)
 
     def devolver_numeros(self, ARR,SORTEO,ARR_FECHA):
         self.sorteo     =   SORTEO
@@ -52,7 +52,7 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
             fecha_p3 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][0]).text;self.driver.implicitly_wait(20)
             time.sleep(4)
             #if(Validar_Fecha_Hoy(fecha_p3)): #?Antes validaba aqui
-            if(Validar_Fecha_hoy2(fecha_p3, self.ARR_FECHA)):
+            if(Validar_Fecha_hoy2(self.ARR_FECHA, fecha_p3)):
                 nu_p3_1 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][1]).text;self.driver.implicitly_wait(20)
                 nu_p3_2 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][2]).text;self.driver.implicitly_wait(20)
                 nu_p3_3 = self.driver.find_element(By.XPATH, arrP3[f'PICK3_{self.sorteo}'][3]).text;self.driver.implicitly_wait(20)
