@@ -2,64 +2,13 @@
 
 import schedule
 import VARIABLES
-from Buscar_premios import Buscar_Premio
 from Funciones_Especiales import fecha, run, clearConsole
 import time
 from config import TIEMPO_A_BUSCAR
+from Objectos_para_Automaticos import *
 
-#! ME FALTA ....  TENGO QUE ENVIAR UNA FECHA DEL SORTEO QUE BUSCO Y ESA MISMA FECHA PUBLICARALA
-
-#LOTERIAS AM ----------------------------------------------------------------
-
-LOTERY_FLORIDA_AM               =   Buscar_Premio(VARIABLES.OBJ_FL_AM).Buscar_numeros_ganadores
-LOTERY_NEW_YORK_AM              =   Buscar_Premio(VARIABLES.OBJ_NY_AM).Buscar_numeros_ganadores
-LOTERY_NEW_JERSEY_AM            =   Buscar_Premio(VARIABLES.OBJ_NJ_AM).Buscar_numeros_ganadores
-LOTERY_CONNECTICUT_AM           =   Buscar_Premio(VARIABLES.OBJ_CT_AM).Buscar_numeros_ganadores
-LOTERY_VIRGINIA_AM              =   Buscar_Premio(VARIABLES.OBJ_VA_AM).Buscar_numeros_ganadores
-LOTERY_WASHINGTON_DC_AM         =   Buscar_Premio(VARIABLES.OBJ_DC_AM).Buscar_numeros_ganadores
-LOTERY_PENNSYLVANIA_AM          =   Buscar_Premio(VARIABLES.OBJ_PA_AM).Buscar_numeros_ganadores
-LOTERY_SOUTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_SC_AM).Buscar_numeros_ganadores
-LOTERY_NORTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_NC_AM).Buscar_numeros_ganadores
-LOTERY_GEORGIA_AM               =   Buscar_Premio(VARIABLES.OBJ_GA_AM).Buscar_numeros_ganadores
-
-#LOTERIAS PM -------------------------------------------------------------
-LOTERY_FLORIDA_PM               =   Buscar_Premio(VARIABLES.OBJ_FL_PM).Buscar_numeros_ganadores
-LOTERY_NEW_YORK_PM              =   Buscar_Premio(VARIABLES.OBJ_NY_PM).Buscar_numeros_ganadores
-LOTERY_NEW_JERSEY_PM            =   Buscar_Premio(VARIABLES.OBJ_NJ_PM).Buscar_numeros_ganadores
-LOTERY_CONNECTICUT_PM           =   Buscar_Premio(VARIABLES.OBJ_CT_PM).Buscar_numeros_ganadores
-LOTERY_VIRGINIA_PM              =   Buscar_Premio(VARIABLES.OBJ_VA_PM).Buscar_numeros_ganadores
-LOTERY_WASHINGTON_DC_PM         =   Buscar_Premio(VARIABLES.OBJ_DC_PM).Buscar_numeros_ganadores
-LOTERY_PENNSYLVANIA_PM          =   Buscar_Premio(VARIABLES.OBJ_PA_PM).Buscar_numeros_ganadores
-LOTERY_SOUTH_CAROLINA_PM        =   Buscar_Premio(VARIABLES.OBJ_SC_PM).Buscar_numeros_ganadores
-LOTERY_NORTH_CAROLINA_PM        =   Buscar_Premio(VARIABLES.OBJ_NC_PM).Buscar_numeros_ganadores
-LOTERY_GEORGIA_PM               =   Buscar_Premio(VARIABLES.OBJ_GA_PM).Buscar_numeros_ganadores
-LOTERY_GEORGIA_NIGHT            =   Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numeros_ganadores
-
-#LOTERIAS DOMINICANA --------------------------------------------------------
-
-LOTTERY_PRIMERA_AM              =   Buscar_Premio(VARIABLES.OBJ_PRIMERA_AM).Buscar_numeros_ganadores
-LOTTERY_PRIMERA_PM              =   Buscar_Premio(VARIABLES.OBJ_PRIMERA_PM).Buscar_numeros_ganadores
-
-LOTTERY_KING_LOTTERY_AM         =   Buscar_Premio(VARIABLES.OBJ_KING_AM).Buscar_numeros_ganadores
-LOTTERY_KING_LOTTERY_PM         =   Buscar_Premio(VARIABLES.OBJ_KING_PM).Buscar_numeros_ganadores
-
-LOTTERY_LA_SUERTE               =   Buscar_Premio(VARIABLES.OBJ_LA_SUERTE).Buscar_numeros_ganadores
-
-LOTTERY_REAL                    =   Buscar_Premio(VARIABLES.OBJ_REAL).Buscar_numeros_ganadores
-LOTTERY_LOTEDOM                 =   Buscar_Premio(VARIABLES.OBJ_LOTEDOM).Buscar_numeros_ganadores
-
-LOTTERY_GANAMAS                 =   Buscar_Premio(VARIABLES.OBJ_GANAMAS).Buscar_numeros_ganadores
-LOTTERY_NACIONAL                =   Buscar_Premio(VARIABLES.OBJ_NACIONAL).Buscar_numeros_ganadores
-
-LOTTERY_LOTEKA                  =   Buscar_Premio(VARIABLES.OBJ_LOTEKA).Buscar_numeros_ganadores
-
-LOTTERY_LEIDSA                  =   Buscar_Premio(VARIABLES.OBJ_LEIDSA).Buscar_numeros_ganadores
-
-LOTTERY_ANGUILLA_AM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_AM).Buscar_numeros_ganadores
-LOTTERY_ANGUILLA_MD             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_MD).Buscar_numeros_ganadores
-LOTTERY_ANGUILLA_TARDE          =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_TARDE).Buscar_numeros_ganadores
-LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Buscar_numeros_ganadores
-
+##! HORARIO DE BUSCAR NUMEROS
+schedule.every().day.at('00:00:00').do(run, clearConsole)
 #LOTERIAS DOMINICANA ------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run,LOTTERY_PRIMERA_AM )
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, LOTTERY_PRIMERA_PM)
@@ -77,11 +26,7 @@ schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_MD['HORA']).do(run,LOTTERY_ANGUIL
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run,LOTTERY_ANGUILLA_TARDE )
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run,LOTTERY_ANGUILLA_PM )
 
-
-##! HORARIO DE BUSCAR NUMEROS
-schedule.every().day.at('00:00:00').do(run, clearConsole)
-
-#LOTERIAS AM ----------------------------------------------------------------
+#LOTERIAS AMERICANA PICKS AM ----------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FL_AM['HORA']).do(run, LOTERY_FLORIDA_AM)
 schedule.every().day.at(VARIABLES.OBJ_NY_AM['HORA']).do(run, LOTERY_NEW_YORK_AM)
 schedule.every().day.at(VARIABLES.OBJ_NJ_AM['HORA']).do(run, LOTERY_NEW_JERSEY_AM)
@@ -93,7 +38,7 @@ schedule.every().day.at(VARIABLES.OBJ_SC_AM['HORA']).do(run, LOTERY_SOUTH_CAROLI
 schedule.every().day.at(VARIABLES.OBJ_GA_AM['HORA']).do(run, LOTERY_GEORGIA_AM)
 schedule.every().day.at(VARIABLES.OBJ_NC_AM['HORA']).do(run, LOTERY_NORTH_CAROLINA_AM)
 
-#LOTERIAS PM --------------------------------------------------------------
+#LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FL_PM['HORA']).do(run, LOTERY_FLORIDA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NY_PM['HORA']).do(run, LOTERY_NEW_YORK_PM)
 schedule.every().day.at(VARIABLES.OBJ_NJ_PM['HORA']).do(run, LOTERY_NEW_JERSEY_PM)

@@ -444,3 +444,10 @@ def Convertir_nombre_loteria(namePlataforma,loteria):
             return loteria
     else:
         return loteria
+
+def Response(StatusError, Message,Status ):
+    return {
+        'StatusError'   :   StatusError,
+        'Message'       :   Message,
+        'Status'        :   Status
+    }
