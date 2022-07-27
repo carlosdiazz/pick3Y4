@@ -48,7 +48,7 @@ class PUBLICAR_EN_LOTENET():
             self.driver.set_page_load_timeout(30)
             return Response(False, 'Se abrio el Navegador correctamente', False)
         except:
-            return Response(True, 'No se pudo abrir el Navegador', False)
+            return Response(True, '\n\nNo se pudo abrir el Navegador\n\n', False)
 
     def iniciar_seccion(self):
 
@@ -62,7 +62,7 @@ class PUBLICAR_EN_LOTENET():
             time.sleep(2)
             return Response(False, 'Se hizo el login correctamente', False)
         except:
-            return (True, 'No se pudo hacer login', False)
+            return (True, '\n\nNo se pudo hacer login\n\n', False)
 
 
     def buscar_loterias(self):
@@ -94,12 +94,12 @@ class PUBLICAR_EN_LOTENET():
 
             #VALIDAR QUE SEA LA LOTERIA CORRECTA
             if(Loteria_que_se_selecciono.endswith(self.sorteo)):
-                return Response(False, "Esta es la loteria que se selecciono", False)
+                return Response(False, "\n\nEsta es la loteria que se selecciono\n\n", False)
             else:
-                return Response(True, 'No se pudo validar el sorteo de la plataforma', False)
+                return Response(True, '\n\nNo se pudo validar el sorteo de la plataforma\n\n', False)
 
         except:
-            return Response(True, 'No se pudo encontrar la direccion de la loteria o del sorteo en plataforma', False)
+            return Response(True, '\n\nNo se pudo encontrar la direccion de la loteria o del sorteo en plataforma\n\n', False)
 
     def colocar_numeros(self):
         if(self.MODALIDAD == MODALIDAD):
@@ -122,9 +122,9 @@ class PUBLICAR_EN_LOTENET():
                 return Response(False, message, True)
             else:
                 self.driver.quit()
-                return Response(False, f'Esta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n', True)
+                return Response(False, f'\n\nEsta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n\n', True)
         except:
-            return Response(True, f'No se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}', False)
+            return Response(True, f'\n\nNo se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}\n\n', False)
 
     def colocar_tradicionales(self):
         try:
@@ -144,38 +144,41 @@ class PUBLICAR_EN_LOTENET():
                 boton_premiar = self.driver.find_element(by=By.XPATH, value=self.boton_premiar );self.driver.implicitly_wait(20)
                 boton_premiar.click()
                 time.sleep(4)
-                message=(f"\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\nNUMEROS => {self.numeros_ganadores}\n")
                 self.driver.quit()
+                message=(f"\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\nNUMEROS => {self.numeros_ganadores}\n\n")
                 return Response(False, message, True)
             else:
                 self.driver.quit()
-                return Response(False, f'Esta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n', True)
+                return Response(False, f'\n\nEsta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n\n', True)
         except:
-            return Response(True, f'No se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}', False)
+            return Response(True, f'\n\nNo se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}\n\n', False)
 
 
     def publicar(self,loteria):
-        self.loteria            =   loteria['loteria']
-        self.sorteo             =   loteria['sorteo']
-        self.fecha              =   loteria['fecha']
-        self.numeros_ganadores  =   loteria['numeros_ganadores']
-        self.MODALIDAD          =   loteria['MODALIDAD']
+        try:
+            self.loteria            =   loteria['loteria']
+            self.sorteo             =   loteria['sorteo']
+            self.fecha              =   loteria['fecha']
+            self.numeros_ganadores  =   loteria['numeros_ganadores']
+            self.MODALIDAD          =   loteria['MODALIDAD']
 
-        #Aqui abro el navegador
-        navegador = self.Navegador()
-        if(navegador['StatusError']):
-            return navegador
+            #Aqui abro el navegador
+            navegador = self.Navegador()
+            if(navegador['StatusError']):
+                return navegador
 
-        #Aqui hago Login
-        login = self.iniciar_seccion()
-        if(login['StatusError']):
-            return login
+            #Aqui hago Login
+            login = self.iniciar_seccion()
+            if(login['StatusError']):
+                return login
 
-        #Aqui busco la opcion de premios y premio
-        Seccion_premios = self.buscar_loterias()
-        if(Seccion_premios['StatusError']):
-            return Seccion_premios
+            #Aqui busco la opcion de premios y premio
+            Seccion_premios = self.buscar_loterias()
+            if(Seccion_premios['StatusError']):
+                return Seccion_premios
 
-        #Aqui coloco los numeros
-        numeros_a_colocar = self.colocar_numeros()
-        return numeros_a_colocar
+            #Aqui coloco los numeros
+            numeros_a_colocar = self.colocar_numeros()
+            return numeros_a_colocar
+        except:
+            return Response(True, '\n\nERRORRRR PASO UNA EXECPCION EN PUBLICAR EN LOTENET\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\n',False)

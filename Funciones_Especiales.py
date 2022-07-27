@@ -54,7 +54,7 @@ def DEVOLVER_ARREGLO_XPATH(datos):
     elif(datos == OBJ_PA_AM or datos == OBJ_PA_PM):
         return PENNSYLVANIA_LOTTERYUSA
 
-    elif(datos == OBJ_SC_AM or datos == OBJ_SC_PM):
+    elif(datos == OBJ_SC_AM2 or datos == OBJ_SC_PM2):
         return SOUTH_CAROLINA_LOTTERYUSA
 
     elif(datos == OBJ_NC_AM or datos == OBJ_NC_PM):

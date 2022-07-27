@@ -9,7 +9,7 @@ from Objectos_para_Automaticos import *
 
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
-#LOTERIAS DOMINICANA ------------------------------------------------------
+#LOTERIAS DOMINICANA ----------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run,LOTTERY_PRIMERA_AM )
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, LOTTERY_PRIMERA_PM)
 schedule.every().day.at(VARIABLES.OBJ_KING_AM['HORA']).do(run, LOTTERY_KING_LOTTERY_AM)
@@ -34,7 +34,7 @@ schedule.every().day.at(VARIABLES.OBJ_CT_AM['HORA']).do(run, LOTERY_CONNECTICUT_
 schedule.every().day.at(VARIABLES.OBJ_VA_AM['HORA']).do(run, LOTERY_VIRGINIA_AM)
 schedule.every().day.at(VARIABLES.OBJ_DC_AM['HORA']).do(run, LOTERY_WASHINGTON_DC_AM)
 schedule.every().day.at(VARIABLES.OBJ_PA_AM['HORA']).do(run, LOTERY_PENNSYLVANIA_AM)
-schedule.every().day.at(VARIABLES.OBJ_SC_AM['HORA']).do(run, LOTERY_SOUTH_CAROLINA_AM)
+schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROLINA_AM)
 schedule.every().day.at(VARIABLES.OBJ_GA_AM['HORA']).do(run, LOTERY_GEORGIA_AM)
 schedule.every().day.at(VARIABLES.OBJ_NC_AM['HORA']).do(run, LOTERY_NORTH_CAROLINA_AM)
 
@@ -46,7 +46,7 @@ schedule.every().day.at(VARIABLES.OBJ_CT_PM['HORA']).do(run, LOTERY_CONNECTICUT_
 schedule.every().day.at(VARIABLES.OBJ_VA_PM['HORA']).do(run, LOTERY_VIRGINIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_DC_PM['HORA']).do(run, LOTERY_WASHINGTON_DC_PM)
 schedule.every().day.at(VARIABLES.OBJ_PA_PM['HORA']).do(run, LOTERY_PENNSYLVANIA_PM)
-schedule.every().day.at(VARIABLES.OBJ_SC_AM['HORA']).do(run, LOTERY_SOUTH_CAROLINA_PM)
+schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)

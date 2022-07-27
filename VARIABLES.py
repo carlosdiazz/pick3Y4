@@ -118,22 +118,6 @@ OBJ_PA_PM = {
     'MEZCLADA'      :   False
 }
 #? ----------------------------------------
-OBJ_SC_AM = {
-    'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '13:00:00',
-    "SORTEO"        :   MIDDAY,
-    "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False
-}
-
-OBJ_SC_PM = {
-    'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '19:00:00',
-    "SORTEO"        :   EVENING,
-    "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False
-}
-#? ----------------------------------------
 OBJ_NC_AM = {
     'LOTERIA'       :   'NORTH CAROLINA',
     'HORA'          :   '15:00:00',
@@ -172,6 +156,23 @@ OBJ_GA_NIGHT = {
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
 }
+#? ----------------------------------------
+OBJ_SC_AM2 = {
+    'LOTERIA'       :   'SOUTH CAROLINA',
+    'HORA'          :   '13:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_SC_PM2 = {
+    'LOTERIA'       :   'SOUTH CAROLINA',
+    'HORA'          :   '19:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False
+}
+
 #? ----------------------------------------
 OBJ_GANAMAS = {
     'LOTERIA'       :   'GANAMAS',
