@@ -25,6 +25,8 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
     def devolver_numeros(self, ARR,SORTEO,ARR_FECHA):
         self.sorteo     =   SORTEO
         self.ARR_FECHA  =   ARR_FECHA
+        #! AQUI AGREGAR QUE ME LLEGUE SI EL NUMERO A BUSCAR ES EL PICK 3 o PICK 4 o EL PICK 
+        #! ME LLEGARA DEL ARREGLO Y LUEGO SOLO VOY A BUSCAR LO QUE ME PIDAN
         try:
             self.Navegador(ARR)
             pick3 = comprobar_pick3(self.PICK3(ARR))

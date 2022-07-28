@@ -1,6 +1,6 @@
 # ESTE ARCHIVO ES QUIEN BUSCA LOS NUMEROS GANADORES VARIAS VECES HASTA ENCONTRARLO Y PUBLICARLO EN MONGODB
 from VARIABLES import MODALIDAD, MODALIDAD_RD
-from Funciones_Especiales import DEVOLVER_ARREGLO_XPATH, fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification, convertir_a_DOMINICANO, Fechas_hoy
+from Funciones_Especiales import fecha, VALIDAR_QUE_NO_EXISTAN, PETICION_POST_PUBLICAR, sendNotification, convertir_a_DOMINICANO, Fechas_hoy
 from API_USA_PICK import API_USA_PICK
 from API_DOMINICANAS import API_DOMINICANA
 import time
@@ -68,11 +68,11 @@ class Buscar_Premio():
     def publicar(self):
 
         if(self.MODALIDAD == 'AMERICANA'):
-            ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
+            ARR_LOTERIA_XPATH = self.datos['ARREGLO_XPATH'][0]
             NUMEROS_VALIDOS_A_PUBLICAR = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo,self.ARR_FECHA)
 
         else:
-            ARR_LOTERIA_XPATH = DEVOLVER_ARREGLO_XPATH(self.datos)
+            ARR_LOTERIA_XPATH = self.datos['ARREGLO_XPATH']
             NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo,self.ARR_FECHA)
 
         if(NUMEROS_VALIDOS_A_PUBLICAR):
