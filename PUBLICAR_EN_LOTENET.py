@@ -145,7 +145,7 @@ class PUBLICAR_EN_LOTENET():
                 boton_premiar.click()
                 time.sleep(4)
                 self.driver.quit()
-                message=(f"\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\nNUMEROS => {self.numeros_ganadores}\n\n")
+                message=(f"\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\nNUMEROS => {self.numeros_ganadores['NU1']}-{self.numeros_ganadores['NU2']}-{self.numeros_ganadores['NU3']}\n\n")
                 return Response(False, message, True)
             else:
                 self.driver.quit()

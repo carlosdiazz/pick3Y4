@@ -1,19 +1,65 @@
-from ..config import BOT_TELEGRAM_PADRE
-TOKEN = BOT_TELEGRAM_PADRE['TOKEN']
-
+#from PICK.config import BOT_TELEGRAM_PADRE
+#TOKEN = BOT_TELEGRAM_PADRE['TOKEN']
+TOKEN ='5348496240:AAHvkD64i5AveuGv3v_5K1y5AyPn74MOqVg'
 
 import telebot, time
 import threading
-
+from telebot.types import ReplyKeyboardMarkup #Para crear botones
+from telebot.types import ForceReply #Para citar un mensaje
+from telebot.types import ReplyKeyboardRemove #Para eliminar botones
 #Instanciamos el Bot
 bot = telebot.TeleBot(TOKEN)
-
+USUARIOS = {}
 #Responde el comando Start
 @bot.message_handler(commands=['start', 'ayuda', 'help'])
 def cmd_start(message):
     print("Entro en la funcion Start")
-    bot.reply_to(message, 'HOLA QLOQ')
+    markup = ReplyKeyboardRemove()
+    #bot.reply_to(message, 'HOLA QLOQ',)
+    bot.send_message(message.chat.id, "USE /start para todo", reply_markup=markup)
 
+@bot.message_handler(commands=['alta'])
+def cmd_alta(message):
+    markup = ForceReply()
+    msg = bot.send_message(message.chat.id, "DIME TU NOMBRE?", reply_markup=markup)
+    bot.register_next_step_handler(msg, preguntar_Edad)
+
+def preguntar_Edad(message):
+    name = message.text
+    USUARIOS[message.chat.id] = {}
+    USUARIOS[message.chat.id]['NAME'] = message.text
+    markup = ForceReply()
+    msg = bot.send_message(message.chat.id, 'QUE EDAD TIENES', reply_markup=markup )
+    bot.register_next_step_handler(msg,preguntar_SEXO)
+
+def preguntar_SEXO(message):
+
+    if not message.text.isdigit():
+        markup = ForceReply()
+        msg = bot.send_message(message.chat.id, 'QUE EDAD TIENES??', reply_markup=markup )
+        bot.register_next_step_handler(msg,preguntar_SEXO)
+    else:
+        USUARIOS[message.chat.id]['EDAD'] = int(message.text)
+        markup = ReplyKeyboardMarkup(
+            one_time_keyboard=True,
+            input_field_placeholder='PULSA EL BOTON',
+            resize_keyboard=True,
+            #AQUI INDICO CUANTA FILA PUEDO TEENER PUEDO TENER HASTA 12 -- row_width=1 
+            )
+        markup.add('HOMBRE', 'MUJER')
+        msg = bot.send_message(message.chat.id, 'CUAL ES TU SEXO?', reply_markup=markup )
+        bot.register_next_step_handler(msg,guardar_datos)
+
+def guardar_datos(message):
+    if message.text != 'HOMBRE' and message.text != 'MUJER':
+        markup = ForceReply()
+        msg = bot.send_message(message.chat.id, 'QUE EDAD TIENES??', reply_markup=markup )
+        bot.register_next_step_handler(msg,preguntar_SEXO)
+    else:
+        markup =ReplyKeyboardRemove()
+        bot.send_message(message.chat.id, 'SE REGISTRO BIEN', reply_markup=markup)
+        USUARIOS[message.chat.id]['SEXO'] = message.text
+        print(USUARIOS)
 
 @bot.message_handler(content_types=['text'])
 def bot_mensajes_texto(message):
@@ -30,7 +76,7 @@ def bot_mensajes_texto(message):
         bot.send_message(message.chat.id, 'Comando No Disponible')
     else:
         bot.send_chat_action(message.chat.id, 'typing') # AQUI AGREGO QUE ESTE ESCRIBIENDO
-        time.sleep(1)
+        #time.sleep(1)
         bot.send_message(message.chat.id, message_a_enviar, parse_mode='html')
 
 def recibir_mensajes():

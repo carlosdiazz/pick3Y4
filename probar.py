@@ -17,7 +17,7 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_NACIONAL )
-#schedule.every().day.at(hora_prueba).do(run, LOTTERY_LOTEKA)
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_LOTEKA)
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_LEIDSA )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_MD )
@@ -34,7 +34,7 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
-
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_AM)
 #LOTERIAS PM --------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
@@ -47,7 +47,7 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
-
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_PM)
 ##? PREMIAR PLATAFORMA ----------------------------------------------------------
 
 

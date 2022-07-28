@@ -172,7 +172,22 @@ OBJ_SC_PM2 = {
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False
 }
+#? ----------------------------------------
+OBJ_MD_AM = {
+    'LOTERIA'       :   'MARYLAND',
+    'HORA'          :   '12:40:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False
+}
 
+OBJ_MD_PM = {
+    'LOTERIA'       :   'MARYLAND',
+    'HORA'          :   '20:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False
+}
 #? ----------------------------------------
 OBJ_GANAMAS = {
     'LOTERIA'       :   'GANAMAS',

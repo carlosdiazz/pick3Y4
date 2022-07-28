@@ -1,6 +1,7 @@
 import os
 import threading
 from datetime import datetime
+from Datos_Loterias.MARYLAND import MARYLAND_LOTTERYUSA
 from VARIABLES import *
 import requests
 import json
@@ -59,6 +60,9 @@ def DEVOLVER_ARREGLO_XPATH(datos):
 
     elif(datos == OBJ_NC_AM or datos == OBJ_NC_PM):
         return NORTH_CAROLINA_LOTTERYUSA
+
+    elif(datos == OBJ_MD_AM or datos == OBJ_MD_PM):
+            return MARYLAND_LOTTERYUSA
 
     elif(datos == OBJ_GA_AM or datos == OBJ_GA_PM or datos == OBJ_GA_NIGHT):
         return GEORGIA_LOTTERYUSA

@@ -16,6 +16,7 @@ LOTERY_PENNSYLVANIA_AM          =   Buscar_Premio(VARIABLES.OBJ_PA_AM).Buscar_nu
 LOTERY_SOUTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_SC_AM2).Buscar_numeros_ganadores
 LOTERY_NORTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_NC_AM).Buscar_numeros_ganadores
 LOTERY_GEORGIA_AM               =   Buscar_Premio(VARIABLES.OBJ_GA_AM).Buscar_numeros_ganadores
+LOTERY_MARYLAND_AM              =   Buscar_Premio(VARIABLES.OBJ_MD_AM).Buscar_numeros_ganadores
 
 #LOTERIAS PM -------------------------------------------------------------
 LOTERY_FLORIDA_PM               =   Buscar_Premio(VARIABLES.OBJ_FL_PM).Buscar_numeros_ganadores
@@ -29,6 +30,7 @@ LOTERY_SOUTH_CAROLINA_PM        =   Buscar_Premio(VARIABLES.OBJ_SC_PM2).Buscar_n
 LOTERY_NORTH_CAROLINA_PM        =   Buscar_Premio(VARIABLES.OBJ_NC_PM).Buscar_numeros_ganadores
 LOTERY_GEORGIA_PM               =   Buscar_Premio(VARIABLES.OBJ_GA_PM).Buscar_numeros_ganadores
 LOTERY_GEORGIA_NIGHT            =   Buscar_Premio(VARIABLES.OBJ_GA_NIGHT).Buscar_numeros_ganadores
+LOTERY_MARYLAND_PM              =   Buscar_Premio(VARIABLES.OBJ_MD_PM).Buscar_numeros_ganadores
 
 #LOTERIAS DOMINICANA --------------------------------------------------------
 

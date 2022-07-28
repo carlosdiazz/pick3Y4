@@ -37,6 +37,7 @@ schedule.every().day.at(VARIABLES.OBJ_PA_AM['HORA']).do(run, LOTERY_PENNSYLVANIA
 schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROLINA_AM)
 schedule.every().day.at(VARIABLES.OBJ_GA_AM['HORA']).do(run, LOTERY_GEORGIA_AM)
 schedule.every().day.at(VARIABLES.OBJ_NC_AM['HORA']).do(run, LOTERY_NORTH_CAROLINA_AM)
+schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, LOTERY_MARYLAND_AM)
 
 #LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FL_PM['HORA']).do(run, LOTERY_FLORIDA_PM)
@@ -50,6 +51,7 @@ schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROL
 schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)
+schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, LOTERY_MARYLAND_PM)
 
 clearConsole()
 while True:
