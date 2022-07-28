@@ -48,7 +48,7 @@ class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENV
             self.driver.get(ARR['URL'][1])
             time.sleep(40)
 
-            FECHA = self.driver.find_element(By.TH, ARR['NUMEROS'][0]).text;self.driver.implicitly_wait(20)
+            FECHA = self.driver.find_element(By.XPATH, ARR['NUMEROS'][0]).text;self.driver.implicitly_wait(20)
             #if(Validar_Fecha_Hoy(FECHA)): #?Antes validaba fecha aqui
             if(Validar_Fecha_hoy2(self.ARR_FECHA, FECHA)):
                 NUMERO_1 = self.driver.find_element(By.XPATH, ARR['NUMEROS'][1]).text;self.driver.implicitly_wait(20);time.sleep(3)
