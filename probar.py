@@ -49,10 +49,10 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_PM)
 ##? PREMIAR PLATAFORMA ----------------------------------------------------------
-
-
+#schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
 ##LOTERIAS AM PICKS ----------------------------------------------------------------
-#schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
+schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_MIDDAY)
