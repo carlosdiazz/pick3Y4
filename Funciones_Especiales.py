@@ -1,7 +1,6 @@
 import os
 import threading
 from datetime import datetime
-from Datos_Loterias.MARYLAND import MARYLAND_LOTTERYUSA
 from VARIABLES import *
 import requests
 import json

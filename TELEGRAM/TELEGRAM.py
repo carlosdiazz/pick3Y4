@@ -7,8 +7,32 @@ import threading
 from telebot.types import ReplyKeyboardMarkup #Para crear botones
 from telebot.types import ForceReply #Para citar un mensaje
 from telebot.types import ReplyKeyboardRemove #Para eliminar botones
+
+from telebot.types import InlineKeyboardMarkup
+from telebot.types import InlineKeyboardButton
+
 #Instanciamos el Bot
 bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['botones'])
+def cmd_botones(message):
+    markup = InlineKeyboardMarkup()
+    b1 = InlineKeyboardButton('BOTON 1', url='HTTP://YOUTUBE.com')
+    b2 = InlineKeyboardButton('BOTON 2', url='HTTP://YOUTUBE.com')
+    b3 = InlineKeyboardButton('BOTON 3', url='HTTP://YOUTUBE.com')
+    b4 = InlineKeyboardButton('BOTON 4', url='HTTP://YOUTUBE.com')
+    b5 = InlineKeyboardButton('BOTON 5', url='HTTP://YOUTUBE.com')
+    b_cerrar = InlineKeyboardButton('cerrar', callback_data='cerrar')
+    markup.add(b1,b2,b3,b4,b5,b_cerrar)
+    bot.send_message(message.chat.id, 'Mis enlances', reply_markup=markup)
+
+@bot.callback_query_handler(func=lambda x: True)
+def respuesta_botones_inline(call):
+    cid = call.from_user.id
+    mid = call.message.id
+    if call.data == 'cerrar':
+        bot.delete_message(cid, mid)
+
 USUARIOS = {}
 #Responde el comando Start
 @bot.message_handler(commands=['start', 'ayuda', 'help'])
