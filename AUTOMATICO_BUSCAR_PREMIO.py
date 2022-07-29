@@ -47,7 +47,7 @@ schedule.every().day.at(VARIABLES.OBJ_CT_PM['HORA']).do(run, LOTERY_CONNECTICUT_
 schedule.every().day.at(VARIABLES.OBJ_VA_PM['HORA']).do(run, LOTERY_VIRGINIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_DC_PM['HORA']).do(run, LOTERY_WASHINGTON_DC_PM)
 schedule.every().day.at(VARIABLES.OBJ_PA_PM['HORA']).do(run, LOTERY_PENNSYLVANIA_PM)
-schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROLINA_PM)
+schedule.every().day.at(VARIABLES.OBJ_SC_PM2['HORA']).do(run, LOTERY_SOUTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)
