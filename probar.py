@@ -45,8 +45,8 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_PM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
+schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
+schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_PM)
 ##? PREMIAR PLATAFORMA ----------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
@@ -71,10 +71,10 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, VIRGINIA_EVENING)
+schedule.every().day.at(hora_prueba).do(run, VIRGINIA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
+schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_EVENING)
+schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
 
 ## OTRAS LOTERIA PARA PREMIAR ---------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)

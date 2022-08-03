@@ -22,4 +22,4 @@ MARYLAND_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-MARYLAND_TODO = [MARYLAND_LOTTERYUSA ]
+MARYLAND_TODO = [MARYLAND_LOTTERYUSA,MARYLAND_LOTTERYUSA ]

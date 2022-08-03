@@ -22,4 +22,4 @@ VIRGINIA_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-VIRGINIA_TODO = [VIRGINIA_LOTTERYUSA ]
+VIRGINIA_TODO = [VIRGINIA_LOTTERYUSA,VIRGINIA_LOTTERYUSA ]

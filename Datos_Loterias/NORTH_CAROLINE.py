@@ -22,4 +22,4 @@ NORTH_CAROLINA_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-NORTH_CAROLINA_TODO = [NORTH_CAROLINA_LOTTERYUSA ]
+NORTH_CAROLINA_TODO = [NORTH_CAROLINA_LOTTERYUSA,NORTH_CAROLINA_LOTTERYUSA ]

@@ -22,4 +22,4 @@ FLORIDA_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-FLORIDA_TODO = [FLORIDA_LOTTERYUSA ]
+FLORIDA_TODO = [FLORIDA_LOTTERYUSA,FLORIDA_LOTTERYUSA]

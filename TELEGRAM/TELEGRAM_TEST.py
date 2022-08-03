@@ -1,7 +1,7 @@
 #from PICK.config import BOT_TELEGRAM_PADRE
 #TOKEN = BOT_TELEGRAM_PADRE['TOKEN']
 TOKEN ='5348496240:AAHvkD64i5AveuGv3v_5K1y5AyPn74MOqVg'
-
+from telegram_bot_calendar import DetailedTelegramCalendar, LSTEP
 from email import header
 import telebot, time
 import threading
@@ -18,6 +18,29 @@ from bs4 import BeautifulSoup
 
 #Instanciamos el Bot
 bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['resultados'],)
+def start(m):
+    calendar, step = DetailedTelegramCalendar().build()
+    bot.send_message(m.chat.id,
+                     f"Select {LSTEP[step]}",
+                     reply_markup=calendar, )
+
+
+@bot.callback_query_handler(func=DetailedTelegramCalendar.func())
+def cal(c):
+    result, key, step = DetailedTelegramCalendar().process(c.data)
+    if not result and key:
+        bot.edit_message_text(f"Select {LSTEP[step]}",
+                              c.message.chat.id,
+                              c.message.message_id,
+                              reply_markup=key)
+    elif result:
+        bot.edit_message_text(f"{result}",
+                              c.message.chat.id,
+                              c.message.message_id)
+
+
 
 @bot.message_handler(commands=['resultados'])
 def cmd_botones(message):

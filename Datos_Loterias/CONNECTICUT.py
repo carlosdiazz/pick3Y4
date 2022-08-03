@@ -22,4 +22,4 @@ CONNECTICUT_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-CONNECTICUT_TODO = [CONNECTICUT_LOTTERYUSA ]
+CONNECTICUT_TODO = [CONNECTICUT_LOTTERYUSA,CONNECTICUT_LOTTERYUSA ]

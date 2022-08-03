@@ -24,4 +24,4 @@ PENNSYLVANIA_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-PENNSYLVANIA_TODO = [PENNSYLVANIA_LOTTERYUSA ]
+PENNSYLVANIA_TODO = [PENNSYLVANIA_LOTTERYUSA,PENNSYLVANIA_LOTTERYUSA ]

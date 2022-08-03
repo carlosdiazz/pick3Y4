@@ -31,4 +31,4 @@ GEORGIA_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-GEORGIA_TODO = [GEORGIA_LOTTERYUSA ]
+GEORGIA_TODO = [GEORGIA_LOTTERYUSA,GEORGIA_LOTTERYUSA ]

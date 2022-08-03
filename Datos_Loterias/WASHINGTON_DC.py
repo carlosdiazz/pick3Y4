@@ -22,4 +22,4 @@ WASHINGTON_DC_LOTTERYUSA = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-WASHINGTON_DC_TODO = [WASHINGTON_DC_LOTTERYUSA ]
+WASHINGTON_DC_TODO = [WASHINGTON_DC_LOTTERYUSA,WASHINGTON_DC_LOTTERYUSA ]

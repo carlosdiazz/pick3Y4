@@ -54,6 +54,7 @@ def Validar_Fecha_Hoy(fecha_comprobar):
     fecha(f'%A %B {fecha_dia_un_digito}st %Y'),
     fecha(f'%A %B {fecha_dia_un_digito}nd %Y'),
     fecha(f'%A %B {fecha_dia_un_digito}rd %Y'),
+    fecha('%a %m/%d/%Y'),
     fecha('%A %B %dth %Y'),
     fecha('%a %m/%d/%y'),
     fecha('%A, %B %d, %Y'),
@@ -360,3 +361,5 @@ def Response(StatusError, Message,Status ):
         'Message'       :   Message,
         'Status'        :   Status
     }
+#print(Fechas_hoy())
+print(fecha('%a %m/%d/%Y'))
