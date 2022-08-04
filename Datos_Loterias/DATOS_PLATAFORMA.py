@@ -77,8 +77,36 @@ PLATAFORMA_RAPI = {
 
 }
 
+PLATAFORMA_LOTEDOM = {
+    'NAME'                      :   'LOTEDOM',
+    'URL'                       :   'https://lotedom.orkapi.net/',
+    "URL_PREMIOS"               :   URL_PREMIOS,
+    "Input_User"                :   Input_User,
+    "Input_Password"            :   Input_Password,
+    "Boton_Login"               :   boton_Login,
+    "Input_Loteria"             :   Input_Loteria,
+    "Input_Sorteo"              :   Input_Sorteo,
+    'Seleccionar_Loteria'       :   Seleccionar_Loteria,
+    'Input_premio'              :   Input_premio,
+    'Boton_Premiar'             :   Boton_Premiar,
+    'Loteria_que_se_selecciono' :   Loteria_que_se_selecciono,
+    'Input_fecha'               :   Input_fecha,
+    'Input_premio_Nu1'          :   Input_premio_Nu1,
+    'Input_premio_Nu2'          :   Input_premio_Nu2,
+    'Input_premio_Nu3'          :   Input_premio_Nu3,
+    'TOKEN_BOT_TELEGRAM'        :   ''
+
+}
+
+
+
 USER_MEGALOTTERY = {
     'USER':'bot@pick',
+    'PASS':'951951'
+}
+
+USER_MEGALOTTERY_SIN_CONFIRMAR = {
+    'USER':'bot@premiar',
     'PASS':'951951'
 }
 
@@ -90,4 +118,9 @@ USER_DESARROLLO = {
 USER_RAPIDITA = {
     'USER':'bot@pick',
     'PASS':'951951'
+}
+
+USER_LOTEDOM = {
+    'USER':'confirmar@orkapi',
+    'PASS':'4040'
 }

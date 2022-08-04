@@ -40,6 +40,11 @@ schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, MARYLAND_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 
+# OTRAS LOTERIA PARA PREMIAR ---------------------------------------------------------
+#schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
+#schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
+
+
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

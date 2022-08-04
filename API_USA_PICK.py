@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 import time
 from Funciones_Especiales import comprobar_pick3,comprobar_pick4, Validar_Fecha_hoy2
 
-class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
+class API_USA_PICK():
 
     def __init__(self):
         print("Se Instancio una nueva clase DE API AMERICANOS PARA BUSCAR NUMEROS")
@@ -16,7 +16,7 @@ class API_USA_PICK(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIA
     def Navegador(self,ARR):
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-        self.chrome_options.add_argument("--headless")
+        #self.chrome_options.add_argument("--headless")
         self.driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),options=self.chrome_options)
         self.driver.delete_all_cookies()
         self.driver.get(ARR[f'URL_{self.sorteo}'][0])

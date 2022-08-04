@@ -70,7 +70,7 @@ class Buscar_Premio():
         if(self.MODALIDAD == 'AMERICANA'):
             ARR_LOTERIA_XPATH_1 = self.datos['ARREGLO_XPATH'][0]
             ARR_LOTERIA_XPATH_2 = self.datos['ARREGLO_XPATH'][1]
-
+            #!REVISAR BIEN ESTE CODIGO DE DOBLE VERIFICACION
             COMPROBAR_ARREGLO_1 = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH_1,self.sorteo,self.ARR_FECHA)
             COMPROBAR_ARREGLO_2 = API_USA_PICK().devolver_numeros(ARR_LOTERIA_XPATH_2,self.sorteo,self.ARR_FECHA)
 

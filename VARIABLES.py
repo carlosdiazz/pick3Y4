@@ -392,3 +392,19 @@ OBJ_FLORIDA_RD_AM = {
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
+
+OBJ_NEW_YORK_RD_PM = {
+    'LOTERIA'       :   'NEW YORK',
+    'SORTEO'        :   EVENING,
+    'HORA'          :   '22:35:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}
+
+OBJ_FLORIDA_RD_PM = {
+    'LOTERIA'       :   'FLORIDA',
+    'SORTEO'        :   EVENING,
+    'HORA'          :   '22:00:00',
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False
+}

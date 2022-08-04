@@ -341,6 +341,13 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'FLORIDA'
         else:
             return sorteo
+    elif(namePlataforma == 'LOTEDOM'):
+        if(sorteo == OBJ_NEW_YORK_RD_PM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_PM['LOTERIA']):
+            return 'NEW YORK NOCHE'
+        elif(sorteo == OBJ_FLORIDA_RD_PM['SORTEO'] and loteria == OBJ_FLORIDA_RD_PM['LOTERIA']):
+            return 'FLORIDA PM'
+        else:
+            return sorteo
     else:
         return sorteo
 
@@ -361,5 +368,3 @@ def Response(StatusError, Message,Status ):
         'Message'       :   Message,
         'Status'        :   Status
     }
-#print(Fechas_hoy())
-print(fecha('%a %m/%d/%Y'))
