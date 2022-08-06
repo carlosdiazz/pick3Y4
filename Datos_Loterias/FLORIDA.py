@@ -36,7 +36,7 @@ PAGE_2_FECHA       =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[
 PAGE_2_NUMERO_1    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[1]'
 PAGE_2_NUMERO_2    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[3]'
 PAGE_2_NUMERO_3    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[5]'
-PAGE_2_NUMERO_4    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[5]'
+PAGE_2_NUMERO_4    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[7]'
 
 
 FLORIDA_PAGE_2 = {
