@@ -26,19 +26,20 @@ URL         =   'https://www.flalottery.com/'
 URL_PICK_3  =   'https://www.flalottery.com/pick3'
 URL_PICK_4  =   'https://www.flalottery.com/pick4'
 
-FECHA       =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[2]'
-NUMERO_1    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[1]'
-NUMERO_2    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[3]'
-NUMERO_3    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[5]'
-NUMERO_4    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[7]'
+FECHA               =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[2]'
+NUMERO_1            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[1]'
+NUMERO_2            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[3]'
+NUMERO_3            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[5]'
+NUMERO_4            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[7]'
 
-PAGE_2_FECHA       =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[2]'
-PAGE_2_NUMERO_1    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[1]'
-PAGE_2_NUMERO_2    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[3]'
-PAGE_2_NUMERO_3    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[5]'
-PAGE_2_NUMERO_4    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[7]'
+PAGE_2_FECHA        =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[2]'
+#                    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[2]'
+PAGE_2_NUMERO_1     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[1]'
+PAGE_2_NUMERO_2     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[3]'
+PAGE_2_NUMERO_3     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[5]'
+PAGE_2_NUMERO_4     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[7]'
 
-
+#!TENGO QUE ARREGLA FLORIDA SEGUNDA PAGINA PAXTH SON DIFERENTES EN PICK3 Y PICK4
 FLORIDA_PAGE_2 = {
 
     'URL_MIDDAY' : [URL, URL_PICK_3, URL_PICK_4],
@@ -54,4 +55,4 @@ FLORIDA_PAGE_2 = {
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-FLORIDA_TODO = [FLORIDA_LOTTERYUSA,FLORIDA_PAGE_2]
+FLORIDA_TODO = [FLORIDA_LOTTERYUSA,FLORIDA_LOTTERYUSA]
