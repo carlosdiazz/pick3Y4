@@ -52,7 +52,7 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
 ##LOTERIAS AM PICKS ----------------------------------------------------------------
-schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_MIDDAY)
@@ -64,9 +64,9 @@ schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_MIDDAY)
 
 ##LOTERIAS PM PICKS --------------------------------------------------------------
-schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_EVENING)
+#schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_EVENING)
-schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_EVENING)
+#schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, WASHINGTON_DC_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_EVENING)
