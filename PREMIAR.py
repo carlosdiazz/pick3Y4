@@ -96,7 +96,7 @@ class PREMIAR():
                         if(pick_3_premiar and pick_4_premiar):
                             message_enviar = f'SE PREMIO CORRECTAMENTE EN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha}\n\nMESSAGE:\n\n{message_picks}'
                             print(message_enviar)
-                            sendNotification(message_enviar, BOT_MEGA['TOKEN'] )
+                            sendNotification(False, message_enviar, BOT_MEGA['TOKEN'] )
                             break
                         else:
                             print('UNO DE LOS PICKS NO SE PREMIO SE INTENTARA DE NUEVO')
@@ -116,7 +116,7 @@ class PREMIAR():
                         if(premios_dominicanos):
                             message_a_enviar = f'SE PREMIO CORRECTAMENTE EN PLATAFORMA: {self.PLATAFORMA["NAME"]} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\nMESSAGE:\n\n{message_picks}'
                             print(message_a_enviar)
-                            sendNotification(message_a_enviar, BOT_MEGA['TOKEN'] )
+                            sendNotification(False, message_a_enviar, BOT_MEGA['TOKEN'] )
                             break
                         else:
                             print("PREMIOS DOMINICANO NO SE PREMIO SE INTETARA DE NUEVO")
@@ -136,10 +136,10 @@ class PREMIAR():
         if(self.MODALIDAD == MODALIDAD):
             if(pick_3_premiar == False or pick_4_premiar == False):
                 message_a_enviar = f'\n\nNO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
-                sendNotification(message_a_enviar, BOT_MEGA['TOKEN'])
+                sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
 
         elif(self.MODALIDAD == MODALIDAD_RD):
             if(premios_dominicanos == False):
                 message_a_enviar = f'\n\nNO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
-                sendNotification(message_a_enviar, BOT_MEGA['TOKEN'])
+                sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
 

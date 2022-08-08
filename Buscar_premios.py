@@ -34,7 +34,7 @@ class Buscar_Premio():
             if(COMPROBAR_QUE_NO_ESTEN['PUBLICADO'] == True):
                 message = f"\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\n{COMPROBAR_QUE_NO_ESTEN['MESSAGE']}"
                 print(message)
-                sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
+                sendNotification(True, message, config.BOT_NOTIFICACIONES['TOKEN'])
                 validar = True
                 break
             else:
@@ -44,7 +44,7 @@ class Buscar_Premio():
                     if(publicar['STATUS']):
                         message = publicar['MESSAGE']
                         print(message)
-                        sendNotification(message, config.BOT_NOTIFICACIONES['TOKEN'])
+                        sendNotification(False, message, config.BOT_NOTIFICACIONES['TOKEN'])
                         validar = True
                         break
                     else:
@@ -59,11 +59,11 @@ class Buscar_Premio():
             if(publicar):
                 message = publicar['MESSAGE']
                 print(message)
-                sendNotification(message,config.BOT_NOTIFICACIONES['TOKEN'])
+                sendNotification(False, message,config.BOT_NOTIFICACIONES['TOKEN'])
             else:
                 message = f"NO SE PUBLICO\n\n\nERROR: {COMPROBAR_QUE_NO_ESTEN['MESSAGE']} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo}"
                 print(message)
-                sendNotification(message,config.BOT_NOTIFICACIONES['TOKEN'])
+                sendNotification(True, message,config.BOT_NOTIFICACIONES['TOKEN'])
 
     def publicar(self):
 

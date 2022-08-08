@@ -42,8 +42,8 @@ schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLA
 
 #!CUANDO PRUEBE LOTEDOM, QUITAR LA OPCION DE DARLE AL BOTON PREMIAR Y AGREGA MAS TIEMPO PARA QUE VERIFIQUE QUE TODO ESTA BIEN
 # OTRAS LOTERIA PARA PREMIAR ---------------------------------------------------------
-#schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
-#schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
+schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
+schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
 
 
 clearConsole()

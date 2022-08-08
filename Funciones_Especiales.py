@@ -300,9 +300,13 @@ def Obtener_User_MONGO_NOTIFICACIONES():
         print("NO SE PUDO OBTENER LOS USUARIOS PARA ENVIAR LA NOTIFICACION")
         return False
 
-def sendNotification(message,token ):
+def sendNotification(error, message,token ):
     try:
-        bot_token = token
+        if(error):
+            bot_token = '5560304390:AAH5iEUEPZWwu0lfqUcxSSEFgN5FCnxVxIw' #SI HAY UN ERROR MANDARE LA NOTIFIACION POR AQUI
+        else:
+            bot_token = token
+
         User=Obtener_User_MONGO_NOTIFICACIONES()
         if(User):
             for usuarios in User:
