@@ -378,9 +378,9 @@ def saber_estado_PC():
     ram_usada = psutil.virtual_memory()[2]
     cpu_usado = psutil.cpu_percent(4)
     espacio_libre = psutil.disk_usage('/').free
+    espacio_libre = round(espacio_libre /1073741824,2)
+    message = f'LA RAM USADA EN ESTE MOMENTO ES: {ram_usada}% \n\nEL CPU USADO ES: {cpu_usado}% \n\nQUEDA {espacio_libre} GB DISPONIBLE EN EL DISCO'
 
-    message = f'LA RAM USADA EN ESTE MOMENTO ES: {ram_usada}% \n\n EL CPU USADO ES: {cpu_usado}% \n\nAUN QUEDA {espacio_libre} GB DISPONIBLE EN EL DISCO'
-
-    if(ram_usada >= 80 or cpu_usado >= 90 or espacio_libre <= 53687091200):
+    if(ram_usada >= 80 or cpu_usado >= 90 or espacio_libre <= 50):
         sendNotification(True,message,'TOKEN')
     print(message)
