@@ -6,6 +6,7 @@ pip install schedule
 pip install pytelegrambotapi --upgrade
 pip install beautifulsoup4
 pip install python-telegram-bot-calendar
+pip install psutil
 ### Si queremos agreggar una nueva loteria
 
 - PRIEMRO TENGO QUE AGREGAR UN ARCHIVO VARIABLES_ENTORNO y agregar alli sus variables a usar

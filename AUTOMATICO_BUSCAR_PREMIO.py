@@ -2,13 +2,14 @@
 
 import schedule
 import VARIABLES
-from Funciones_Especiales import fecha, run, clearConsole
+from Funciones_Especiales import fecha, run, clearConsole, saber_estado_PC
 import time
 from config import TIEMPO_A_BUSCAR
 from Objectos_para_Automaticos import *
 
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
+schedule.every().day.at('07:00:00').do(run, saber_estado_PC)
 #LOTERIAS DOMINICANA ----------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run,LOTTERY_PRIMERA_AM )
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, LOTTERY_PRIMERA_PM)
