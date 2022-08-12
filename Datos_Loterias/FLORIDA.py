@@ -32,13 +32,6 @@ NUMERO_2            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p
 NUMERO_3            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[5]'
 NUMERO_4            =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[1]/p[3]/span[7]'
 
-PAGE_2_FECHA        =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[2]'
-#                    =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[2]'
-PAGE_2_NUMERO_1     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[1]'
-PAGE_2_NUMERO_2     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[3]'
-PAGE_2_NUMERO_3     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[5]'
-PAGE_2_NUMERO_4     =   '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[7]'
-
 #!TENGO QUE ARREGLA FLORIDA SEGUNDA PAGINA PAXTH SON DIFERENTES EN PICK3 Y PICK4
 FLORIDA_PAGE_2 = {
 
@@ -48,11 +41,22 @@ FLORIDA_PAGE_2 = {
     'PICK3_MIDDAY' : [FECHA,NUMERO_1,NUMERO_2,NUMERO_3 ],
     'PICK4_MIDDAY' : [FECHA,NUMERO_1,NUMERO_2,NUMERO_3,NUMERO_4 ],
 
-    'PICK3_EVENING' : [PAGE_2_FECHA,PAGE_2_NUMERO_1,PAGE_2_NUMERO_2,PAGE_2_NUMERO_3 ],
-    'PICK4_EVENING' : [PAGE_2_FECHA,PAGE_2_NUMERO_1,PAGE_2_NUMERO_2,PAGE_2_NUMERO_3,PAGE_2_NUMERO_4 ]
+    'PICK3_EVENING' : [
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[2]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[1]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[3]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/div[1]/p[3]/span[5]'
+        ],
+    'PICK4_EVENING' : [
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[2]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[1]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[3]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[5]',
+        '/html/body/div[3]/div[3]/section[2]/div/div[2]/div[3]/p[3]/span[7]'
+    ]
 }
 
 
 #! ----------------------------------------------------------------------------------------------------------------------------------
 
-FLORIDA_TODO = [FLORIDA_LOTTERYUSA,FLORIDA_LOTTERYUSA]
+FLORIDA_TODO = [FLORIDA_LOTTERYUSA,FLORIDA_PAGE_2]

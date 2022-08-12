@@ -56,10 +56,10 @@ class Buscar_Premio():
 
 
         if(validar == False):
-            if(publicar):
+            if(publicar):#NO SE PUBLICO
                 message = publicar['MESSAGE']
                 print(message)
-                sendNotification(False, message,config.BOT_NOTIFICACIONES['TOKEN'])
+                sendNotification(True, message,config.BOT_NOTIFICACIONES['TOKEN'])
             else:
                 message = f"NO SE PUBLICO\n\n\nERROR: {COMPROBAR_QUE_NO_ESTEN['MESSAGE']} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo}"
                 print(message)
