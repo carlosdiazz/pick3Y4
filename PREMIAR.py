@@ -3,7 +3,7 @@ import time
 from VARIABLES import MODALIDAD, MODALIDAD_RD
 from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo, sendNotification, Convertir_nombre_loteria, Convertir_nombre_sorteo, Response
 from PUBLICAR_EN_LOTENET import PUBLICAR_EN_LOTENET
-from config import BOT_PREMIAR_MEGALOTTERY as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
+from config import BOT_PREMIAR as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
 class PREMIAR():
 
     def __init__(self, obj, PLATAFORMA, USER):

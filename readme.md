@@ -4,9 +4,11 @@ pip install selenium
 pip install webdriver-manager
 pip install schedule
 pip install pytelegrambotapi --upgrade
-pip install beautifulsoup4
 pip install python-telegram-bot-calendar
 pip install psutil
+pip install Flask
+pip install pyngrok
+pip install waitress
 ### Si queremos agreggar una nueva loteria
 
 - PRIEMRO TENGO QUE AGREGAR UN ARCHIVO VARIABLES_ENTORNO y agregar alli sus variables a usar

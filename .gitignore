@@ -167,3 +167,4 @@ cython_debug/
 probare.py
 VARIABLES_ENTORNO.py
 VARIABLES_ENTORNO_TELEGRAM.py
+config_ngrok.yml
