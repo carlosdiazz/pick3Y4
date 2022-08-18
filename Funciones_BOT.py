@@ -6,8 +6,12 @@ from VARIABLES import MODALIDAD,MODALIDAD_RD
 def Mensaje_start(name):
 
     text  =     f'<b>HOLA, {name}.</b>\n'
-    text  +=      '<code>\nESTE ES EL BOT DE LOTERIAS</code>\n\n'
-    text  +=     f'<b>Si desea consultar los premios de alguna loteria escriba /resultados, luego elige la fecha y loteria a consultar</b>\n'
+    text  +=    '<code>\nESTE ES EL BOT PADRE DE LOTERIAS</code>\n'
+    text  +=    f'<b>\nSi desea consultar los premios de alguna loteria escriba /resultados, luego elige la fecha y loteria a consultar</b>\n'
+    text  +=    f'<code>\nAutomaticmaente, queda suscricto en todos los canales, solo debes de esribir start en los siguientes bots</code>\n'
+    text  +=    '<b>\nBOT DE NOTIFICACIONES: </b>\n <i>https://t.me/Notificaciones_pick_usa_bot\n</i>'
+    text  +=    '<b>\nBOT DE ERRORES DE LA API: </b>\n <i>https://t.me/Error_api_buscar_bot</i>\n'
+    text  +=    '<b>\nBOT DE PREMIOS PLATAFORMAS: </b>\n <i>https://t.me/Premios_megalottery_bot\n</i>'
 
     return text
 
@@ -62,6 +66,7 @@ def AGREGAR_USER_MONGO(user):
         ARR_USUARIOS = OBTENER_USERS_MONGO()
 
         if(ARR_USUARIOS):
+            user = str(user)
             if(user in ARR_USUARIOS):
                 print("YA EL USUARIO EXISTE EN MONGODB")
                 return False
@@ -79,6 +84,7 @@ def AGREGAR_USER_MONGO(user):
                     'api-key': API_KEY_MONGO_DB
                 }
                 requests.request("POST", url, headers=headers, data=payload)
+                print("EL USUARIO SE SUSCRIBIO")
                 return True
         else:
             print("NO SE ENCONTRARON USUARIOS EN MONGODB")

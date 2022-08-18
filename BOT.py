@@ -44,60 +44,61 @@ def webhook():
 def cmd_start(message):
     #Dar la Bienvenida al Usuario
     markup = ReplyKeyboardRemove()
-    mensaje_a_eliminar = bot.reply_to(message, "Este mensaje se eliminara, al completar de cargar")
+    mensaje_a_eliminar = bot.reply_to(message, "Este mensaje se eliminara, al completar de cargar... Su Usuario ha sido registrado para recibir notificaciones")
+    print(AGREGAR_USER_MONGO(message.from_user.id))
     message_enviar = Mensaje_start(message.chat.first_name)
     bot.send_chat_action(message.chat.id, 'typing') #PARA PONER QUE ESTA ESCRIBIENDO
     bot.send_message(message.chat.id, message_enviar, parse_mode='html', reply_markup=markup);time.sleep(3)
     bot.delete_message(message.chat.id, mensaje_a_eliminar.message_id)
     #print(message)
 
-#Funcion para buscar los Premios #!TENGO QUE CREAR DIFERENTES FUNCIONES PARA VALIDAR DATO INGRESADO
-@bot.message_handler(commands=['resultados','resultado'])
-def cmd_resultados(message):
-    markup = ForceReply()
-    msg = bot.send_message(message.chat.id, "Cual Loteria deseas consultar?", reply_markup=markup)
-    bot.register_next_step_handler(msg, preguntar_sorteo)
-
-def preguntar_sorteo(message):
-    loteria = message.text
-    arr = {'LOTERIA':loteria}
-    markup = ForceReply()
-    msg = bot.send_message(message.chat.id, "Cual Sorteo deseas consultar?", reply_markup=markup)
-    bot.register_next_step_handler(msg, preguntar_fecha, arr )
-
-def preguntar_fecha(message, arr):
-    sorteo = message.text
-    arr['SORTEO']=sorteo
-    markup = ForceReply()
-    msg = bot.send_message(message.chat.id, "Cual Fecha deseas consultar?", reply_markup=markup)
-    bot.register_next_step_handler(msg, Consultar_Datos,arr )
-
-def Consultar_Datos(message,arr ):
-    fecha = message.text
-    arr['FECHA']=fecha
-    markup = ReplyKeyboardMarkup(
-        one_time_keyboard=True,                         # Para que aparezca el mensaje
-        input_field_placeholder='Elige una opcion',     # Mensaje
-        resize_keyboard=True,                           # Con esto ajusto el tamano de los botones
-        #row_width=5                                     #Con esto ajusto la fila que se van a genereada
-    )
-    #markup.add('SI','NO')                               #Aqui se distribuyen solo los botones
-    markup.row('SI')                                    #Aqui especifico qeu en la primera fila solo saldra SI
-    markup.row('NO')
-    msg = bot.send_message(message.chat.id, "Esta seguro?" , reply_markup=markup)
-    bot.register_next_step_handler(msg, Validar_Datos, arr)
-
-def Validar_Datos(message, arr):
-    markup = ReplyKeyboardRemove()
-    if message.text != 'SI' and message.text != 'NO':
-        msg = bot.send_message(message.chat.id, "Error: Datos Invalidos")
-        bot.register_next_step_handler(msg, Validar_Datos, arr)
-        bot.send_message(message.chat.id, "Solo puedes elegir SI o NO", reply_markup=markup)
-    else:
-        print(arr)
-        bot.send_message(message.chat.id, "OK", reply_markup=markup)
-        del arr
-
+##Funcion para buscar los Premios #!TENGO QUE CREAR DIFERENTES FUNCIONES PARA VALIDAR DATO INGRESADO
+#@bot.message_handler(commands=['FORZAR','forzar'])
+#def cmd_resultados(message):
+#    markup = ForceReply()
+#    msg = bot.send_message(message.chat.id, "Cual Loteria deseas FORZAR EL PREMIO?", reply_markup=markup)
+#    bot.register_next_step_handler(msg, preguntar_sorteo)
+#
+#def preguntar_sorteo(message):
+#    loteria = message.text
+#    arr = {'LOTERIA':loteria}
+#    markup = ForceReply()
+#    msg = bot.send_message(message.chat.id, "Cual Sorteo deseas consultar?", reply_markup=markup)
+#    bot.register_next_step_handler(msg, preguntar_fecha, arr )
+#
+#def preguntar_fecha(message, arr):
+#    sorteo = message.text
+#    arr['SORTEO']=sorteo
+#    markup = ForceReply()
+#    msg = bot.send_message(message.chat.id, "Cual Fecha deseas consultar?", reply_markup=markup)
+#    bot.register_next_step_handler(msg, Consultar_Datos,arr )
+#
+#def Consultar_Datos(message,arr ):
+#    fecha = message.text
+#    arr['FECHA']=fecha
+#    markup = ReplyKeyboardMarkup(
+#        one_time_keyboard=True,                         # Para que aparezca el mensaje
+#        input_field_placeholder='Elige una opcion',     # Mensaje
+#        resize_keyboard=True,                           # Con esto ajusto el tamano de los botones
+#        #row_width=5                                     #Con esto ajusto la fila que se van a genereada
+#    )
+#    #markup.add('SI','NO')                               #Aqui se distribuyen solo los botones
+#    markup.row('SI')                                    #Aqui especifico qeu en la primera fila solo saldra SI
+#    markup.row('NO')
+#    msg = bot.send_message(message.chat.id, "Esta seguro?" , reply_markup=markup)
+#    bot.register_next_step_handler(msg, Validar_Datos, arr)
+#
+#def Validar_Datos(message, arr):
+#    markup = ReplyKeyboardRemove()
+#    if message.text != 'SI' and message.text != 'NO':
+#        msg = bot.send_message(message.chat.id, "Error: Datos Invalidos")
+#        bot.register_next_step_handler(msg, Validar_Datos, arr)
+#        bot.send_message(message.chat.id, "Solo puedes elegir SI o NO", reply_markup=markup)
+#    else:
+#        print(arr)
+#        bot.send_message(message.chat.id, "OK", reply_markup=markup)
+#        del arr
+#
 #Funcion para Buscar Premios con BOTONES en Pantalla
 @bot.message_handler(commands=['premios','premio'])
 
@@ -289,7 +290,7 @@ def respuesta_botones_inline(call):
         msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
         bot.send_message(cid, msg, reply_markup=markup)
         bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
-        #return 1
+        return 1
 
 
     #elif call.data == OBJ_PRIMERA_AM['LOTERIA']: #? LA PRIMERA - LOTERIA
@@ -317,14 +318,145 @@ def respuesta_botones_inline(call):
 
     elif call.data =='AMERICANA':
         bot.delete_message(cid,mid)
-        FLORIDA         = InlineKeyboardButton('FLORIDA'        , callback_data = 'FLORIDA-USA')
-        NEW_YORK        = InlineKeyboardButton('NEW YORK'       , callback_data = 'NEW_YORK-USA')
-        markup.add(FLORIDA,NEW_YORK)
+        BTN_GEORGIA         = InlineKeyboardButton(OBJ_GA_AM['LOTERIA']     , callback_data = 'GEORGIA-USA')
+        BTN_MARYLAND        = InlineKeyboardButton(OBJ_MD_AM['LOTERIA']     , callback_data = OBJ_MD_AM['LOTERIA'])
+        BTN_NEW_JERSEY      = InlineKeyboardButton(OBJ_NJ_AM['LOTERIA']     , callback_data = OBJ_NJ_AM['LOTERIA'])
+        BTN_SOUTH_CAROLINA  = InlineKeyboardButton(OBJ_SC_AM2['LOTERIA']    , callback_data = OBJ_SC_AM2['LOTERIA'])
+        BTN_NORTH_CAROLINA  = InlineKeyboardButton(OBJ_NC_AM['LOTERIA']     , callback_data = OBJ_NC_AM['LOTERIA'])
+        BTN_PENNSYLVANIA    = InlineKeyboardButton(OBJ_PA_AM['LOTERIA']     , callback_data = OBJ_PA_AM['LOTERIA'])
+        BTN_FLORIDA_USA     = InlineKeyboardButton(OBJ_FL_AM['LOTERIA']     , callback_data = 'FLORIDA-USA')
+        BTN_WASHINGTON      = InlineKeyboardButton(OBJ_DC_AM['LOTERIA']     , callback_data = OBJ_DC_AM['LOTERIA'])
+        BTN_VIRGINIA        = InlineKeyboardButton(OBJ_VA_AM['LOTERIA']     , callback_data = OBJ_VA_AM['LOTERIA'])
+        BTN_CONNECTICUT     = InlineKeyboardButton(OBJ_CT_AM['LOTERIA']     , callback_data = OBJ_CT_AM['LOTERIA'])
+        BTN_NEW_YORK_USA    = InlineKeyboardButton(OBJ_NY_AM['LOTERIA']     , callback_data = 'NEW_YORK-USA')
+
+        markup.add(
+            BTN_GEORGIA,
+            BTN_MARYLAND,
+            BTN_NEW_JERSEY,
+            BTN_SOUTH_CAROLINA,
+            BTN_NORTH_CAROLINA,
+            BTN_PENNSYLVANIA,
+            BTN_FLORIDA_USA,
+            BTN_WASHINGTON,
+            BTN_VIRGINIA,
+            BTN_CONNECTICUT,
+            BTN_NEW_YORK_USA
+        )
         bot.send_message(cid, "Elige la loteria a Buscar.", reply_markup=markup)
+
+    elif call.data == 'GEORGIA-USA': #? GEORGIA USA
+        FECHAS[cid]['LOTERIA']=OBJ_GA_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']=OBJ_GA_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == 'FLORIDA-USA': #? FLORIDA USA
+        FECHAS[cid]['LOTERIA']      = OBJ_FL_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_FL_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == 'NEW_YORK-USA': #? NEW YORK
+        FECHAS[cid]['LOTERIA']      = OBJ_NY_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_NY_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_MD_AM['LOTERIA']: #? MARYLAND
+        FECHAS[cid]['LOTERIA']      = OBJ_MD_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_MD_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_NJ_AM['LOTERIA']: #? NEW JERSEY
+        FECHAS[cid]['LOTERIA']      = OBJ_NJ_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_NJ_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_SC_AM2['LOTERIA']: #? SOUTH CAROLINA
+        FECHAS[cid]['LOTERIA']      = OBJ_SC_AM2['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_SC_AM2['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_NC_AM['LOTERIA']: #? NORTH CAROLINA
+        FECHAS[cid]['LOTERIA']      = OBJ_NC_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_NC_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_PA_AM['LOTERIA']: #? PENNSYLVANIA
+        FECHAS[cid]['LOTERIA']      = OBJ_PA_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_PA_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_DC_AM['LOTERIA']: #? WASHINGTON
+        FECHAS[cid]['LOTERIA']      = OBJ_DC_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_DC_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_VA_AM['LOTERIA']: #? VIRGINIA
+        FECHAS[cid]['LOTERIA']      = OBJ_VA_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_VA_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_CT_AM['LOTERIA']: #? CONNECTICUT
+        FECHAS[cid]['LOTERIA']      = OBJ_CT_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD']    = OBJ_CT_AM['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
 
     else:
         bot.delete_message(cid,mid)
-        #!IMPLEMNETAR LA LIBERACION DE MEMORIA DEL ARREGLO
         del FECHAS[cid]
         print(FECHAS)
 
