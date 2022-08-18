@@ -88,6 +88,11 @@ from Objectos_para_Automaticos import *
 
 #schedule.every().day.at(hora_prueba).do(run, KING_LOTTERY_AM_PLATATAFORMA_MEGA)
 
+#!PROBAR ESTOS COMANDOS
+#schedule.every().day.at(hora_prueba).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
+#schedule.every().day.at(hora_prueba).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
+#schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
+
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|---------- PRUEBAS --> {fecha_actual} <----------|")

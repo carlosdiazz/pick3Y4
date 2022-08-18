@@ -389,6 +389,15 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'FLORIDA PM'
         else:
             return sorteo
+    elif(namePlataforma == 'MEGALOTTERY'):
+        if(sorteo == OBJ_GEORGIA_RD_AM['SORTEO'] and loteria == OBJ_GEORGIA_RD_AM['LOTERIA']):
+            return 'AM'
+        elif(sorteo == OBJ_GEORGIA_RD_PM['SORTEO'] and loteria == OBJ_GEORGIA_RD_PM['LOTERIA']):
+            return 'PM'
+        elif(sorteo == OBJ_GEORGIA_RD_NIGHT['SORTEO'] and loteria == OBJ_GEORGIA_RD_NIGHT['LOTERIA']):
+            return 'NIGHT'
+        else:
+            return sorteo
     else:
         return sorteo
 
