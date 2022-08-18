@@ -7,6 +7,7 @@ from config import TIEMPO_A_BUSCAR, hora_prueba
 from Objectos_para_Automaticos import *
 
 ##? BUSCAR NUMEROS------------------------------------------------------------------------
+
 ###LOTERIAS DOMINICANA ------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
 #schedule.every().day.at(hora_prueba).do(run, LOTTERY_PRIMERA_PM)
@@ -23,6 +24,8 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_MD )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_TARDE )
 #schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_PM )
+
+
 ###LOTERIAS AM ----------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
@@ -35,6 +38,8 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_AM)
+
+
 #LOTERIAS PM --------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
@@ -48,9 +53,13 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_PM)
+
+
 ##? PREMIAR PLATAFORMA ----------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
+
+
 ##LOTERIAS AM PICKS ----------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
@@ -79,17 +88,14 @@ from Objectos_para_Automaticos import *
 ## OTRAS LOTERIA PARA PREMIAR ---------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
 #schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
-
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_AM_PLATAFORMA_DEV)
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_AM_PLATAFORMA_DEV)
-
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_PM_LOTEDOM)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_PM_LOTEDOM)
-
 #schedule.every().day.at(hora_prueba).do(run, KING_LOTTERY_AM_PLATATAFORMA_MEGA)
 
 #!PROBAR ESTOS COMANDOS
-schedule.every().day.at(hora_prueba).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
+#schedule.every().day.at(hora_prueba).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
 
