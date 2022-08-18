@@ -1,5 +1,7 @@
 import json, requests
 from config import API_KEY_MONGO_DB
+from Funciones_Especiales import Consultar_Numeros_BOT
+from VARIABLES import MODALIDAD,MODALIDAD_RD
 
 def Mensaje_start(name):
 
@@ -9,14 +11,23 @@ def Mensaje_start(name):
 
     return text
 
-def Mensaje_loteria(loteria, sorteo, fecha, numeros_ganadores):
+def Mensaje_loteria_INDIVIDUAL(loteria, sorteo, fecha, numeros_ganadores,MODALIDAD):
 
-    text  =      f'<code>\n -- <u>RESULTADOS</u> -- </code>\n\n'
-    text  +=     f'<b>\nLOTERIA: </b><i> {loteria} </i>\n'
-    text  +=     f'<b>\n SORTEO: </b><i> {sorteo} </i>\n'
-    text  +=     f'<b>\n  FECHA: </b><i> {fecha} </i>\n'
-    text  +=     f'<b>\nNUMEROS: </b><i> {numeros_ganadores["NU1"]}-{numeros_ganadores["NU2"]}-{numeros_ganadores["NU3"]} </i>'
-    return text
+    if(MODALIDAD == MODALIDAD_RD):
+        text   =     f'<b>\nLOTERIA: </b><i> {loteria} </i>\n'
+        text  +=     f'<b>\nSORTEO: </b><i> {sorteo} </i>\n'
+        text  +=     f'<b>\nFECHA: </b><i> {fecha} </i>\n'
+        text  +=     f'<b>\nNUMEROS: </b><i> {numeros_ganadores["NU1"]}-{numeros_ganadores["NU2"]}-{numeros_ganadores["NU3"]}\n</i>'
+        text  +=     f'<b>------------------------------</b>'
+        return text
+    else:
+        text   =     f'<b>\nLOTERIA: </b><i> {loteria} </i>\n'
+        text  +=     f'<b>\nSORTEO: </b><i> {sorteo} </i>\n'
+        text  +=     f'<b>\nFECHA: </b><i> {fecha} </i>\n'
+        text  +=     f'<b>\nPICK3: </b><i> {numeros_ganadores["PICK3"]}\n</i>'
+        text  +=     f'<b>\nPICK4: </b><i> {numeros_ganadores["PICK4"]}\n</i>'
+        text  +=     f'<b>------------------------------</b>'
+        return text
 
 def OBTENER_USERS_MONGO():
     try:
@@ -75,3 +86,38 @@ def AGREGAR_USER_MONGO(user):
     except:
         print("PASO UN EXCEPT EN LA FUNCION DE AGREGAR USERB")
         return False
+
+def Mensaje_elegiste_loteria(arr):
+    loteria = arr['LOTERIA']
+    fecha   = arr["FECHA"]
+    return f'Elegiste la loteria: {loteria} para la fecha: {fecha}'
+
+def OBTENER_PREMIOS(arr):
+    LOTERIA     = arr['LOTERIA']
+    FECHA       = arr['FECHA']
+    MODALIDAD   = arr['MODALIDAD']
+    FECHA=FECHA.strftime('%d-%m-%Y') #Aqui convierto la fecha
+
+    consulta_api=Consultar_Numeros_BOT(MODALIDAD,LOTERIA,FECHA)
+    if(consulta_api['NUMEROS']):
+        text  =      f'<code>\n -- <u>RESULTADOS</u> -- </code>\n'
+        for i in consulta_api['NUMEROS']:
+            loteria_actual              = i['loteria']
+            sorteo_actual               = i['sorteo']
+            fecha_actual                = i['fecha']
+            numeros_ganadores_actual    = i['numeros_ganadores']
+            mensaje_nuevo = Mensaje_loteria_INDIVIDUAL(loteria_actual,sorteo_actual,fecha_actual, numeros_ganadores_actual, MODALIDAD)
+            text += mensaje_nuevo
+        return text
+    else:
+        print(consulta_api['MESSAGE'])
+        return 'NO SE ENCONTRARON LOS NUMEROS'
+
+
+arr_prueba ={
+    'LOTERIA'   :   'ANGUILLA',
+    'FECHA'     :   '17-08-2022',
+    'MODALIDAD' :   'DOMINICANA'
+}
+
+#print(OBTENER_PREMIOS(arr_prueba))

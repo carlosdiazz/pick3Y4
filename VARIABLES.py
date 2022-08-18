@@ -33,6 +33,8 @@ MODALIDAD       =   'AMERICANA'  #Esta variable la uso para identificar en varia
 MODALIDAD_RD    =   'DOMINICANA' #Esta variable la uso para identificar en varias parte del codigo que esta loteria es Dominicana
 ARREGLO         =   'ARREGLO_XPATH'
 
+#SI pongo mezclada true, es para la loteria americana convertirla en loterias tradicionales dominicanas
+
 #? ----------------------------------------
 OBJ_FL_AM = {
     'LOTERIA'       :   'FLORIDA',
@@ -184,7 +186,7 @@ OBJ_GA_AM = {
     'HORA'          :   '12:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False,
+    'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }
 
@@ -193,7 +195,7 @@ OBJ_GA_PM = {
     'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False,
+    'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }
 OBJ_GA_NIGHT = {
@@ -201,7 +203,7 @@ OBJ_GA_NIGHT = {
     'HORA'          :   '23:30:00',
     "SORTEO"        :   'NIGHT',
     "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False,
+    'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }
 #? ----------------------------------------
@@ -407,4 +409,29 @@ OBJ_FLORIDA_RD_PM = {
     'HORA'          :   '22:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
+}
+OBJ_GEORGIA_RD_AM = {
+    'LOTERIA'       :   'GEORGIA',
+    'HORA'          :   '12:50:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   GEORGIA_TODO
+}
+
+OBJ_GEORGIA_RD_PM = {
+    'LOTERIA'       :   'GEORGIA',
+    'HORA'          :   '19:00:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   GEORGIA_TODO
+}
+OBJ_GEORGIA_RD_NIGHT = {
+    'LOTERIA'       :   'GEORGIA',
+    'HORA'          :   '23:30:00',
+    "SORTEO"        :   'NIGHT',
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   GEORGIA_TODO
 }

@@ -5,8 +5,7 @@ from datetime import datetime
 from VARIABLES import *
 import requests
 import json
-from config import API_KEY_MONGO_DB
-
+from config import API_KEY_MONGO_DB, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
 def fecha(tipo_fecha):
     return datetime.today().strftime(tipo_fecha)
 
@@ -256,6 +255,43 @@ def CONSULTAR_NUMEROS_API(urlAPI, loteria,sorteo,fecha):
                     "MESSAGE"   :   "NO SE PUDO HACER LA PETICION GET",
                     'NUMEROS'   :   False
                 }
+def Consultar_Numeros_BOT(modalidad, loteria, fecha):
+    if modalidad == 'AMERICANA':
+        urlAPI = URL_API_NODE_LAMERICANA
+    else:
+        urlAPI = URL_API_NODE_LDOMINICANA
+    try:
+        url = f'{urlAPI}?loteria={loteria}&fecha={fecha}'
+        r=requests.get(url)
+        if(r.status_code == 200):
+            res=(r.json())
+            if(len(res['message']) >= 1):
+                return {
+                    "ERROR"     :   False,
+                    "MESSAGE"   :   'LOS NUMEROS ESTAN EN LA BASE DATOS',
+                    'NUMEROS'   :   res['message']
+                }
+            else:
+                return {
+                    "ERROR"     :   False,
+                    "MESSAGE"   :   'LOS NUMEROS NO ESTAN EN LA BASE DATOS',
+                    'NUMEROS'   :   False
+                }
+
+        else:
+            #Hubo un error en la peticion
+            return {
+                    "ERROR"     :   True,
+                    "MESSAGE"   :   "HUBO UN ERROR EN LA PETICION GET",
+                    'NUMEROS'   :   False
+                }
+    except:
+        #Fallo externo
+        return {
+                "ERROR"     :   True,
+                "MESSAGE"   :   "NO SE PUDO HACER LA PETICION GET",
+                'NUMEROS'   :   False
+            }
 
 def saber_sorteo(sorteo):
     if(sorteo == 'MIDDAY'):
@@ -384,3 +420,5 @@ def saber_estado_PC():
     if(ram_usada >= 80 or cpu_usado >= 90 or espacio_libre <= 50):
         sendNotification(True,message,'TOKEN')
     print(message)
+
+#print(Consultar_Numeros_BOT('DOMINICANA','LOTEDOM','17-08-2022'))
