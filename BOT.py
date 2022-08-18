@@ -154,6 +154,7 @@ def respuesta_botones_inline(call):
         BTN_GANAMAS         = InlineKeyboardButton(OBJ_GANAMAS['LOTERIA']           , callback_data  = OBJ_GANAMAS['LOTERIA'])
         BTN_LEIDSA          = InlineKeyboardButton(OBJ_LEIDSA['LOTERIA']            , callback_data = OBJ_LEIDSA['LOTERIA'])
         BTN_NACIONAL        = InlineKeyboardButton(OBJ_NACIONAL['LOTERIA']          , callback_data = OBJ_NACIONAL['LOTERIA'])
+        BTN_GEORGIA         = InlineKeyboardButton(OBJ_GEORGIA_RD_AM['LOTERIA']     , callback_data = OBJ_GEORGIA_RD_AM['LOTERIA'])
 
         markup.add(
             BTN_PRIMERA,
@@ -167,7 +168,8 @@ def respuesta_botones_inline(call):
             BTN_ANGUILA,
             BTN_LOTEKA,
             BTN_NACIONAL,
-            BTN_LEIDSA
+            BTN_LEIDSA,
+            BTN_GEORGIA
         )
         bot.send_message(cid, "Elige la loteria a Buscar.", reply_markup=markup)
 
@@ -285,6 +287,16 @@ def respuesta_botones_inline(call):
     elif call.data == OBJ_NACIONAL['LOTERIA']: #? NACIONAl
         FECHAS[cid]['LOTERIA'] = OBJ_NACIONAL['LOTERIA']
         FECHAS[cid]['MODALIDAD']=OBJ_NACIONAL['MODALIDAD']
+        bot.delete_message(cid,mid)
+        msg = Mensaje_elegiste_loteria(FECHAS[cid])
+        msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
+        bot.send_message(cid, msg, reply_markup=markup)
+        bot.send_message(cid, msg_resultados, reply_markup=markup, parse_mode='html')
+        return 1
+
+    elif call.data == OBJ_GEORGIA_RD_AM['LOTERIA']: #? GEORGIA
+        FECHAS[cid]['LOTERIA']   = OBJ_GEORGIA_RD_AM['LOTERIA']
+        FECHAS[cid]['MODALIDAD'] = OBJ_GEORGIA_RD_AM['MODALIDAD']
         bot.delete_message(cid,mid)
         msg = Mensaje_elegiste_loteria(FECHAS[cid])
         msg_resultados = OBTENER_PREMIOS(FECHAS[cid])
