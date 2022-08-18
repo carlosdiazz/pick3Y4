@@ -414,7 +414,7 @@ OBJ_GEORGIA_RD_AM = {
     'LOTERIA'       :   'GEORGIA',
     'HORA'          :   '12:50:00',
     "SORTEO"        :   MIDDAY,
-    "MODALIDAD"     :   MODALIDAD,
+    "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }
@@ -423,7 +423,7 @@ OBJ_GEORGIA_RD_PM = {
     'LOTERIA'       :   'GEORGIA',
     'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
-    "MODALIDAD"     :   MODALIDAD,
+    "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }
@@ -431,7 +431,7 @@ OBJ_GEORGIA_RD_NIGHT = {
     'LOTERIA'       :   'GEORGIA',
     'HORA'          :   '23:30:00',
     "SORTEO"        :   'NIGHT',
-    "MODALIDAD"     :   MODALIDAD,
+    "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   GEORGIA_TODO
 }

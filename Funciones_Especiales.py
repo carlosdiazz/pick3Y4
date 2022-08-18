@@ -391,11 +391,11 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return sorteo
     elif(namePlataforma == 'MEGALOTTERY'):
         if(sorteo == OBJ_GEORGIA_RD_AM['SORTEO'] and loteria == OBJ_GEORGIA_RD_AM['LOTERIA']):
-            return 'AM'
+            return 'GEORGIA AM'
         elif(sorteo == OBJ_GEORGIA_RD_PM['SORTEO'] and loteria == OBJ_GEORGIA_RD_PM['LOTERIA']):
-            return 'PM'
+            return 'GEORGIA PM'
         elif(sorteo == OBJ_GEORGIA_RD_NIGHT['SORTEO'] and loteria == OBJ_GEORGIA_RD_NIGHT['LOTERIA']):
-            return 'NIGHT'
+            return 'GEOGIA NIGHT'
         else:
             return sorteo
     else:
