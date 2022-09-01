@@ -99,6 +99,25 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
 
+
+#? FUNCIONARON ESTOS 4 COMANDOS
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_AM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_AM)
+
+
+#! PROBAR COMANDOS PREMIOS
+schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_MIDDAY)
+
+
+
+#! PROBAR ESTO DE NOCHE
+#! schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_PM)
+#! schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_PM)
+#! schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_PM)
+#! schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
+
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|---------- PRUEBAS --> {fecha_actual} <----------|")

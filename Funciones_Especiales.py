@@ -412,6 +412,26 @@ def Convertir_nombre_loteria(namePlataforma,loteria):
     else:
         return loteria
 
+def Convertir_nombre_loteria_PICKS(namePlataforma,loteria):
+    
+    if(namePlataforma == 'RAPIDITA'):
+        if(loteria == OBJ_PRIMERA_PM['LOTERIA']):
+            return '12M'
+        else:
+            return loteria
+    else:
+        return loteria
+
+def Convertir_nombre_sorteo_PICKS(namePlataforma,loteria):
+    
+    if(namePlataforma == 'RAPIDITA'):
+        if(loteria == OBJ_PRIMERA_PM['LOTERIA']):
+            return '12M'
+        else:
+            return loteria
+    else:
+        return loteria
+
 def Response(StatusError, Message,Status ):
     return {
         'StatusError'   :   StatusError,

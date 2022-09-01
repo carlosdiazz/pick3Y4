@@ -1,7 +1,7 @@
 from Buscar_premios import Buscar_Premio
 import VARIABLES
 from PREMIAR import PREMIAR
-from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_LOTEDOM, PLATAFORMA_MEGA, USER_LOTEDOM, USER_MEGALOTTERY, PLATAFORMA_RAPI, USER_RAPIDITA, PLATAFORMA_DEV, USER_DESARROLLO, USER_MEGALOTTERY_SIN_CONFIRMAR
+from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_LOTEDOM, PLATAFORMA_MEGA, PLATAFORMA_SANCHEZ, USER_LOTEDOM, USER_MEGALOTTERY, PLATAFORMA_RAPI, USER_RAPIDITA, PLATAFORMA_DEV, USER_DESARROLLO, USER_MEGALOTTERY_SIN_CONFIRMAR, USER_SANCHEZ
 
 #! BUSCAR PREMIOS DE LOTERIAS
 #LOTERIAS AM ----------------------------------------------------------------
@@ -17,6 +17,26 @@ LOTERY_SOUTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_SC_AM2).Buscar_n
 LOTERY_NORTH_CAROLINA_AM        =   Buscar_Premio(VARIABLES.OBJ_NC_AM).Buscar_numeros_ganadores
 LOTERY_GEORGIA_AM               =   Buscar_Premio(VARIABLES.OBJ_GA_AM).Buscar_numeros_ganadores
 LOTERY_MARYLAND_AM              =   Buscar_Premio(VARIABLES.OBJ_MD_AM).Buscar_numeros_ganadores
+
+
+LOTERY_VERMONT_AM               =   Buscar_Premio(VARIABLES.OBJ_VT_AM).Buscar_numeros_ganadores
+
+LOTERY_VERMONT_PM               =   Buscar_Premio(VARIABLES.OBJ_VT_PM).Buscar_numeros_ganadores #? MOVER A PM
+
+LOTERY_NEW_HAMPSHIRE_AM         =   Buscar_Premio(VARIABLES.OBJ_NH_AM).Buscar_numeros_ganadores
+
+LOTERY_NEW_HAMPSHIRE_PM         =   Buscar_Premio(VARIABLES.OBJ_NH_PM).Buscar_numeros_ganadores #? MOVER A PM
+
+LOTERY_MAINE_AM                 =   Buscar_Premio(VARIABLES.OBJ_ME_AM).Buscar_numeros_ganadores
+
+LOTERY_MAINE_PM                 =   Buscar_Premio(VARIABLES.OBJ_ME_PM).Buscar_numeros_ganadores #? MOVER A PM
+
+LOTERY_ILLINOIS_AM              =   Buscar_Premio(VARIABLES.OBJ_IL_AM).Buscar_numeros_ganadores
+
+LOTERY_ILLINOIS_PM              =   Buscar_Premio(VARIABLES.OBJ_IL_PM).Buscar_numeros_ganadores #? MOVER A PM
+
+
+
 
 #LOTERIAS PM -------------------------------------------------------------
 LOTERY_FLORIDA_PM               =   Buscar_Premio(VARIABLES.OBJ_FL_PM).Buscar_numeros_ganadores
@@ -54,7 +74,7 @@ LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Bus
 #! PREMIAR PLATAFORMAS
 
 
-#LOTERIAS AM
+#LOTERIAS AM MEGALOTTERY
 FLORIDA_MIDDAY                      =   PREMIAR(VARIABLES.OBJ_FL_AM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 MARYLAND_MIDDAY                     =   PREMIAR(VARIABLES.OBJ_MD_AM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 NEW_YORK_MIDDAY                     =   PREMIAR(VARIABLES.OBJ_NY_AM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
@@ -67,7 +87,7 @@ WASHINGTON_DC_MIDDAY                =   PREMIAR(VARIABLES.OBJ_DC_AM, PLATAFORMA_
 CONNECTICUT_MIDDAY                  =   PREMIAR(VARIABLES.OBJ_CT_AM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 NORTH_CAROLINA_MIDDAY               =   PREMIAR(VARIABLES.OBJ_NC_AM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 
-#LOTERIAS PM
+#LOTERIAS PM MEGALOTTERY
 SOUTH_CAROLINA_EVENING              =   PREMIAR(VARIABLES.OBJ_SC_PM2, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 GEORGIA_EVENING                     =   PREMIAR(VARIABLES.OBJ_GA_PM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
 MARYLAND_EVENING                    =   PREMIAR(VARIABLES.OBJ_MD_PM, PLATAFORMA_MEGA, USER_MEGALOTTERY).premiar
@@ -99,3 +119,6 @@ FLORIDA_AM_PLATAFORMA_DEV           =   PREMIAR(VARIABLES.OBJ_FLORIDA_RD_AM, PLA
 #LOTERIAS EN LOTEDOM ---------------------------------------------------------------------------------
 NEW_YORK_PM_LOTEDOM                 =   PREMIAR(VARIABLES.OBJ_NEW_YORK_RD_PM, PLATAFORMA_LOTEDOM, USER_LOTEDOM).premiar
 FLORIDA_PM_LOTEDOM                  =   PREMIAR(VARIABLES.OBJ_FLORIDA_RD_PM, PLATAFORMA_LOTEDOM, USER_LOTEDOM).premiar
+
+#LOTERIAS SANCHEZ PICKS AM ------------------------------------------------------------------------------
+SANCHEZ_MARYLAND_MIDDAY             =   PREMIAR(VARIABLES.OBJ_ME_AM,PLATAFORMA_SANCHEZ, USER_SANCHEZ ).premiar

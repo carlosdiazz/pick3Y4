@@ -15,13 +15,17 @@ from DATOS_Loterias_Dominicana.REAL import REAL
 from Datos_Loterias.CONNECTICUT import CONNECTICUT_TODO
 from Datos_Loterias.FLORIDA import FLORIDA_TODO
 from Datos_Loterias.GEORGIA import GEORGIA_TODO
+from Datos_Loterias.ILLINOIS import ILLINOIS_TODO
+from Datos_Loterias.MAINE import MAINE_TODO
 from Datos_Loterias.MARYLAND import MARYLAND_TODO
+from Datos_Loterias.NEW_HAMPSHIRE import NEW_HAMPSHIRE_TODO
 from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_TODO
 from Datos_Loterias.NEW_YORK import NEW_YORK_TODO
 from Datos_Loterias.NORTH_CAROLINE import NORTH_CAROLINA_TODO
 from Datos_Loterias.PENNSYLVANIA import PENNSYLVANIA_TODO
 from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_TODO
 from Datos_Loterias.VIRGINIA import VIRGINIA_TODO
+from Datos_Loterias.Vermont import VERMONT_TODO
 from Datos_Loterias.WASHINGTON_DC import WASHINGTON_DC_TODO
 
 
@@ -243,6 +247,82 @@ OBJ_MD_PM = {
     'ARREGLO_XPATH' :   MARYLAND_TODO
 }
 #? ----------------------------------------
+OBJ_VT_AM = {
+    'LOTERIA'       :   'VERMONT',
+    'HORA'          :   '13:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   VERMONT_TODO
+}
+
+OBJ_VT_PM = {
+    'LOTERIA'       :   'VERMONT',
+    'HORA'          :   '19:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   VERMONT_TODO
+}
+
+
+#? ----------------------------------------
+OBJ_NH_AM = {
+    'LOTERIA'       :   'NEW HAMPSHIRE',
+    'HORA'          :   '13:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   NEW_HAMPSHIRE_TODO
+}
+
+OBJ_NH_PM = {
+    'LOTERIA'       :   'NEW HAMPSHIRE',
+    'HORA'          :   '19:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   NEW_HAMPSHIRE_TODO
+}
+
+#? ----------------------------------------
+OBJ_ME_AM = {
+    'LOTERIA'       :   'MAINE',
+    'HORA'          :   '13:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   MAINE_TODO
+}
+
+OBJ_ME_PM = {
+    'LOTERIA'       :   'MAINE',
+    'HORA'          :   '19:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   MAINE_TODO
+}
+#? ----------------------------------------
+OBJ_IL_AM = {
+    'LOTERIA'       :   'ILLINOIS',
+    'HORA'          :   '14:50:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   ILLINOIS_TODO
+}
+
+OBJ_IL_PM = {
+    'LOTERIA'       :   'ILLINOIS',
+    'HORA'          :   '21:30:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   ILLINOIS_TODO
+}
+
+#! LOTERIAS DOMINICANA --------------------------------------------------------------------------------
 OBJ_GANAMAS = {
     'LOTERIA'       :   'GANAMAS',
     'SORTEO'        :   'GANAMAS',
@@ -378,7 +458,7 @@ OBJ_ANGUILLA_PM = {
     'ARREGLO_XPATH' :   ANGUILA
 }
 
-#! PREMIAR LOTERIA AMERICANA EN PLATAFORMA
+#! PREMIAR LOTERIA AMERICANA EN PLATAFORMA ------------------------------------------------------------------
 OBJ_NEW_YORK_RD_AM = {
     'LOTERIA'       :   'NEW YORK',
     'SORTEO'        :   MIDDAY,
