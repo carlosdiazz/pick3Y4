@@ -29,7 +29,7 @@ class PREMIAR():
         arrp4 = {
                 'loteria'           :   Convertir_nombre_loteria_PICK4(self.PLATAFORMA['NAME'],'PICK 4'),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo']),
+                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria']),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK4'],
                 'MODALIDAD'         :   self.MODALIDAD
             }

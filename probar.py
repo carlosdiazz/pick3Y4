@@ -56,11 +56,9 @@ from Objectos_para_Automaticos import *
 
 
 ##? PREMIAR PLATAFORMA ----------------------------------------------------------
+
+##LOTERIAS AM PICKS MEGALOTTERY----------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
-#schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
-
-
-##LOTERIAS AM PICKS ----------------------------------------------------------------
 #schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
@@ -72,7 +70,8 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run, CONNECTICUT_MIDDAY)
 #schedule.every().day.at(hora_prueba).do(run, NORTH_CAROLINA_MIDDAY)
 
-##LOTERIAS PM PICKS --------------------------------------------------------------
+##LOTERIAS PM PICKS MEGALOTTERY--------------------------------------------------------------
+#schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, GEORGIA_EVENING)
 #schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_EVENING)
@@ -109,6 +108,17 @@ from Objectos_para_Automaticos import *
 
 #! PROBAR COMANDOS PREMIOS
 #schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_HAMPSHIRE_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run,SANCHEZ_MAINE_MIDDAY )
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_VERMOMT_MIDDAY )
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_JERSEY_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_FLORIDA_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CONNECTICUT_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ILLINOIS_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_YORK_MIDDAY)
+
+
 
 #!PROBAR PREMIOS SANCHEZ DOMINICANO
 #schedule.every().day.at(hora_prueba).do(run, SANCHEZ_KING_LOTERRY_AM)
@@ -137,12 +147,16 @@ from Objectos_para_Automaticos import *
 
 #schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LEIDSA)
 
+#! PROBAR ESTO PICKS RD SANCHEZ
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_FLORIDA_RD_AM)
+
+
 
 #! PROBAR ESTO DE NOCHE
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_PM)
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_PM)
-schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

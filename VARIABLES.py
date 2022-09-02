@@ -461,7 +461,7 @@ OBJ_MAINE_PM_RD = {
 #? ----------------------------------------
 OBJ_IL_AM = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '13:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -479,7 +479,7 @@ OBJ_IL_PM = {
 
 OBJ_ILLINOIS_AM_RD = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '13:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,

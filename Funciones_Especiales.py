@@ -432,6 +432,10 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_PRIMERA_PM['SORTEO'] and loteria == OBJ_PRIMERA_PM['LOTERIA']):
             return 'LA PRIMERA PM'
         
+        elif(sorteo == OBJ_FLORIDA_RD_AM['SORTEO'] and loteria == OBJ_FLORIDA_RD_AM['LOTERIA']):
+            return 'FLORIDA AM'
+        
+        
         else:
             return sorteo
 

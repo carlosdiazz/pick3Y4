@@ -53,7 +53,17 @@ schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_
 
 
 #! PROBAR COMANDOS PREMIOS SANCHEZ PICKS
-#schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, SANCHEZ_MARYLAND_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, SANCHEZ_MARYLAND_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_NH_AM['HORA']).do(run, SANCHEZ_NEW_HAMPSHIRE_MIDDAY)
+
+schedule.every().day.at(VARIABLES.OBJ_ME_AM['HORA']).do(run, SANCHEZ_MAINE_MIDDAY )
+schedule.every().day.at(VARIABLES.OBJ_VT_AM['HORA']).do(run, SANCHEZ_VERMOMT_MIDDAY )
+schedule.every().day.at(VARIABLES.OBJ_GA_AM['HORA']).do(run, SANCHEZ_GEORGIA_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_NJ_AM['HORA']).do(run, SANCHEZ_NEW_JERSEY_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_FL_AM['HORA']).do(run, SANCHEZ_FLORIDA_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_CT_AM['HORA']).do(run, SANCHEZ_CONNECTICUT_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_IL_AM['HORA']).do(run, SANCHEZ_ILLINOIS_MIDDAY)
+schedule.every().day.at(VARIABLES.OBJ_NY_AM['HORA']).do(run, SANCHEZ_NEW_YORK_MIDDAY)
 
 
 #! PROBAR COMANDOS PREMIOS SANCHEZ DOMINICANAS
@@ -81,6 +91,7 @@ schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run, SANCHEZ_NACIONAL
 
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run, SANCHEZ_LEIDSA)
 
+schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, SANCHEZ_FLORIDA_RD_AM)
 
 
 clearConsole()
