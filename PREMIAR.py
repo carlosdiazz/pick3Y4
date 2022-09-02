@@ -1,7 +1,7 @@
 from re import M
 import time
 from VARIABLES import MODALIDAD, MODALIDAD_RD
-from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo, sendNotification, Convertir_nombre_loteria, Convertir_nombre_sorteo, Response
+from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo_picks, sendNotification, Convertir_nombre_loteria, Convertir_nombre_sorteo, Convertir_nombre_loteria_PICK3, Convertir_nombre_loteria_PICK4
 from PUBLICAR_EN_LOTENET import PUBLICAR_EN_LOTENET
 from config import BOT_PREMIAR as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
 class PREMIAR():
@@ -16,9 +16,9 @@ class PREMIAR():
 
     def PUBLICAR_PICK3(self):
         OBJ_3 = {
-                'loteria'           :   'PICK 3',
+                'loteria'           :   Convertir_nombre_loteria_PICK3(self.PLATAFORMA['NAME'],'PICK 3'),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   self.loteria_a_publicar['loteria'] +" "+saber_sorteo(self.loteria_a_publicar['sorteo']),
+                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria']),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK3'],
                 'MODALIDAD'         :   self.MODALIDAD
                 }
@@ -27,9 +27,9 @@ class PREMIAR():
 
     def PUBLICAR_PICK4(self):
         arrp4 = {
-                'loteria'           :   'PICK 4',
+                'loteria'           :   Convertir_nombre_loteria_PICK4(self.PLATAFORMA['NAME'],'PICK 4'),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   self.loteria_a_publicar['loteria'] +" "+saber_sorteo(self.loteria_a_publicar['sorteo']),
+                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo']),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK4'],
                 'MODALIDAD'         :   self.MODALIDAD
             }

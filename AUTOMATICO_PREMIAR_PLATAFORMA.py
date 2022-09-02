@@ -52,8 +52,34 @@ schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_P
 schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
 
 
-#! PROBAR COMANDOS PREMIOS SANCHEZ
-schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, SANCHEZ_MARYLAND_MIDDAY)
+#! PROBAR COMANDOS PREMIOS SANCHEZ PICKS
+#schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, SANCHEZ_MARYLAND_MIDDAY)
+
+
+#! PROBAR COMANDOS PREMIOS SANCHEZ DOMINICANAS
+schedule.every().day.at(VARIABLES.OBJ_KING_AM['HORA']).do(run, SANCHEZ_KING_LOTERRY_AM)
+schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, SANCHEZ_KING_LOTERRY_PM)
+
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_AM['HORA']).do(run, SANCHEZ_ANGUILA_AM)
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_MD['HORA']).do(run, SANCHEZ_ANGUILA_MD)
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run, SANCHEZ_ANGUILA_TARDE)
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run, SANCHEZ_ANGILA_PM)
+
+schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run, SANCHEZ_PRIMERA_AM)
+schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, SANCHEZ_PRIMERA_PM)
+
+schedule.every().day.at(VARIABLES.OBJ_LA_SUERTE['HORA']).do(run, SANCHEZ_LA_SUERTE_AM)
+
+schedule.every().day.at(VARIABLES.OBJ_REAL['HORA']).do(run, SANCHEZ_REAL)
+
+schedule.every().day.at(VARIABLES.OBJ_LOTEDOM['HORA']).do(run, SANCHEZ_LOTEDOM)
+
+schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, SANCHEZ_LOTEKA)
+
+schedule.every().day.at(VARIABLES.OBJ_GANAMAS['HORA']).do(run, SANCHEZ_GANAMAS)
+schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run, SANCHEZ_NACIONAL)
+
+schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run, SANCHEZ_LEIDSA)
 
 
 

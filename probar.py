@@ -1,7 +1,7 @@
 
 #? ESTE ARCHIVO ES SOLO PARA PROBAR CODIGO
 import schedule
-from Funciones_Especiales import fecha, run, clearConsole
+from Funciones_Especiales import fecha, run
 import time
 from config import TIEMPO_A_BUSCAR, hora_prueba
 from Objectos_para_Automaticos import *
@@ -108,15 +108,41 @@ from Objectos_para_Automaticos import *
 
 
 #! PROBAR COMANDOS PREMIOS
-schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_MIDDAY)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_MIDDAY)
 
+#!PROBAR PREMIOS SANCHEZ DOMINICANO
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_KING_LOTERRY_AM)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_KING_LOTERRY_PM)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_AM)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_MD)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_TARDE)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGILA_PM)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_PRIMERA_AM)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_PRIMERA_PM)
+
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LA_SUERTE_AM)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_REAL)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LOTEDOM)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LOTEKA)
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GANAMAS)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NACIONAL)
+
+
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LEIDSA)
 
 
 #! PROBAR ESTO DE NOCHE
-#! schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_PM)
-#! schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_PM)
-#! schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_PM)
-#! schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_PM)
+#schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_PM)
+schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
