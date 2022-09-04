@@ -571,4 +571,4 @@ def publicar_super_pale(obj):
 
     pass
 
-publicar_super_pale(OBJ_SP_PRIMERA_GANAMAS)
+#publicar_super_pale(OBJ_SP_PRIMERA_GANAMAS)

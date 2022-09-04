@@ -8,7 +8,8 @@ from Objectos_para_Automaticos import *
 
 #! AGREGAR TODO EN PROBAR
 #schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
-schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_YORK_RD_AM)
+#PREMIOS AMERICANAS PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
+
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
     print(f"|---------- PRUEBAS --> {fecha_actual} <----------|")
