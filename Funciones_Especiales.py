@@ -5,7 +5,8 @@ from datetime import datetime
 from VARIABLES import *
 import requests
 import json
-from config import API_KEY_MONGO_DB, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
+from config import API_KEY_MONGO_DB, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
+import time
 def fecha(tipo_fecha):
     return datetime.today().strftime(tipo_fecha)
 
@@ -425,17 +426,44 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
 
         elif(sorteo == OBJ_ANGUILLA_PM['SORTEO'] and loteria == OBJ_ANGUILLA_PM['LOTERIA']):
             return 'ANGUILA PM'
-        
+
         elif(sorteo == OBJ_PRIMERA_AM['SORTEO'] and loteria == OBJ_PRIMERA_PM['LOTERIA']):
             return 'LA PRIMERA AM'
-        
+
         elif(sorteo == OBJ_PRIMERA_PM['SORTEO'] and loteria == OBJ_PRIMERA_PM['LOTERIA']):
             return 'LA PRIMERA PM'
-        
+
         elif(sorteo == OBJ_FLORIDA_RD_AM['SORTEO'] and loteria == OBJ_FLORIDA_RD_AM['LOTERIA']):
             return 'FLORIDA AM'
-        
-        
+
+        elif(sorteo == OBJ_MARYLAND_AM_RD['SORTEO'] and loteria == OBJ_MARYLAND_AM_RD['LOTERIA']):
+            return 'MARYLAND AM'
+
+        elif(sorteo == OBJ_MAINE_AM_RD['SORTEO'] and loteria == OBJ_MAINE_AM_RD['LOTERIA']):
+            return 'MAINE AM'
+
+        elif(sorteo == OBJ_NEW_HAMPSHIRE_AM_RD['SORTEO'] and loteria == OBJ_NEW_HAMPSHIRE_AM_RD['LOTERIA']):
+            return 'NEW HAMPSHIRE AM'
+
+        elif(sorteo == OBJ_VERMONT_AM_RD['SORTEO'] and loteria == OBJ_VERMONT_AM_RD['LOTERIA']):
+            return 'VERMONT AM'
+
+        elif(sorteo == OBJ_GEORGIA_RD_AM['SORTEO'] and loteria == OBJ_GEORGIA_RD_AM['LOTERIA']):
+            return 'GEORGIA MD'
+
+        elif(sorteo == OBJ_NEW_JERSEY_AM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_AM_RD['LOTERIA']):
+            return 'NEW JERSEY AM'
+
+        elif(sorteo == OBJ_ILLINOIS_AM_RD['SORTEO'] and loteria == OBJ_ILLINOIS_AM_RD['LOTERIA']):
+            return 'ILLINOIS AM'
+
+        elif(sorteo == OBJ_CONNECTICUT_AM_RD['SORTEO'] and loteria == OBJ_CONNECTICUT_AM_RD['LOTERIA']):
+            return 'CONNECTICUT MD'
+
+        elif(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
+            return 'NEW YORK AM'
+
+
         else:
             return sorteo
 
@@ -501,4 +529,46 @@ def saber_estado_PC():
         sendNotification(True,message,'TOKEN')
     print(message)
 
-#print(Consultar_Numeros_BOT('DOMINICANA','LOTEDOM','17-08-2022'))
+
+OBJ_SP_PRIMERA_GANAMAS = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'PRIMERA GANAMAS',
+    'HORA'          :   '12:40:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+def saber_super_pale(obj):
+    if(obj == OBJ_SP_PRIMERA_GANAMAS):
+        return {
+            'LOTERIA_1' :   OBJ_PRIMERA_AM,
+            'LOTERIA_2' :   OBJ_GANAMAS
+        }
+    else:
+        return False
+
+
+#! QUEDE AQUI
+def publicar_super_pale(obj):
+    fecha_a_buscar = fecha('%d-%m-%Y')
+    arr_loterias = saber_super_pale(obj)
+    
+    NUMERO_LOTERIA_1 = False
+    NUMERO_LOTERIA_2 = False
+
+    
+    OBJ_LOTERIA_1 = arr_loterias['LOTERIA_1']
+    OBJ_LOTERIA_2 = arr_loterias['LOTERIA_2']
+
+
+    for i in range(INTENTOS):
+
+        #numero_a_bsucar = CONSULTAR_NUMEROS_API(URL_API_NODE_LDOMINICANA, )
+
+
+        time.sleep(TIEMPO_A_ESPERAR)
+
+    pass
+
+publicar_super_pale(OBJ_SP_PRIMERA_GANAMAS)

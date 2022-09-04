@@ -35,6 +35,7 @@ EVENING         =   'EVENING'
 MIDDAY          =   'MIDDAY'
 MODALIDAD       =   'AMERICANA'  #Esta variable la uso para identificar en varias parte del codigo que esta loteria es Pick3 y Pick4
 MODALIDAD_RD    =   'DOMINICANA' #Esta variable la uso para identificar en varias parte del codigo que esta loteria es Dominicana
+MODALIDAD_PALE  =   'PALE'       #Esta variable la uso para identificar en varias parte del codigo que esta loteria es un pale
 ARREGLO         =   'ARREGLO_XPATH'
 
 #SI pongo mezclada true, es para la loteria americana convertirla en loterias tradicionales dominicanas
@@ -164,6 +165,26 @@ OBJ_CT_PM = {
     'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   CONNECTICUT_TODO
 }
+
+OBJ_CONNECTICUT_AM_RD = {
+    'LOTERIA'       :   'CONNECTICUT',
+    'HORA'          :   '14:00:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   True,
+    'ARREGLO_XPATH' :   CONNECTICUT_TODO
+}
+
+OBJ_CONNECTICUR_PM_RD = {
+    'LOTERIA'       :   'CONNECTICUT',
+    'HORA'          :   '23:00:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   True,
+    'ARREGLO_XPATH' :   CONNECTICUT_TODO
+}
+
+
 #? ----------------------------------------
 OBJ_VA_AM = {
     'LOTERIA'       :   'VIRGINIA',
@@ -405,7 +426,7 @@ OBJ_NEW_HAMPSHIRE_AM_RD = {
     'LOTERIA'       :   'NEW HAMPSHIRE',
     'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
-    "MODALIDAD"     :   MODALIDAD,
+    "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   NEW_HAMPSHIRE_TODO
 }
@@ -629,4 +650,13 @@ OBJ_ANGUILLA_PM = {
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   ANGUILA
+}
+
+OBJ_SP_PRIMERA_GANAMAS = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'PRIMERA GANAMAS',
+    'HORA'          :   '12:40:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
 }

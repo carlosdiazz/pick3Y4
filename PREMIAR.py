@@ -1,6 +1,6 @@
 from re import M
 import time
-from VARIABLES import MODALIDAD, MODALIDAD_RD
+from VARIABLES import MODALIDAD, MODALIDAD_PALE, MODALIDAD_RD
 from Funciones_Especiales import fecha, CONSULTAR_NUMEROS_API, saber_sorteo_picks, sendNotification, Convertir_nombre_loteria, Convertir_nombre_sorteo, Convertir_nombre_loteria_PICK3, Convertir_nombre_loteria_PICK4
 from PUBLICAR_EN_LOTENET import PUBLICAR_EN_LOTENET
 from config import BOT_PREMIAR as BOT_MEGA, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
@@ -54,12 +54,13 @@ class PREMIAR():
         pick_3_premiar = False
         pick_4_premiar = False
         premios_dominicanos = False
+        premios_super_pale = False
         message = ''
         message_picks = ''
         self.fecha = fecha('%d-%m-%Y')
 
         if(self.MODALIDAD == MODALIDAD):
-                self.URI_PETICION = URL_API_NODE_LAMERICANA
+            self.URI_PETICION = URL_API_NODE_LAMERICANA
         elif(self.MODALIDAD == MODALIDAD_RD):
             self.URI_PETICION = URL_API_NODE_LDOMINICANA
 
@@ -121,6 +122,10 @@ class PREMIAR():
                         else:
                             print("PREMIOS DOMINICANO NO SE PREMIO SE INTETARA DE NUEVO")
                             time.sleep(TIEMPO_A_ESPERAR)
+                    #! QUEDE AQUI
+                    elif(self.MODALIDAD == MODALIDAD_PALE):
+                        pass
+
                     else:
                         print("NO DEBERIA DE LLEGAR AQUI ES UNA NUEVA MODALIDAD DE NUEMROS")
                         time.sleep(TIEMPO_A_ESPERAR)
@@ -142,4 +147,7 @@ class PREMIAR():
             if(premios_dominicanos == False):
                 message_a_enviar = f'\n\nNO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
                 sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
+        else:
+            message_a_enviar = f'NO DEBIO DE LLEGAR AQUI INVESTIGA PASO TODA LA MODALIDAD'
+            sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
 

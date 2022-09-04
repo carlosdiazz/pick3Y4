@@ -68,6 +68,9 @@ schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLI
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)
 schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, LOTERY_MARYLAND_PM)
 
+#LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
+
+
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
