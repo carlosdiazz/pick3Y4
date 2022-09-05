@@ -47,6 +47,17 @@ class PREMIAR():
         return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(tradicionales)
 
 
+    def PUBLICAR_SUPER_PALES(self):
+        super_pales = {
+            'loteria'           :   self.loteria,
+            'fecha'             :   self.loteria_a_publicar['fecha'],
+            "sorteo"            :   Convertir_nombre_sorteo(self.PLATAFORMA['NAME'], self.sorteo, self.loteria),
+            'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores'],
+            'MODALIDAD'         :   self.MODALIDAD
+        }
+        return PUBLICAR_EN_LOTENET(self.USER_PLATAFORMA, self.PLATAFORMA ).publicar(super_pales)
+
+
     def premiar(self):
 
         print(f'SE ESTA INICIALIZANDO LA PREMIACION DE PLATAFORMAS PARA {self.loteria} {self.sorteo}')
@@ -61,7 +72,7 @@ class PREMIAR():
 
         if(self.MODALIDAD == MODALIDAD):
             self.URI_PETICION = URL_API_NODE_LAMERICANA
-        elif(self.MODALIDAD == MODALIDAD_RD):
+        elif(self.MODALIDAD == MODALIDAD_RD or self.MODALIDAD == MODALIDAD_PALE):
             self.URI_PETICION = URL_API_NODE_LDOMINICANA
 
         for intentos in range(INTENTOS):
@@ -106,7 +117,7 @@ class PREMIAR():
                     elif(self.MODALIDAD == MODALIDAD_RD):
 
                         if(premios_dominicanos == False):
-                            premiar_dominicanos =self.PUBLICAR_TRADICIONALES()
+                            premiar_dominicanos = self.PUBLICAR_SUPER_PALES()
                             if(premiar_dominicanos['StatusError'] == False and premiar_dominicanos['Status'] == True):
                                 message_picks = premiar_dominicanos['Message']
                                 premios_dominicanos = True
@@ -122,9 +133,26 @@ class PREMIAR():
                         else:
                             print("PREMIOS DOMINICANO NO SE PREMIO SE INTETARA DE NUEVO")
                             time.sleep(TIEMPO_A_ESPERAR)
-                    #! QUEDE AQUI
+
                     elif(self.MODALIDAD == MODALIDAD_PALE):
-                        pass
+
+                        if(premios_super_pale == False):
+                            premiar_pales = self.PUBLICAR_TRADICIONALES()
+                            if(premiar_pales['StatusError'] == False and premiar_pales['Status'] == True):
+                                message_picks = premiar_pales['Message']
+                                premios_super_pale = True
+                            else:
+                                message = premiar_pales['Message']
+                                print(message)
+
+                        if(premios_super_pale):
+                            message_a_enviar = f'SE PREMIO CORRECTAMENTE EN PLATAFORMA: {self.PLATAFORMA["NAME"]} \n\nLOTERIA: {self.loteria}\n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\nMESSAGE:\n\n{message_picks}'
+                            print(message_a_enviar)
+                            sendNotification(False, message_a_enviar, BOT_MEGA['TOKEN'] )
+                            break
+                        else:
+                            print("PREMIOS PALE DOMINICANO NO SE PREMIO SE INTETARA DE NUEVO")
+                            time.sleep(TIEMPO_A_ESPERAR)
 
                     else:
                         print("NO DEBERIA DE LLEGAR AQUI ES UNA NUEVA MODALIDAD DE NUEMROS")
@@ -145,6 +173,10 @@ class PREMIAR():
 
         elif(self.MODALIDAD == MODALIDAD_RD):
             if(premios_dominicanos == False):
+                message_a_enviar = f'\n\nNO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
+                sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
+        elif(self.MODALIDAD == MODALIDAD_PALE):
+            if(premios_super_pale == False):
                 message_a_enviar = f'\n\nNO SE PREMIO\n\nEN PLATAFORMA: {self.PLATAFORMA["NAME"]}\n\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nERROR: {message}'
                 sendNotification(True, message_a_enviar, BOT_MEGA['TOKEN'])
         else:

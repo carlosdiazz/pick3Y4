@@ -81,7 +81,7 @@ schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run, SANCHEZ_NACIONAL
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run, SANCHEZ_LEIDSA)
 
 #PREMIOS AMERICANAS PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
-schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, SANCHEZ_FLORIDA_RD_AM)
+schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_AM['HORA']).do(run, SANCHEZ_FLORIDA_RD_AM)
 schedule.every().day.at(VARIABLES.OBJ_MARYLAND_AM_RD['HORA']).do(run, SANCHEZ_MARYLAND_RD_AM )
 schedule.every().day.at(VARIABLES.OBJ_MAINE_AM_RD['HORA']).do(run, SANCHEZ_MAINE_RD_AM)
 schedule.every().day.at(VARIABLES.OBJ_NEW_HAMPSHIRE_AM_RD['HORA']).do(run, SANCHEZ_NEW_HAMPSHIRE_RD_AM)
@@ -91,6 +91,18 @@ schedule.every().day.at(VARIABLES.OBJ_NEW_JERSEY_AM_RD['HORA']).do(run, SANCHEZ_
 schedule.every().day.at(VARIABLES.OBJ_ILLINOIS_AM_RD['HORA']).do(run, SANCHEZ_ILLINOIS_RD_AM)
 schedule.every().day.at(VARIABLES.OBJ_CONNECTICUT_AM_RD['HORA']).do(run, SANCHEZ_CONNECTICUT_RD_AM)
 schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_AM['HORA']).do(run, SANCHEZ_NEW_YORK_RD_AM)
+
+#PREMIOS SUPER PALES SANCHEZ ---------------------------------------------------------------------------------------
+schedule.every().day.at(VARIABLES.OBJ_SP_REAL_PRIMERA['HORA']).do(run, SANCHEZ_SP_REAL_PRIMERA)
+schedule.every().day.at(VARIABLES.OBJ_SP_PRIMERA_GANAMAS['HORA']).do(run, SANCHEZ_SP_PRIMERA_GANAMAS)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_REAL['HORA']).do(run, SANCHEZ_SP_NYAM_REAL)
+schedule.every().day.at(VARIABLES.OBJ_SP_REAL_GANAMAS['HORA']).do(run,SANCHEZ_SP_REAl_GANAMAS )
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_FLAM['HORA']).do(run, SANCHEZ_SP_NYAM_FLAM)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_GANAMAS['HORA']).do(run,SANCHEZ_SP_NYAM_GANAMAS )
+#schedule.every().day.at(VARIABLES.['HORA']).do(run, )
+#schedule.every().day.at(VARIABLES.['HORA']).do(run, )
+#schedule.every().day.at(VARIABLES.['HORA']).do(run, )
+
 
 
 clearConsole()

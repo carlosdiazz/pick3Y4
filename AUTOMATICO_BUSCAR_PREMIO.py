@@ -70,6 +70,18 @@ schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, LOTERY_MARYLAND_PM)
 
 #LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_SP_PRIMERA_GANAMAS['HORA']).do(run, LOTTERY_SP_PRIMERA_GANAMAS)
+schedule.every().day.at(VARIABLES.OBJ_SP_REAL_PRIMERA['HORA']).do(run,LOTTERY_SP_REAL_PRIMERA )
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_REAL['HORA']).do(run,LOTTERY_SP_NYAM_REAL )
+schedule.every().day.at(VARIABLES.OBJ_SP_REAL_GANAMAS['HORA']).do(run,LOTTERY_SP_REAL_GANAMAS)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_FLAM['HORA']).do(run,LOTTERY_SP_NYAM_FLAM )
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_LOTEKA['HORA']).do(run, LOTTERY_SP_NYAM_LOTEKA)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_GANAMAS['HORA']).do(run,LOTTERY_SP_NYAM_GANAMAS )
+schedule.every().day.at(VARIABLES.OBJ_SP_GANAMAS_LOTEKA['HORA']).do(run,LOTTERY_SP_GANAMAS_LOTEKA )
+schedule.every().day.at(VARIABLES.OBJ_SP_NACIONAL_LEIDSA['HORA']).do(run, LOTTERY_SP_NACIONAL_LEIDSA)
+schedule.every().day.at(VARIABLES.OBJ_SP_LOTEKA_NACIONAL['HORA']).do(run, LOTTERY_SP_LOTEKA_NACIONAL)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run,LOTTERY_SP_NYPM_NACIONAL)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, LOTTERY_SP_NYPM_FLPM)
+
 
 
 clearConsole()

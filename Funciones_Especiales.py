@@ -386,6 +386,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'NOCHE'
         else:
             return sorteo
+
     elif(namePlataforma == 'DESARROLLO'):
         if(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
             return 'NEW YORK AM'
@@ -393,6 +394,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'FLORIDA'
         else:
             return sorteo
+
     elif(namePlataforma == 'LOTEDOM'):
         if(sorteo == OBJ_NEW_YORK_RD_PM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_PM['LOTERIA']):
             return 'NEW YORK NOCHE'
@@ -409,6 +411,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'GEORGIA NIGHT'
         else:
             return sorteo
+
     elif(namePlataforma == 'SANCHEZ'):
         if(sorteo == OBJ_KING_AM['SORTEO'] and loteria == OBJ_KING_AM['LOTERIA']):
             return 'KING LOTTERY MD'
@@ -464,6 +467,41 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
             return 'NEW YORK AM'
 
+        elif(sorteo == OBJ_SP_REAL_PRIMERA['SORTEO'] and loteria == OBJ_SP_REAL_PRIMERA['LOTERIA']):
+            return 'SP REAL PRIMERA'
+
+        elif(sorteo == OBJ_SP_PRIMERA_GANAMAS['SORTEO'] and loteria == OBJ_SP_PRIMERA_GANAMAS['LOTERIA']):
+            return 'SP PRIMERA GANAMAS'
+
+        elif(sorteo == OBJ_SP_NYAM_REAL['SORTEO'] and loteria == OBJ_SP_NYAM_REAL['LOTERIA']):
+            return 'SP NY AM REAL'
+
+        elif(sorteo == OBJ_SP_REAL_GANAMAS['SORTEO'] and loteria == OBJ_SP_REAL_GANAMAS['LOTERIA']):
+            return 'SP REAL GANAMAS'
+
+        elif(sorteo == OBJ_SP_NYAM_FLAM['SORTEO'] and loteria == OBJ_SP_NYAM_FLAM['LOTERIA']):
+            return 'SP NYAM FLAM'
+
+        elif(sorteo == OBJ_SP_NYAM_LOTEKA['SORTEO'] and loteria == OBJ_SP_NYAM_LOTEKA['LOTERIA']):
+            return 'SP NY AM LOTEKA'
+
+        elif(sorteo == OBJ_SP_NYAM_GANAMAS['SORTEO'] and loteria == OBJ_SP_NYAM_GANAMAS['LOTERIA']):
+            return 'SP NY AM GANAMAS'
+
+        elif(sorteo == OBJ_SP_GANAMAS_LOTEKA['SORTEO'] and loteria == OBJ_SP_GANAMAS_LOTEKA['LOTERIA']):
+            return 'SP GANAMAS LOTEKA'
+
+        elif(sorteo == OBJ_SP_NACIONAL_LEIDSA['SORTEO'] and loteria == OBJ_SP_NACIONAL_LEIDSA['LOTERIA']):
+            return 'SP NACIONAL LEIDSA'
+
+        elif(sorteo == OBJ_SP_LOTEKA_NACIONAL['SORTEO'] and loteria == OBJ_SP_LOTEKA_NACIONAL['LOTERIA']):
+            return 'SP LOTEKA NACIONAL'
+
+        elif(sorteo == OBJ_SP_NYPM_NACIONAL['SORTEO'] and loteria == OBJ_SP_NYPM_NACIONAL['LOTERIA']):
+            return 'SP NYPM NACIONAL'
+
+        elif(sorteo == OBJ_SP_NYPM_FLPM['SORTEO'] and loteria == OBJ_SP_NYPM_FLPM['LOTERIA']):
+            return 'SP NYPM FLPM'
 
         else:
             return sorteo

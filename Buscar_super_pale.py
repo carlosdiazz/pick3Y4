@@ -19,7 +19,6 @@ class Buscar_super_pale():
         validar                 = False
         publicar                = False
         self.fecha              = fecha('%d-%m-%Y')
-        #self.fecha              = '04-09-2022'
         self.NUMERO_LOTERIA_1   = False
         self.NUMERO_LOTERIA_2   = False
 
@@ -81,8 +80,8 @@ class Buscar_super_pale():
 
         if(self.NUMERO_LOTERIA_1 and self.NUMERO_LOTERIA_1):
             return {
-                'NU_1'  :   super_pale_1['NUMEROS']['numeros_ganadores']['NU1'],
-                'NU_2'  :   super_pale_2['NUMEROS']['numeros_ganadores']['NU1']
+                'NU1'  :   super_pale_1['NUMEROS']['numeros_ganadores']['NU1'],
+                'NU2'  :   super_pale_2['NUMEROS']['numeros_ganadores']['NU1']
             }
         else:
             return False

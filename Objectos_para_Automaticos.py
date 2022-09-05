@@ -58,7 +58,18 @@ LOTTERY_ANGUILLA_TARDE          =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_TARDE).
 LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Buscar_numeros_ganadores
 
 #LOTERIAS SUPER PALE ------------------------------------------------------------------------------------------------------
-LOTTERY_SP_PRIMERA_GANAMAS       =   Buscar_super_pale(VARIABLES.OBJ_SP_PRIMERA_GANAMAS).Buscar_numeros_ganadores
+LOTTERY_SP_PRIMERA_GANAMAS          =   Buscar_super_pale(VARIABLES.OBJ_SP_PRIMERA_GANAMAS).Buscar_numeros_ganadores
+LOTTERY_SP_REAL_PRIMERA             =   Buscar_super_pale(VARIABLES.OBJ_SP_REAL_PRIMERA).Buscar_numeros_ganadores
+LOTTERY_SP_NYAM_REAL                =   Buscar_super_pale(VARIABLES.OBJ_SP_NYAM_REAL).Buscar_numeros_ganadores
+LOTTERY_SP_REAL_GANAMAS             =   Buscar_super_pale(VARIABLES.OBJ_SP_REAL_GANAMAS).Buscar_numeros_ganadores
+LOTTERY_SP_NYAM_FLAM                =   Buscar_super_pale(VARIABLES.OBJ_SP_NYAM_FLAM).Buscar_numeros_ganadores
+LOTTERY_SP_NYAM_LOTEKA              =   Buscar_super_pale(VARIABLES.OBJ_SP_NYAM_LOTEKA).Buscar_numeros_ganadores
+LOTTERY_SP_NYAM_GANAMAS             =   Buscar_super_pale(VARIABLES.OBJ_SP_NYAM_GANAMAS).Buscar_numeros_ganadores
+LOTTERY_SP_GANAMAS_LOTEKA           =   Buscar_super_pale(VARIABLES.OBJ_SP_GANAMAS_LOTEKA).Buscar_numeros_ganadores
+LOTTERY_SP_NACIONAL_LEIDSA          =   Buscar_super_pale(VARIABLES.OBJ_SP_NACIONAL_LEIDSA).Buscar_numeros_ganadores
+LOTTERY_SP_LOTEKA_NACIONAL          =   Buscar_super_pale(VARIABLES.OBJ_SP_LOTEKA_NACIONAL).Buscar_numeros_ganadores
+LOTTERY_SP_NYPM_NACIONAL            =   Buscar_super_pale(VARIABLES.OBJ_SP_NYPM_NACIONAL).Buscar_numeros_ganadores
+LOTTERY_SP_NYPM_FLPM                =   Buscar_super_pale(VARIABLES.OBJ_SP_NYPM_FLPM).Buscar_numeros_ganadores
 
 
 #! PREMIAR PLATAFORMAS
@@ -150,3 +161,9 @@ SANCHEZ_CONNECTICUT_RD_AM           =   PREMIAR(VARIABLES.OBJ_CONNECTICUT_AM_RD,
 SANCHEZ_NEW_YORK_RD_AM              =   PREMIAR(VARIABLES.OBJ_NEW_YORK_RD_AM, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
 
 #PREMIAR LOTERIAS SUPER PALE ------------------------------------------------------------------------------------------------------
+SANCHEZ_SP_REAL_PRIMERA             =   PREMIAR(VARIABLES.OBJ_SP_REAL_PRIMERA, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
+SANCHEZ_SP_PRIMERA_GANAMAS          =   PREMIAR(VARIABLES.OBJ_SP_PRIMERA_GANAMAS, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
+SANCHEZ_SP_NYAM_REAL                =   PREMIAR(VARIABLES.OBJ_SP_NYAM_REAL, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
+SANCHEZ_SP_REAl_GANAMAS             =   PREMIAR(VARIABLES.OBJ_SP_REAL_GANAMAS, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
+SANCHEZ_SP_NYAM_FLAM                =   PREMIAR(VARIABLES.OBJ_SP_NYAM_FLAM, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
+SANCHEZ_SP_NYAM_GANAMAS             =   PREMIAR(VARIABLES.OBJ_SP_NYAM_GANAMAS, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar

@@ -7,7 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
-from VARIABLES import MODALIDAD, MODALIDAD_RD
+from VARIABLES import MODALIDAD, MODALIDAD_PALE, MODALIDAD_RD
 from Funciones_Especiales import Response
 class PUBLICAR_EN_LOTENET():
 
@@ -104,8 +104,12 @@ class PUBLICAR_EN_LOTENET():
     def colocar_numeros(self):
         if(self.MODALIDAD == MODALIDAD):
             return self.colocar_picks()
+
         elif(self.MODALIDAD == MODALIDAD_RD):
             return self.colocar_tradicionales()
+
+        elif(self.MODALIDAD == MODALIDAD_PALE):
+            return self.colocar_super_pale()
 
 
     def colocar_picks(self):
@@ -153,6 +157,30 @@ class PUBLICAR_EN_LOTENET():
         except:
             return Response(True, f'\n\nNo se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}\n\n', False)
 
+    def colocar_super_pale(self):
+        try:
+            print("AQUI CON PALE")
+            input_numero_1 = self.driver.find_element(by=By.XPATH, value=self.Input_premio1 );self.driver.implicitly_wait(20)
+            if(input_numero_1.is_enabled()):
+                input_numero_1.send_keys(self.numeros_ganadores['NU1'])
+                time.sleep(2)
+
+                input_numero_2 = self.driver.find_element(by=By.XPATH, value=self.Input_premio2 );self.driver.implicitly_wait(20)
+                input_numero_2.send_keys(self.numeros_ganadores['NU2'])
+                time.sleep(2)
+
+                boton_premiar = self.driver.find_element(by=By.XPATH, value=self.boton_premiar );self.driver.implicitly_wait(20)
+                boton_premiar.click()
+                time.sleep(4)
+                self.driver.quit()
+                message=(f"\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\nNUMEROS => {self.numeros_ganadores['NU1']}-{self.numeros_ganadores['NU2']}\n\n")
+                return Response(False, message, True)
+            else:
+                self.driver.quit()
+                return Response(False, f'\n\nEsta loteria esta Premiada {self.loteria} sorteo: {self.sorteo}\n\n', True)
+        except:
+            return Response(True, f'\n\nNo se pudo premiar esta loteria: {self.loteria} sorteo: {self.sorteo}\n\n', False)
+
 
     def publicar(self,loteria):
         try:
@@ -181,4 +209,4 @@ class PUBLICAR_EN_LOTENET():
             numeros_a_colocar = self.colocar_numeros()
             return numeros_a_colocar
         except:
-            return Response(True, '\n\nERRORRRR PASO UNA EXECPCION EN PUBLICAR EN LOTENET\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\n',False)
+            return Response(True, f'\n\nERRORRRR PASO UNA EXECPCION EN PUBLICAR EN LOTENET\n\nLOTERIA => {self.loteria}\nSORTEO => {self.sorteo}\n\n',False)
