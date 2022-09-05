@@ -31,14 +31,14 @@ class Buscar_Premio():
         for intento in range (INTENTOS):
             COMPROBAR_QUE_NO_ESTEN = VALIDAR_QUE_NO_EXISTAN(self.URI_PETICION,self.loteria,self.sorteo,self.fecha)
 
-            if(COMPROBAR_QUE_NO_ESTEN['PUBLICADO'] == True):
+            if(COMPROBAR_QUE_NO_ESTEN['PUBLICADO'] == True): # 'LOS NUMEROS YA ESTAN PUBLICADOS'
                 message = f"\nLOTERIA: {self.loteria} \n\nSORTEO: {self.sorteo} \n\nFECHA: {self.fecha} \n\n{COMPROBAR_QUE_NO_ESTEN['MESSAGE']}"
                 print(message)
                 sendNotification(True, message, config.BOT_NOTIFICACIONES['TOKEN'])
                 validar = True
                 break
             else:
-                if(COMPROBAR_QUE_NO_ESTEN['ERROR'] == False):
+                if(COMPROBAR_QUE_NO_ESTEN['ERROR'] == False): # 'LOS NUMEROS NO ESTAN PUBLICADOS EN MONGO AUN'
                     publicar = self.publicar()
 
                     if(publicar['STATUS']):

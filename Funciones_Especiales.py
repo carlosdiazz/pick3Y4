@@ -1,4 +1,5 @@
 import os
+from pickle import TRUE
 import psutil
 import threading
 from datetime import datetime
@@ -530,45 +531,42 @@ def saber_estado_PC():
     print(message)
 
 
-OBJ_SP_PRIMERA_GANAMAS = {
-    'LOTERIA'       :   'SUPER PALE',
-    'SORTEO'        :   'PRIMERA GANAMAS',
-    'HORA'          :   '12:40:00',
-    'MODALIDAD'     :   MODALIDAD_PALE,
-    'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   False
-}
-
 def saber_super_pale(obj):
     if(obj == OBJ_SP_PRIMERA_GANAMAS):
-        return {
-            'LOTERIA_1' :   OBJ_PRIMERA_AM,
-            'LOTERIA_2' :   OBJ_GANAMAS
-        }
+        return { 'LOTERIA_1' :   OBJ_PRIMERA_AM, 'LOTERIA_2' :   OBJ_GANAMAS }
+
+    elif(obj == OBJ_SP_REAL_PRIMERA):
+        return { 'LOTERIA_1': OBJ_REAL, 'LOTERIA_2': OBJ_PRIMERA_AM }
+
+    elif(obj == OBJ_SP_NYAM_REAL):
+        return { 'LOTERIA_1': OBJ_NEW_YORK_RD_AM, 'LOTERIA_2': OBJ_REAL}
+
+    elif(obj == OBJ_SP_REAL_GANAMAS ):
+        return { 'LOTERIA_1': OBJ_REAL, 'LOTERIA_2':OBJ_GANAMAS }
+
+    elif(obj == OBJ_SP_NYAM_FLAM):
+        return { 'LOTERIA_1':OBJ_NEW_YORK_RD_AM, 'LOTERIA_2': OBJ_FLORIDA_RD_AM}
+
+    elif(obj == OBJ_SP_NYAM_LOTEKA):
+        return { 'LOTERIA_1': OBJ_NEW_YORK_RD_AM, 'LOTERIA_2': OBJ_LOTEKA}
+
+    elif(obj == OBJ_SP_NYAM_GANAMAS):
+        return { 'LOTERIA_1':OBJ_NEW_YORK_RD_AM, 'LOTERIA_2': OBJ_GANAMAS}
+
+    elif(obj == OBJ_SP_GANAMAS_LOTEKA ):
+        return { 'LOTERIA_1': OBJ_GANAMAS, 'LOTERIA_2': OBJ_LOTEKA}
+
+    elif(obj == OBJ_SP_NACIONAL_LEIDSA):
+        return { 'LOTERIA_1': OBJ_NACIONAL, 'LOTERIA_2': OBJ_LEIDSA}
+
+    elif(obj == OBJ_SP_LOTEKA_NACIONAL):
+        return { 'LOTERIA_1': OBJ_LOTEKA, 'LOTERIA_2': OBJ_NACIONAL }
+
+    elif(obj == OBJ_SP_NYPM_NACIONAL):
+        return { 'LOTERIA_1': OBJ_NEW_YORK_RD_PM, 'LOTERIA_2': OBJ_NACIONAL }
+
+    elif(obj == OBJ_SP_NYPM_FLPM):
+        return { 'LOTERIA_1':OBJ_NEW_YORK_RD_PM, 'LOTERIA_2': OBJ_FLORIDA_RD_PM}
+
     else:
         return False
-
-
-#! QUEDE AQUI
-def publicar_super_pale(obj):
-    fecha_a_buscar = fecha('%d-%m-%Y')
-    arr_loterias = saber_super_pale(obj)
-    
-    NUMERO_LOTERIA_1 = False
-    NUMERO_LOTERIA_2 = False
-
-    
-    OBJ_LOTERIA_1 = arr_loterias['LOTERIA_1']
-    OBJ_LOTERIA_2 = arr_loterias['LOTERIA_2']
-
-
-    for i in range(INTENTOS):
-
-        #numero_a_bsucar = CONSULTAR_NUMEROS_API(URL_API_NODE_LDOMINICANA, )
-
-
-        time.sleep(TIEMPO_A_ESPERAR)
-
-    pass
-
-#publicar_super_pale(OBJ_SP_PRIMERA_GANAMAS)

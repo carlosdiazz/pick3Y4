@@ -7,8 +7,9 @@ from config import TIEMPO_A_BUSCAR, hora_prueba
 from Objectos_para_Automaticos import *
 
 #! AGREGAR TODO EN PROBAR
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_PM)
-#PREMIOS AMERICANAS PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
+#LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
+schedule.every().day.at(hora_prueba).do(run, LOTTERY_SP_PRIMERA_GANAMAS)
+
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

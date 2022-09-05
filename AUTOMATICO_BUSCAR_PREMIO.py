@@ -69,6 +69,7 @@ schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_N
 schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, LOTERY_MARYLAND_PM)
 
 #LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
+schedule.every().day.at(VARIABLES.OBJ_SP_PRIMERA_GANAMAS['HORA']).do(run, LOTTERY_SP_PRIMERA_GANAMAS)
 
 
 clearConsole()

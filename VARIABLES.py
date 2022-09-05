@@ -654,8 +654,107 @@ OBJ_ANGUILLA_PM = {
 
 OBJ_SP_PRIMERA_GANAMAS = {
     'LOTERIA'       :   'SUPER PALE',
-    'SORTEO'        :   'PRIMERA GANAMAS',
-    'HORA'          :   '12:40:00',
+    'SORTEO'        :   'PRIMERA Y GANAMAS',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_REAL_PRIMERA = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'REAL Y PRIMERA',
+    'HORA'          :   '13:10:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYAM_REAL = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK AM Y REAL',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_REAL_GANAMAS = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'REAL Y GANAMAS',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYAM_FLAM = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK AM Y FLORIDA AM',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYAM_LOTEKA = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK AM Y LOTEKA',
+    'HORA'          :   '20:10:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYAM_GANAMAS = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK AM Y GANAMAS',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_GANAMAS_LOTEKA = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'GANAMAS Y LOTEKA',
+    'HORA'          :   '20:10:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NACIONAL_LEIDSA = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NACIONAL Y LEIDSA',
+    'HORA'          :   '21:10:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_LOTEKA_NACIONAL = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'LOTEKA Y NACIONAL',
+    'HORA'          :   '14:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYPM_NACIONAL = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK PM Y NACIONAL',
+    'HORA'          :   '22:50:00',
+    'MODALIDAD'     :   MODALIDAD_PALE,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   False
+}
+
+OBJ_SP_NYPM_FLPM = {
+    'LOTERIA'       :   'SUPER PALE',
+    'SORTEO'        :   'NEWYORK PM Y FLORIDA PM',
+    'HORA'          :   '22:50:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False

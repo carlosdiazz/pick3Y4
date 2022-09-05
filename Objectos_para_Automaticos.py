@@ -2,7 +2,7 @@ from Buscar_premios import Buscar_Premio
 import VARIABLES
 from PREMIAR import PREMIAR
 from Datos_Loterias.DATOS_PLATAFORMA import PLATAFORMA_LOTEDOM, PLATAFORMA_MEGA, PLATAFORMA_SANCHEZ, USER_LOTEDOM, USER_MEGALOTTERY, PLATAFORMA_RAPI, USER_RAPIDITA, PLATAFORMA_DEV, USER_DESARROLLO, USER_MEGALOTTERY_SIN_CONFIRMAR, USER_SANCHEZ
-
+from Buscar_super_pale import Buscar_super_pale
 #! BUSCAR PREMIOS DE LOTERIAS
 #LOTERIAS AM PICKS ----------------------------------------------------------------
 LOTERY_FLORIDA_AM               =   Buscar_Premio(VARIABLES.OBJ_FL_AM).Buscar_numeros_ganadores
@@ -56,6 +56,9 @@ LOTTERY_ANGUILLA_AM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_AM).Bus
 LOTTERY_ANGUILLA_MD             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_MD).Buscar_numeros_ganadores
 LOTTERY_ANGUILLA_TARDE          =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_TARDE).Buscar_numeros_ganadores
 LOTTERY_ANGUILLA_PM             =   Buscar_Premio(VARIABLES.OBJ_ANGUILLA_PM).Buscar_numeros_ganadores
+
+#LOTERIAS SUPER PALE ------------------------------------------------------------------------------------------------------
+LOTTERY_SP_PRIMERA_GANAMAS       =   Buscar_super_pale(VARIABLES.OBJ_SP_PRIMERA_GANAMAS).Buscar_numeros_ganadores
 
 
 #! PREMIAR PLATAFORMAS
@@ -146,5 +149,4 @@ SANCHEZ_ILLINOIS_RD_AM              =   PREMIAR(VARIABLES.OBJ_ILLINOIS_AM_RD, PL
 SANCHEZ_CONNECTICUT_RD_AM           =   PREMIAR(VARIABLES.OBJ_CONNECTICUT_AM_RD, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
 SANCHEZ_NEW_YORK_RD_AM              =   PREMIAR(VARIABLES.OBJ_NEW_YORK_RD_AM, PLATAFORMA_SANCHEZ, USER_SANCHEZ).premiar
 
-#LOTERIAS SUPER PALE ------------------------------------------------------------------------------------------------------
-LOTERY_SP_PRIMERA_GANAMAS           =   ''
+#PREMIAR LOTERIAS SUPER PALE ------------------------------------------------------------------------------------------------------
