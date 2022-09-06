@@ -14,6 +14,7 @@ from DATOS_Loterias_Dominicana.REAL import REAL_TODO
 from DATOS_Loterias_Dominicana.ANGUILA_MD import ANGUILA_MD_TODO
 from DATOS_Loterias_Dominicana.ANGUILA_TARDE import ANGUILA_TARDE_TODO
 from DATOS_Loterias_Dominicana.ANGUILA_PM import ANGUILA_PM_TODO
+from Datos_Loterias.CALIFORNIA import CALIFORNIA_TODO
 
 #IMPORTACIONES AMERICANAS
 from Datos_Loterias.CONNECTICUT import CONNECTICUT_TODO
@@ -178,7 +179,7 @@ OBJ_CONNECTICUT_AM_RD = {
     'ARREGLO_XPATH' :   CONNECTICUT_TODO
 }
 
-OBJ_CONNECTICUR_PM_RD = {
+OBJ_CONNECTICUT_PM_RD = {
     'LOTERIA'       :   'CONNECTICUT',
     'HORA'          :   '23:00:00',
     "SORTEO"        :   EVENING,
@@ -242,6 +243,26 @@ OBJ_PA_PM = {
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   PENNSYLVANIA_TODO
 }
+#? ----------------------------------------
+OBJ_CA_PM = {
+    'LOTERIA'       :   'CALIFORNIA',
+    'HORA'          :   '21:40:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   True,
+    'ARREGLO_XPATH' :   CALIFORNIA_TODO
+}
+
+OBJ_CALIFORNIA_RD_PM = {
+    'LOTERIA'       :   'CALIFORNIA',
+    'HORA'          :   '21:40:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   CALIFORNIA_TODO
+}
+
+
 #? ----------------------------------------
 OBJ_NC_AM = {
     'LOTERIA'       :   'NORTH CAROLINA',

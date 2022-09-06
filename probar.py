@@ -52,23 +52,14 @@ from Objectos_para_Automaticos import *
 #schedule.every().day.at(hora_prueba).do(run,SANCHEZ_SP_GANAMAS_LOTEKA )
 #schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_LOTEKA_NACIONAL)
 #schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NACIONAL_LEIDSA)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NYPM_NACIONAL)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NYPM_FLPM )
+
+#!FALTAn
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_NIGHT)
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_RD_NIGHT)
 
 
-#PREMIOS SANCHEZ PICKS PM --------------------------------------------------------------------------
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MAINE_EVENING)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_VERMOMT_EVENING )
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_HAMPSHIRE_EVENING )
-
-#PREMIOS AMERICANAS PM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_RD_PM )
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_VERMONT_RD_PM)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_HAMPSHIRE_RD_PM)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MAINE_RD_PM)
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_RD_PM)
-
-#schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

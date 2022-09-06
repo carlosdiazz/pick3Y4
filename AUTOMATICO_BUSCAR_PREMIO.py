@@ -39,19 +39,10 @@ schedule.every().day.at(VARIABLES.OBJ_SC_AM2['HORA']).do(run, LOTERY_SOUTH_CAROL
 schedule.every().day.at(VARIABLES.OBJ_GA_AM['HORA']).do(run, LOTERY_GEORGIA_AM)
 schedule.every().day.at(VARIABLES.OBJ_NC_AM['HORA']).do(run, LOTERY_NORTH_CAROLINA_AM)
 schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, LOTERY_MARYLAND_AM)
-
-#!Nuevas
 schedule.every().day.at(VARIABLES.OBJ_VT_AM['HORA']).do(run, LOTERY_VERMONT_AM)
-schedule.every().day.at(VARIABLES.OBJ_VT_PM['HORA']).do(run, LOTERY_VERMONT_PM)
-
 schedule.every().day.at(VARIABLES.OBJ_NH_AM['HORA']).do(run, LOTERY_NEW_HAMPSHIRE_AM)
-schedule.every().day.at(VARIABLES.OBJ_NH_PM['HORA']).do(run, LOTERY_NEW_HAMPSHIRE_PM)
-
 schedule.every().day.at(VARIABLES.OBJ_ME_AM['HORA']).do(run, LOTERY_MAINE_AM)
-schedule.every().day.at(VARIABLES.OBJ_ME_PM['HORA']).do(run, LOTERY_MAINE_PM)
-
 schedule.every().day.at(VARIABLES.OBJ_IL_AM['HORA']).do(run, LOTERY_ILLINOIS_AM)
-schedule.every().day.at(VARIABLES.OBJ_IL_PM['HORA']).do(run, LOTERY_ILLINOIS_PM)
 
 
 #LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
@@ -67,6 +58,12 @@ schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, LOTERY_GEORGIA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NC_PM['HORA']).do(run, LOTERY_NORTH_CAROLINA_PM)
 schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, LOTERY_GEORGIA_NIGHT)
 schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, LOTERY_MARYLAND_PM)
+schedule.every().day.at(VARIABLES.OBJ_VT_PM['HORA']).do(run, LOTERY_VERMONT_PM)
+schedule.every().day.at(VARIABLES.OBJ_NH_PM['HORA']).do(run, LOTERY_NEW_HAMPSHIRE_PM)
+schedule.every().day.at(VARIABLES.OBJ_ME_PM['HORA']).do(run, LOTERY_MAINE_PM)
+schedule.every().day.at(VARIABLES.OBJ_IL_PM['HORA']).do(run, LOTERY_ILLINOIS_PM)
+schedule.every().day.at(VARIABLES.OBJ_CA_PM['HORA']).do(run, LOTERY_CALIFORNIA_PM)
+
 
 #LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_SP_PRIMERA_GANAMAS['HORA']).do(run, LOTTERY_SP_PRIMERA_GANAMAS)

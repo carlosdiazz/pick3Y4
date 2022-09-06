@@ -439,6 +439,9 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_FLORIDA_RD_AM['SORTEO'] and loteria == OBJ_FLORIDA_RD_AM['LOTERIA']):
             return 'FLORIDA AM'
 
+        elif(sorteo == OBJ_FLORIDA_RD_PM['SORTEO'] and loteria == OBJ_FLORIDA_RD_PM['LOTERIA']):
+            return 'FLORIDA PM'
+
         elif(sorteo == OBJ_MARYLAND_AM_RD['SORTEO'] and loteria == OBJ_MARYLAND_AM_RD['LOTERIA']):
             return 'MARYLAND AM'
 
@@ -469,17 +472,35 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_GEORGIA_RD_PM['SORTEO'] and loteria == OBJ_GEORGIA_RD_PM['LOTERIA']):
             return 'GEORGIA EV'
 
+        elif(sorteo == OBJ_GEORGIA_RD_NIGHT['SORTEO'] and loteria == OBJ_GEORGIA_RD_NIGHT['LOTERIA']):
+            return 'GEORGIA PM'
+
+        elif(sorteo == OBJ_CALIFORNIA_RD_PM['SORTEO'] and loteria == OBJ_CALIFORNIA_RD_PM['LOTERIA']):
+            return 'CALIFORNIA PM'
+
         elif(sorteo == OBJ_NEW_JERSEY_AM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_AM_RD['LOTERIA']):
             return 'NEW JERSEY AM'
+
+        elif(sorteo == OBJ_NEW_JERSEY_PM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_PM_RD['LOTERIA']):
+            return 'NEW JERSEY PM'
 
         elif(sorteo == OBJ_ILLINOIS_AM_RD['SORTEO'] and loteria == OBJ_ILLINOIS_AM_RD['LOTERIA']):
             return 'ILLINOIS AM'
 
+        elif(sorteo == OBJ_ILLINOIS_PM_RD['SORTEO'] and loteria == OBJ_ILLINOIS_PM_RD['LOTERIA']):
+            return 'ILLINOIS PM'
+
         elif(sorteo == OBJ_CONNECTICUT_AM_RD['SORTEO'] and loteria == OBJ_CONNECTICUT_AM_RD['LOTERIA']):
             return 'CONNECTICUT MD'
 
+        elif(sorteo == OBJ_CONNECTICUT_PM_RD['SORTEO'] and loteria == OBJ_CONNECTICUT_PM_RD['LOTERIA']):
+            return 'CONNECTICUT PM'
+
         elif(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
             return 'NEW YORK AM'
+        
+        elif(sorteo == OBJ_NEW_YORK_RD_PM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_PM['LOTERIA']):
+            return 'NEW YORK PM'
 
         elif(sorteo == OBJ_SP_REAL_PRIMERA['SORTEO'] and loteria == OBJ_SP_REAL_PRIMERA['LOTERIA']):
             return 'SP REAL PRIMERA'

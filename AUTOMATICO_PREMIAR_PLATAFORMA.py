@@ -68,9 +68,13 @@ schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, SANCHEZ_GEORGIA_EVE
 schedule.every().day.at(VARIABLES.OBJ_ME_PM['HORA']).do(run, SANCHEZ_MAINE_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_VT_PM['HORA']).do(run, SANCHEZ_VERMOMT_EVENING )
 schedule.every().day.at(VARIABLES.OBJ_NH_PM['HORA']).do(run, SANCHEZ_NEW_HAMPSHIRE_EVENING )
-
-
-
+schedule.every().day.at(VARIABLES.OBJ_CA_PM['HORA']).do(run, SANCHEZ_CALIFORNIA_EVENING )
+schedule.every().day.at(VARIABLES.OBJ_FL_PM['HORA']).do(run, SANCHEZ_FLORIDA_EVENING)
+schedule.every().day.at(VARIABLES.OBJ_IL_PM['HORA']).do(run, SANCHEZ_ILLINOIS_EVENING)
+schedule.every().day.at(VARIABLES.OBJ_NY_PM['HORA']).do(run, SANCHEZ_NEW_YORK_EVENING)
+schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, SANCHEZ_GEORGIA_NIGHT)
+schedule.every().day.at(VARIABLES.OBJ_NJ_PM['HORA']).do(run, SANCHEZ_NEW_JERSEY_EVENING)
+schedule.every().day.at(VARIABLES.OBJ_CT_PM['HORA']).do(run, SANCHEZ_CONNECTICUT_EVENING)
 
 
 
@@ -112,8 +116,13 @@ schedule.every().day.at(VARIABLES.OBJ_VERMONT_PM_RD['HORA']).do(run, SANCHEZ_VER
 schedule.every().day.at(VARIABLES.OBJ_NEW_HAMPSHIRE_PM_RD['HORA']).do(run, SANCHEZ_NEW_HAMPSHIRE_RD_PM)
 schedule.every().day.at(VARIABLES.OBJ_MAINE_PM_RD['HORA']).do(run, SANCHEZ_MAINE_RD_PM)
 schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_PM['HORA']).do(run, SANCHEZ_GEORGIA_RD_PM)
-
-
+schedule.every().day.at(VARIABLES.OBJ_CALIFORNIA_RD_PM['HORA']).do(run, SANCHEZ_CALIFORNIA_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, SANCHEZ_FLORIDA_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_ILLINOIS_PM_RD['HORA']).do(run, SANCHEZ_ILLINOIS_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, SANCHEZ_NEW_YORK_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_NEW_JERSEY_PM_RD['HORA']).do(run, SANCHEZ_NEW_JERSEY_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_CONNECTICUT_PM_RD['HORA']).do(run, SANCHEZ_CONNECTICUT_RD_PM)
+schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_NIGHT['HORA']).do(run, SANCHEZ_GEORGIA_RD_NIGHT)
 
 
 #PREMIOS SUPER PALES SANCHEZ ---------------------------------------------------------------------------------------
@@ -127,8 +136,8 @@ schedule.every().day.at(VARIABLES.OBJ_SP_NYAM_LOTEKA['HORA']).do(run,SANCHEZ_SP_
 schedule.every().day.at(VARIABLES.OBJ_SP_GANAMAS_LOTEKA['HORA']).do(run,SANCHEZ_SP_GANAMAS_LOTEKA )
 schedule.every().day.at(VARIABLES.OBJ_SP_LOTEKA_NACIONAL['HORA']).do(run, SANCHEZ_SP_LOTEKA_NACIONAL)
 schedule.every().day.at(VARIABLES.OBJ_SP_NACIONAL_LEIDSA['HORA']).do(run, SANCHEZ_SP_NACIONAL_LEIDSA)
-#schedule.every().day.at(VARIABLES.['HORA']).do(run, )
-
+schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run, SANCHEZ_SP_NYPM_NACIONAL)
+schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, SANCHEZ_SP_NYPM_FLPM )
 
 
 clearConsole()
