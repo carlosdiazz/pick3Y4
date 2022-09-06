@@ -76,27 +76,25 @@ schedule.every().day.at(VARIABLES.OBJ_GA_NIGHT['HORA']).do(run, SANCHEZ_GEORGIA_
 schedule.every().day.at(VARIABLES.OBJ_NJ_PM['HORA']).do(run, SANCHEZ_NEW_JERSEY_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_CT_PM['HORA']).do(run, SANCHEZ_CONNECTICUT_EVENING)
 
-
-
-
-
-
-#PREMIOS SANCHEZ DOMINICANAS --------------------------------------------------------------------------
+#PREMIOS SANCHEZ DOMINICANAS AM --------------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_KING_AM['HORA']).do(run, SANCHEZ_KING_LOTERRY_AM)
-schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, SANCHEZ_KING_LOTERRY_PM)
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_AM['HORA']).do(run, SANCHEZ_ANGUILA_AM)
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_MD['HORA']).do(run, SANCHEZ_ANGUILA_MD)
-schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run, SANCHEZ_ANGUILA_TARDE)
-schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run, SANCHEZ_ANGILA_PM)
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run, SANCHEZ_PRIMERA_AM)
-schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, SANCHEZ_PRIMERA_PM)
 schedule.every().day.at(VARIABLES.OBJ_LA_SUERTE['HORA']).do(run, SANCHEZ_LA_SUERTE_AM)
 schedule.every().day.at(VARIABLES.OBJ_REAL['HORA']).do(run, SANCHEZ_REAL)
 schedule.every().day.at(VARIABLES.OBJ_LOTEDOM['HORA']).do(run, SANCHEZ_LOTEDOM)
-schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, SANCHEZ_LOTEKA)
 schedule.every().day.at(VARIABLES.OBJ_GANAMAS['HORA']).do(run, SANCHEZ_GANAMAS)
+
+#PREMIOS SANCHEZ DOMINICANAS PM --------------------------------------------------------------------------
+schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, SANCHEZ_KING_LOTERRY_PM)
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run, SANCHEZ_ANGUILA_TARDE)
+schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run, SANCHEZ_ANGILA_PM)
+schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, SANCHEZ_PRIMERA_PM)
 schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run, SANCHEZ_NACIONAL)
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run, SANCHEZ_LEIDSA)
+schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, SANCHEZ_LOTEKA)
+
 
 #PREMIOS AMERICANAS AM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_AM['HORA']).do(run, SANCHEZ_FLORIDA_RD_AM)
@@ -123,7 +121,6 @@ schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, SANCHEZ_NE
 schedule.every().day.at(VARIABLES.OBJ_NEW_JERSEY_PM_RD['HORA']).do(run, SANCHEZ_NEW_JERSEY_RD_PM)
 schedule.every().day.at(VARIABLES.OBJ_CONNECTICUT_PM_RD['HORA']).do(run, SANCHEZ_CONNECTICUT_RD_PM)
 schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_NIGHT['HORA']).do(run, SANCHEZ_GEORGIA_RD_NIGHT)
-
 
 #PREMIOS SUPER PALES SANCHEZ ---------------------------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_SP_REAL_PRIMERA['HORA']).do(run, SANCHEZ_SP_REAL_PRIMERA)

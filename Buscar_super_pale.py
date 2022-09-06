@@ -78,7 +78,7 @@ class Buscar_super_pale():
                 self.NUMERO_LOTERIA_2 = False
                 print(super_pale_2['MESSAGE'])
 
-        if(self.NUMERO_LOTERIA_1 and self.NUMERO_LOTERIA_1):
+        if(self.NUMERO_LOTERIA_1 and self.NUMERO_LOTERIA_2):
             return {
                 'NU1'  :   super_pale_1['NUMEROS']['numeros_ganadores']['NU1'],
                 'NU2'  :   super_pale_2['NUMEROS']['numeros_ganadores']['NU1']
