@@ -80,8 +80,16 @@ class Buscar_Premio():
                 NUMEROS_VALIDOS_A_PUBLICAR = False
 
         else:
-            ARR_LOTERIA_XPATH = self.datos['ARREGLO_XPATH']
-            NUMEROS_VALIDOS_A_PUBLICAR = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH,self.sorteo,self.ARR_FECHA)
+            ARR_LOTERIA_XPATH_1 = self.datos['ARREGLO_XPATH'][0]
+            ARR_LOTERIA_XPATH_2 = self.datos['ARREGLO_XPATH'][1]
+            COMPROBAR_ARREGLO_1 = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH_1,self.sorteo,self.ARR_FECHA)
+            COMPROBAR_ARREGLO_2 = API_DOMINICANA().devolver_numeros(ARR_LOTERIA_XPATH_2,self.sorteo,self.ARR_FECHA)
+
+            if(COMPROBAR_ARREGLO_1 == COMPROBAR_ARREGLO_2):
+                    NUMEROS_VALIDOS_A_PUBLICAR = COMPROBAR_ARREGLO_2
+            else:
+                NUMEROS_VALIDOS_A_PUBLICAR = False
+
 
         if(NUMEROS_VALIDOS_A_PUBLICAR):
 

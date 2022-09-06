@@ -117,7 +117,7 @@ class PREMIAR():
                     elif(self.MODALIDAD == MODALIDAD_RD):
 
                         if(premios_dominicanos == False):
-                            premiar_dominicanos = self.PUBLICAR_SUPER_PALES()
+                            premiar_dominicanos = self.PUBLICAR_TRADICIONALES()
                             if(premiar_dominicanos['StatusError'] == False and premiar_dominicanos['Status'] == True):
                                 message_picks = premiar_dominicanos['Message']
                                 premios_dominicanos = True
@@ -137,7 +137,7 @@ class PREMIAR():
                     elif(self.MODALIDAD == MODALIDAD_PALE):
 
                         if(premios_super_pale == False):
-                            premiar_pales = self.PUBLICAR_TRADICIONALES()
+                            premiar_pales = self.PUBLICAR_SUPER_PALES()
                             if(premiar_pales['StatusError'] == False and premiar_pales['Status'] == True):
                                 message_picks = premiar_pales['Message']
                                 premios_super_pale = True

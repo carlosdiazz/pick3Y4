@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 import time
-from Funciones_Especiales import Validar_Fecha_Hoy, solo_undigito, Validar_Fecha_hoy2
+from Funciones_Especiales import solo_undigito, Validar_Fecha_hoy2
 
 class API_DOMINICANA(): #! AUN ME fALTA VALIDAR LA FECHA POR AQUI, TENGO QUE ENVIAR LA FECHA Y CONFIRMARLA AQUI
 

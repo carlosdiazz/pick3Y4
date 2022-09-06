@@ -1,16 +1,20 @@
 #IMPORTACIONES DOMINICANAS
-from DATOS_Loterias_Dominicana.ANGUILA import ANGUILA
-from DATOS_Loterias_Dominicana.GANAMAS import GANAMAS
-from DATOS_Loterias_Dominicana.KING_LOTTERY_DIA import KING_LOTTERY_DIA
-from DATOS_Loterias_Dominicana.KING_LOTTERY_NOCHE import KING_LOTTERY_NOCHE
-from DATOS_Loterias_Dominicana.LA_SUERTE import LA_SUERTE
-from DATOS_Loterias_Dominicana.LEIDSA import LEIDSA
-from DATOS_Loterias_Dominicana.LOTEDOM import LOTEDOM
-from DATOS_Loterias_Dominicana.LOTEKA import LOTEKA
-from DATOS_Loterias_Dominicana.NACIONAL import NACIONAL
-from DATOS_Loterias_Dominicana.PRIMERA_DIA import PRIMERA_DIA
-from DATOS_Loterias_Dominicana.PRIMERA_NOCHE import PRIMERA_NOCHE
-from DATOS_Loterias_Dominicana.REAL import REAL
+from DATOS_Loterias_Dominicana.ANGUILA_AM import ANGUILA_AM_TODO
+from DATOS_Loterias_Dominicana.GANAMAS import GANAMAS_TODO
+from DATOS_Loterias_Dominicana.KING_LOTTERY_DIA import KING_LOTTERY_DIA_TODO
+from DATOS_Loterias_Dominicana.KING_LOTTERY_NOCHE import KING_LOTTERY_NOCHE_TODO
+from DATOS_Loterias_Dominicana.LA_SUERTE import LA_SUERTE_TODO
+from DATOS_Loterias_Dominicana.LEIDSA import LEIDSA_TODO
+from DATOS_Loterias_Dominicana.LOTEDOM import LOTEDOM_TODO
+from DATOS_Loterias_Dominicana.LOTEKA import LOTEKA_TODO
+from DATOS_Loterias_Dominicana.NACIONAL import NACIONAL_TODO
+from DATOS_Loterias_Dominicana.PRIMERA_DIA import PRIMERA_DIA_TODO
+from DATOS_Loterias_Dominicana.PRIMERA_NOCHE import PRIMERA_NOCHE_TODO
+from DATOS_Loterias_Dominicana.REAL import REAL_TODO
+from DATOS_Loterias_Dominicana.ANGUILA_MD import ANGUILA_MD_TODO
+from DATOS_Loterias_Dominicana.ANGUILA_TARDE import ANGUILA_TARDE_TODO
+from DATOS_Loterias_Dominicana.ANGUILA_PM import ANGUILA_PM_TODO
+
 #IMPORTACIONES AMERICANAS
 from Datos_Loterias.CONNECTICUT import CONNECTICUT_TODO
 from Datos_Loterias.FLORIDA import FLORIDA_TODO
@@ -27,7 +31,6 @@ from Datos_Loterias.SOUTH_CAROLINA import SOUTH_CAROLINA_TODO
 from Datos_Loterias.VIRGINIA import VIRGINIA_TODO
 from Datos_Loterias.Vermont import VERMONT_TODO
 from Datos_Loterias.WASHINGTON_DC import WASHINGTON_DC_TODO
-
 
 #AQUI AGREGO LAS DIFERENTES LOTERIAS CON SU NOMBRES Y HORARIO PARA BUSCAR Y PREMIAR
 #?SI MEZCLADA ES TRUE, MEZCLARA LAS LOTERIAS AMERICANA EN DOMINICANA TAMBIEN
@@ -523,7 +526,7 @@ OBJ_GANAMAS = {
     'HORA'          :   '14:35:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   GANAMAS
+    'ARREGLO_XPATH' :   GANAMAS_TODO
 }
 #? ----------------------------------------
 OBJ_KING_AM = {
@@ -532,7 +535,7 @@ OBJ_KING_AM = {
     'HORA'          :   '12:30:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   KING_LOTTERY_DIA
+    'ARREGLO_XPATH' :   KING_LOTTERY_DIA_TODO
 }
 
 OBJ_KING_PM = {
@@ -541,7 +544,7 @@ OBJ_KING_PM = {
     'HORA'          :   '19:30:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   KING_LOTTERY_NOCHE
+    'ARREGLO_XPATH' :   KING_LOTTERY_NOCHE_TODO
 }
 #? ----------------------------------------
 OBJ_LA_SUERTE = {
@@ -550,7 +553,7 @@ OBJ_LA_SUERTE = {
     'HORA'          :   '12:30:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   LA_SUERTE
+    'ARREGLO_XPATH' :   LA_SUERTE_TODO
 }
 #? ----------------------------------------
 OBJ_LEIDSA = {
@@ -559,7 +562,7 @@ OBJ_LEIDSA = {
     'HORA'          :   '20:55:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   LEIDSA
+    'ARREGLO_XPATH' :   LEIDSA_TODO
 }
 #? ----------------------------------------
 OBJ_LOTEDOM = {
@@ -568,7 +571,7 @@ OBJ_LOTEDOM = {
     'HORA'          :   '14:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   LOTEDOM
+    'ARREGLO_XPATH' :   LOTEDOM_TODO
 }
 #? ----------------------------------------
 OBJ_LOTEKA = {
@@ -577,7 +580,7 @@ OBJ_LOTEKA = {
     'HORA'          :   '20:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   LOTEKA
+    'ARREGLO_XPATH' :   LOTEKA_TODO
 }
 #? ----------------------------------------
 OBJ_NACIONAL = {
@@ -586,7 +589,7 @@ OBJ_NACIONAL = {
     'HORA'          :   '20:55:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   NACIONAL
+    'ARREGLO_XPATH' :   NACIONAL_TODO
 }
 #? ----------------------------------------
 OBJ_PRIMERA_AM = {
@@ -595,7 +598,7 @@ OBJ_PRIMERA_AM = {
     'HORA'          :   '12:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   PRIMERA_DIA
+    'ARREGLO_XPATH' :   PRIMERA_DIA_TODO
 }
 
 OBJ_PRIMERA_PM = {
@@ -604,7 +607,7 @@ OBJ_PRIMERA_PM = {
     'HORA'          :   '20:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   PRIMERA_NOCHE
+    'ARREGLO_XPATH' :   PRIMERA_NOCHE_TODO
 }
 #? ----------------------------------------
 OBJ_REAL = {
@@ -613,7 +616,7 @@ OBJ_REAL = {
     'HORA'          :   '13:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   REAL
+    'ARREGLO_XPATH' :   REAL_TODO
 }
 #? ----------------------------------------
 OBJ_ANGUILLA_AM = {
@@ -622,7 +625,7 @@ OBJ_ANGUILLA_AM = {
     'HORA'          :   '10:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   ANGUILA
+    'ARREGLO_XPATH' :   ANGUILA_AM_TODO
 }
 
 OBJ_ANGUILLA_MD = {
@@ -631,7 +634,7 @@ OBJ_ANGUILLA_MD = {
     'HORA'          :   '13:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   ANGUILA
+    'ARREGLO_XPATH' :   ANGUILA_MD_TODO
 }
 
 OBJ_ANGUILLA_TARDE = {
@@ -640,7 +643,7 @@ OBJ_ANGUILLA_TARDE = {
     'HORA'          :   '18:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   ANGUILA
+    'ARREGLO_XPATH' :   ANGUILA_TARDE_TODO
 }
 
 OBJ_ANGUILLA_PM = {
@@ -649,7 +652,7 @@ OBJ_ANGUILLA_PM = {
     'HORA'          :   '21:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
-    'ARREGLO_XPATH' :   ANGUILA
+    'ARREGLO_XPATH' :   ANGUILA_PM_TODO
 }
 
 OBJ_SP_PRIMERA_GANAMAS = {
@@ -736,7 +739,7 @@ OBJ_SP_NACIONAL_LEIDSA = {
 OBJ_SP_LOTEKA_NACIONAL = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'LOTEKA Y NACIONAL',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '21:20:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False

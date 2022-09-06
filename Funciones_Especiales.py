@@ -1,13 +1,12 @@
 import os
-from pickle import TRUE
 import psutil
 import threading
 from datetime import datetime
 from VARIABLES import *
 import requests
 import json
-from config import API_KEY_MONGO_DB, INTENTOS, TIEMPO_A_ESPERAR, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
-import time
+from config import API_KEY_MONGO_DB, URL_API_NODE_LAMERICANA, URL_API_NODE_LDOMINICANA
+
 def fecha(tipo_fecha):
     return datetime.today().strftime(tipo_fecha)
 
@@ -383,7 +382,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
 
     if(namePlataforma == 'RAPIDITA'):
         if(sorteo == OBJ_PRIMERA_PM['SORTEO']):
-            return 'NOCHE'
+            return '12M NOCHE'
         else:
             return sorteo
 
@@ -443,17 +442,32 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_MARYLAND_AM_RD['SORTEO'] and loteria == OBJ_MARYLAND_AM_RD['LOTERIA']):
             return 'MARYLAND AM'
 
+        elif(sorteo == OBJ_MARYLAND_PM_RD['SORTEO'] and loteria == OBJ_MARYLAND_PM_RD['LOTERIA']):
+            return 'MARYLAND PM'
+
         elif(sorteo == OBJ_MAINE_AM_RD['SORTEO'] and loteria == OBJ_MAINE_AM_RD['LOTERIA']):
             return 'MAINE AM'
+
+        elif(sorteo == OBJ_MAINE_PM_RD['SORTEO'] and loteria == OBJ_MAINE_PM_RD['LOTERIA']):
+            return 'MAINE PM'
 
         elif(sorteo == OBJ_NEW_HAMPSHIRE_AM_RD['SORTEO'] and loteria == OBJ_NEW_HAMPSHIRE_AM_RD['LOTERIA']):
             return 'NEW HAMPSHIRE AM'
 
+        elif(sorteo == OBJ_NEW_HAMPSHIRE_PM_RD['SORTEO'] and loteria == OBJ_NEW_HAMPSHIRE_PM_RD['LOTERIA']):
+            return 'NEW HAMPSHIRE PM'
+
         elif(sorteo == OBJ_VERMONT_AM_RD['SORTEO'] and loteria == OBJ_VERMONT_AM_RD['LOTERIA']):
             return 'VERMONT AM'
 
+        elif(sorteo == OBJ_VERMONT_PM_RD['SORTEO'] and loteria == OBJ_VERMONT_PM_RD['LOTERIA']):
+            return 'VERMONT PM'
+
         elif(sorteo == OBJ_GEORGIA_RD_AM['SORTEO'] and loteria == OBJ_GEORGIA_RD_AM['LOTERIA']):
             return 'GEORGIA MD'
+
+        elif(sorteo == OBJ_GEORGIA_RD_PM['SORTEO'] and loteria == OBJ_GEORGIA_RD_PM['LOTERIA']):
+            return 'GEORGIA EV'
 
         elif(sorteo == OBJ_NEW_JERSEY_AM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_AM_RD['LOTERIA']):
             return 'NEW JERSEY AM'
