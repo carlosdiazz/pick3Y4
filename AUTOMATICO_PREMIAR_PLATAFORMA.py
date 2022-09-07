@@ -48,7 +48,8 @@ schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_NIGHT['HORA']).do(run, GEORGIA_
 # OTRAS LOTERIA PARA PREMIAR EN LOTEDOM ---------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
 schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
-
+schedule.every().sunday.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, LOTEKA_PM_LOTEDOM)
+schedule.every().sunday.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run, ANGUILA_PM_LOTEDOM)
 
 #PREMIOS SANCHEZ PICKS AM --------------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_MD_AM['HORA']).do(run, SANCHEZ_MARYLAND_MIDDAY)
@@ -94,6 +95,8 @@ schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, SANCHEZ_PRIMER
 schedule.every().day.at(VARIABLES.OBJ_NACIONAL['HORA']).do(run, SANCHEZ_NACIONAL)
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run, SANCHEZ_LEIDSA)
 schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, SANCHEZ_LOTEKA)
+schedule.every().sunday.at("15:55:00").do(run, SANCHEZ_LEIDSA)
+schedule.every().sunday.at("18:05:00").do(run, SANCHEZ_NACIONAL)
 
 
 #PREMIOS AMERICANAS AM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
@@ -135,7 +138,6 @@ schedule.every().day.at(VARIABLES.OBJ_SP_LOTEKA_NACIONAL['HORA']).do(run, SANCHE
 schedule.every().day.at(VARIABLES.OBJ_SP_NACIONAL_LEIDSA['HORA']).do(run, SANCHEZ_SP_NACIONAL_LEIDSA)
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run, SANCHEZ_SP_NYPM_NACIONAL)
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, SANCHEZ_SP_NYPM_FLPM )
-
 
 clearConsole()
 while True:

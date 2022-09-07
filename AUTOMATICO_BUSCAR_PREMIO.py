@@ -10,6 +10,7 @@ from Objectos_para_Automaticos import *
 ##! HORARIO DE BUSCAR NUMEROS
 schedule.every().day.at('00:00:00').do(run, clearConsole)
 schedule.every().day.at('07:00:00').do(run, saber_estado_PC)
+
 #BUSCAR LOTERIAS DOMINICANA AM ----------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_AM['HORA']).do(run,LOTTERY_PRIMERA_AM )
 schedule.every().day.at(VARIABLES.OBJ_KING_AM['HORA']).do(run, LOTTERY_KING_LOTTERY_AM)
@@ -19,6 +20,8 @@ schedule.every().day.at(VARIABLES.OBJ_LOTEDOM['HORA']).do(run,LOTTERY_LOTEDOM )
 schedule.every().day.at(VARIABLES.OBJ_GANAMAS['HORA']).do(run,LOTTERY_GANAMAS )
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_AM['HORA']).do(run,LOTTERY_ANGUILLA_AM )
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_MD['HORA']).do(run,LOTTERY_ANGUILLA_MD )
+schedule.every().sunday.at("15:55:00").do(run, LOTTERY_LEIDSA)
+schedule.every().sunday.at("18:05:00").do(run, LOTTERY_NACIONAL)
 
 #BUSCAR LOTERIAS DOMINICANA PM ---------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, LOTTERY_PRIMERA_PM)
@@ -28,7 +31,6 @@ schedule.every().day.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, LOTTERY_LOTEKA)
 schedule.every().day.at(VARIABLES.OBJ_LEIDSA['HORA']).do(run,LOTTERY_LEIDSA )
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_TARDE['HORA']).do(run,LOTTERY_ANGUILLA_TARDE )
 schedule.every().day.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run,LOTTERY_ANGUILLA_PM )
-
 
 #BUSCAR LOTERIAS AMERICANA PICKS AM ----------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FL_AM['HORA']).do(run, LOTERY_FLORIDA_AM)
@@ -46,7 +48,6 @@ schedule.every().day.at(VARIABLES.OBJ_VT_AM['HORA']).do(run, LOTERY_VERMONT_AM)
 schedule.every().day.at(VARIABLES.OBJ_NH_AM['HORA']).do(run, LOTERY_NEW_HAMPSHIRE_AM)
 schedule.every().day.at(VARIABLES.OBJ_ME_AM['HORA']).do(run, LOTERY_MAINE_AM)
 schedule.every().day.at(VARIABLES.OBJ_IL_AM['HORA']).do(run, LOTERY_ILLINOIS_AM)
-
 
 #BUSCAR LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_FL_PM['HORA']).do(run, LOTERY_FLORIDA_PM)
@@ -66,7 +67,6 @@ schedule.every().day.at(VARIABLES.OBJ_NH_PM['HORA']).do(run, LOTERY_NEW_HAMPSHIR
 schedule.every().day.at(VARIABLES.OBJ_ME_PM['HORA']).do(run, LOTERY_MAINE_PM)
 schedule.every().day.at(VARIABLES.OBJ_IL_PM['HORA']).do(run, LOTERY_ILLINOIS_PM)
 schedule.every().day.at(VARIABLES.OBJ_CA_PM['HORA']).do(run, LOTERY_CALIFORNIA_PM)
-
 
 #BUSCAR LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_SP_PRIMERA_GANAMAS['HORA']).do(run, LOTTERY_SP_PRIMERA_GANAMAS)
