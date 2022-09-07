@@ -21,6 +21,10 @@ class Buscar_super_pale():
         self.fecha              = fecha('%d-%m-%Y')
         self.NUMERO_LOTERIA_1   = False
         self.NUMERO_LOTERIA_2   = False
+        self.super_pale_1       = False
+        self.super_pale_2       = False
+        self.primer_numero      = False
+        self.segundo_numero     = False
 
 
         for intento in range (INTENTOS):
@@ -32,11 +36,10 @@ class Buscar_super_pale():
                 sendNotification(True, message, BOT_NOTIFICACIONES['TOKEN'])
                 validar = True
                 break
-            else: #ES PORQUE AUN NO ESTA PUBLICADO EN MONGO
 
+            else: #ES PORQUE AUN NO ESTA PUBLICADO EN MONGO
                 if(COMPROBAR_QUE_NO_ESTEN['ERROR'] == False):
                     publicar = self.publicar()
-
                     if(publicar['STATUS']): #SI ES TRUE SWE PUBLICO EN BASE DE DATO
                         message = publicar['MESSAGE']
                         print(message)
@@ -62,28 +65,34 @@ class Buscar_super_pale():
                 sendNotification(True, message,BOT_NOTIFICACIONES['TOKEN'])
 
     def buscar_super_pale(self):
-        if(self.NUMERO_LOTERIA_1 == False):
-            super_pale_1 = CONSULTAR_NUMEROS_API(self.URI_PETICION,self.OBJ_super_pale_1['LOTERIA'],self.OBJ_super_pale_1['SORTEO'],self.fecha)
-            if(super_pale_1['NUMEROS'] and super_pale_1['ERROR'] == False):
-                self.NUMERO_LOTERIA_1 = True
-            else:
-                self.NUMERO_LOTERIA_1 = False
-                print(super_pale_1['MESSAGE'])
+        try:
+            if(self.NUMERO_LOTERIA_1 == False and self.primer_numero == False):
+                self.super_pale_1 = CONSULTAR_NUMEROS_API(self.URI_PETICION,self.OBJ_super_pale_1['LOTERIA'],self.OBJ_super_pale_1['SORTEO'],self.fecha)
+                if(self.super_pale_1['NUMEROS'] and self.super_pale_1['ERROR'] == False):
+                    self.NUMERO_LOTERIA_1 = True
+                    self.primer_numero = self.super_pale_1['NUMEROS']['numeros_ganadores']['NU1']
+                else:
+                    self.NUMERO_LOTERIA_1 = False
+                    print(self.super_pale_1['MESSAGE'])
 
-        if(self.NUMERO_LOTERIA_2 == False):
-            super_pale_2 = CONSULTAR_NUMEROS_API(self.URI_PETICION,self.OBJ_super_pale_2['LOTERIA'],self.OBJ_super_pale_2['SORTEO'],self.fecha)
-            if(super_pale_2['NUMEROS'] and super_pale_2['ERROR'] == False):
-                self.NUMERO_LOTERIA_2 = True
-            else:
-                self.NUMERO_LOTERIA_2 = False
-                print(super_pale_2['MESSAGE'])
+            if(self.NUMERO_LOTERIA_2 == False and self.segundo_numero == False):
+                self.super_pale_2 = CONSULTAR_NUMEROS_API(self.URI_PETICION,self.OBJ_super_pale_2['LOTERIA'],self.OBJ_super_pale_2['SORTEO'],self.fecha)
+                if(self.super_pale_2['NUMEROS'] and self.super_pale_2['ERROR'] == False):
+                    self.NUMERO_LOTERIA_2 = True
+                    self.segundo_numero = self.super_pale_2['NUMEROS']['numeros_ganadores']['NU1']
+                else:
+                    self.NUMERO_LOTERIA_2 = False
+                    print(self.super_pale_2['MESSAGE'])
 
-        if(self.NUMERO_LOTERIA_1 and self.NUMERO_LOTERIA_2):
-            return {
-                'NU1'  :   super_pale_1['NUMEROS']['numeros_ganadores']['NU1'],
-                'NU2'  :   super_pale_2['NUMEROS']['numeros_ganadores']['NU1']
-            }
-        else:
+            if(self.NUMERO_LOTERIA_1 and self.NUMERO_LOTERIA_2 and self.primer_numero and self.segundo_numero):
+                return {
+                    'NU1'  :   self.primer_numero,
+                    'NU2'  :   self.segundo_numero
+                }
+            else:
+                return False
+        except:
+            print('Paso un expect en la funcion de super pale')
             return False
 
 
