@@ -399,6 +399,8 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'NEW YORK NOCHE'
         elif(sorteo == OBJ_FLORIDA_RD_PM['SORTEO'] and loteria == OBJ_FLORIDA_RD_PM['LOTERIA']):
             return 'FLORIDA PM'
+        elif(sorteo == OBJ_ANGUILLA_PM['SORTEO'] and loteria == OBJ_ANGUILLA_PM['LOTERIA']):
+            return 'ANGUILA NOCHE'
         else:
             return sorteo
     elif(namePlataforma == 'MEGALOTTERY'):
@@ -555,6 +557,11 @@ def Convertir_nombre_loteria(namePlataforma,loteria):
     elif(namePlataforma == 'SANCHEZ'):
         if(loteria == OBJ_GANAMAS['LOTERIA']):
             return 'NACIONAL'
+        else:
+            return loteria
+    elif(namePlataforma == 'LOTEDOM'):
+        if(loteria == OBJ_ANGUILLA_PM['LOTERIA']):
+            return 'ANGUILA'
         else:
             return loteria
     else:

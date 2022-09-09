@@ -66,7 +66,7 @@ OBJ_FL_PM = {
 OBJ_FLORIDA_RD_AM = {
     'LOTERIA'       :   'FLORIDA',
     'SORTEO'        :   MIDDAY,
-    'HORA'          :   '14:30:00',
+    'HORA'          :   '13:40:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
