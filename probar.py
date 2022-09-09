@@ -7,7 +7,7 @@ from config import TIEMPO_A_BUSCAR, hora_prueba
 from Objectos_para_Automaticos import *
 ###
 ###  #! BUSCAR NUMEROS GANADORES
-###  #BUSCAR LOTERIAS DOMINICANA AM ----------------------------------------------------------------------
+###  #?BUSCAR LOTERIAS DOMINICANA AM ----------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_LA_SUERTE)
@@ -17,7 +17,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_MD )
 ###
-###  #BUSCAR LOTERIAS DOMINICANA PM ---------------------------------------------------------------------
+###  #?BUSCAR LOTERIAS DOMINICANA PM ---------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_PRIMERA_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_PM)
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_NACIONAL )
@@ -26,7 +26,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_TARDE )
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_PM )
 ###
-###  #BUSCAR LOTERIAS AMERICANA PICKS AM ----------------------------------------------------------------
+###  #?BUSCAR LOTERIAS AMERICANA PICKS AM ----------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
@@ -43,7 +43,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_AM)
 ###
-###  #BUSCAR LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
+###  #?BUSCAR LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_PM)
@@ -62,7 +62,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_NIGHT)
 ###  schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_PM)
 ###
-###  #BUSCAR LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
+###  #?BUSCAR LOTERIAS QUE SON SUPER PALES ------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_SP_PRIMERA_GANAMAS)
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_SP_REAL_PRIMERA )
 ###  schedule.every().day.at(hora_prueba).do(run,LOTTERY_SP_NYAM_REAL )
@@ -77,7 +77,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, LOTTERY_SP_NYPM_FLPM)
 ###
 ###  #! PREMIOS EN TODA LA PLATAFORMA
-###  #PREMIAR PICKS AM MEGALOTERY-----------------------------------------------------------
+###  #?PREMIAR PICKS AM MEGALOTERY-----------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, FLORIDA_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, NEW_YORK_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, VIRGINIA_MIDDAY)
@@ -90,7 +90,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, MARYLAND_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_MIDDAY)
 ###
-###  #PREMIAR PICKS PM MEGALOTERY-----------------------------------------------------------
+###  #?PREMIAR PICKS PM MEGALOTERY-----------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SOUTH_CAROLINA_EVENING)
 ###  schedule.every().day.at(hora_prueba).do(run, GEORGIA_EVENING)
 ###  schedule.every().day.at(hora_prueba).do(run, PENNSYLVANIA_EVENING)
@@ -104,7 +104,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT)
 ###  schedule.every().day.at(hora_prueba).do(run, MARYLAND_EVENING)
 ###
-###  # LOTERIA DOMINIACANA EN MEGA Y RAPIDITA --------------------------------------------------------------0---
+###  #?LOTERIA DOMINIACANA EN MEGA Y RAPIDITA --------------------------------------------------------------0---
 ###  schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
 ###  schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 ###  schedule.every().day.at(hora_prueba).do(run, KING_LOTTERY_AM_PLATATAFORMA_MEGA)
@@ -113,11 +113,11 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
 ###  schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
 ###
-###  # OTRAS LOTERIA PARA PREMIAR EN LOTEDOM ---------------------------------------------------------
+###  #?OTRAS LOTERIA PARA PREMIAR EN LOTEDOM ---------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, NEW_YORK_PM_LOTEDOM)
 ###  schedule.every().day.at(hora_prueba).do(run, FLORIDA_PM_LOTEDOM)
 ###
-###  #PREMIOS SANCHEZ PICKS AM --------------------------------------------------------------------------
+###  #?PREMIOS SANCHEZ PICKS AM --------------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_HAMPSHIRE_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MAINE_MIDDAY )
@@ -129,7 +129,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ILLINOIS_MIDDAY)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_YORK_MIDDAY)
 ###
-###  #PREMIOS SANCHEZ PICKS PM --------------------------------------------------------------------------
+###  #?PREMIOS SANCHEZ PICKS PM --------------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_EVENING)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_EVENING)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MAINE_EVENING)
@@ -143,7 +143,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CONNECTICUT_EVENING)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_NIGHT)
 ###
-###  #PREMIOS SANCHEZ DOMINICANAS AM --------------------------------------------------------------------------
+###  #?PREMIOS SANCHEZ DOMINICANAS AM --------------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_KING_LOTERRY_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_MD)
@@ -153,7 +153,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LOTEDOM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GANAMAS)
 ###
-###  #PREMIOS SANCHEZ DOMINICANAS PM --------------------------------------------------------------------------
+###  #?PREMIOS SANCHEZ DOMINICANAS PM --------------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_KING_LOTERRY_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGUILA_TARDE)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_ANGILA_PM)
@@ -162,7 +162,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LEIDSA)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_LOTEKA)
 ###
-###  #PREMIOS AMERICANAS AM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
+###  #?PREMIOS AMERICANAS AM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_FLORIDA_RD_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_RD_AM )
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MAINE_RD_AM)
@@ -174,7 +174,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CONNECTICUT_RD_AM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_YORK_RD_AM)
 ###
-###  #PREMIOS AMERICANAS PM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
+###  ?PREMIOS AMERICANAS PM PERO COMO DOMINICANA SANCHEZ -----------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_MARYLAND_RD_PM )
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_VERMONT_RD_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_NEW_HAMPSHIRE_RD_PM)
@@ -188,7 +188,7 @@ from Objectos_para_Automaticos import *
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CONNECTICUT_RD_PM)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_GEORGIA_RD_NIGHT)
 ###
-###  #PREMIOS SUPER PALES SANCHEZ ---------------------------------------------------------------------------------------
+###  #?PREMIOS SUPER PALES SANCHEZ ---------------------------------------------------------------------------------------
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_REAL_PRIMERA)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_PRIMERA_GANAMAS)
 ###  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NYAM_REAL)
