@@ -23,6 +23,7 @@ from Datos_Loterias.GEORGIA import GEORGIA_TODO
 from Datos_Loterias.ILLINOIS import ILLINOIS_TODO
 from Datos_Loterias.MAINE import MAINE_TODO
 from Datos_Loterias.MARYLAND import MARYLAND_TODO
+from Datos_Loterias.MASSACHUSETTS import MASSACHUSETTS_TODO
 from Datos_Loterias.NEW_HAMPSHIRE import NEW_HAMPSHIRE_TODO
 from Datos_Loterias.NEW_JERSEY import NEW_JERSEY_TODO
 from Datos_Loterias.NEW_YORK import NEW_YORK_TODO
@@ -760,7 +761,7 @@ OBJ_SP_NACIONAL_LEIDSA = {
 OBJ_SP_LOTEKA_NACIONAL = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'LOTEKA Y NACIONAL',
-    'HORA'          :   '21:20:00',
+    'HORA'          :   '21:10:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -769,7 +770,7 @@ OBJ_SP_LOTEKA_NACIONAL = {
 OBJ_SP_NYPM_NACIONAL = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK PM Y NACIONAL',
-    'HORA'          :   '22:50:00',
+    'HORA'          :   '22:40:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -778,8 +779,28 @@ OBJ_SP_NYPM_NACIONAL = {
 OBJ_SP_NYPM_FLPM = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK PM Y FLORIDA PM',
-    'HORA'          :   '22:50:00',
+    'HORA'          :   '22:40:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
+}
+
+#! LOTERIAS ESPECIALES MASSACHUSETTS
+
+OBJ_MA_AM = {
+    'LOTERIA'       :   'MASSACHUSETTS',
+    'HORA'          :   '14:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
+}
+
+OBJ_MA_PM = {
+    'LOTERIA'       :   'MASSACHUSETTS',
+    'HORA'          :   '21:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
 }

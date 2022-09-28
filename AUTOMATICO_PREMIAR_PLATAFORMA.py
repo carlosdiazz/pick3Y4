@@ -139,6 +139,10 @@ schedule.every().day.at(VARIABLES.OBJ_SP_NACIONAL_LEIDSA['HORA']).do(run, SANCHE
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run, SANCHEZ_SP_NYPM_NACIONAL)
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, SANCHEZ_SP_NYPM_FLPM )
 
+#! LOTERIAS RARAS
+schedule.every().day.at(VARIABLES.OBJ_MA_AM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_AM )
+schedule.every().day.at(VARIABLES.OBJ_MA_PM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_PM )
+
 clearConsole()
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')

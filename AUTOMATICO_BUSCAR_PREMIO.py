@@ -83,6 +83,11 @@ schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run,LOTTERY_S
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, LOTTERY_SP_NYPM_FLPM)
 
 
+#!LOTERIA ESPECIAL
+
+schedule.every().day.at(VARIABLES.OBJ_MA_AM['HORA']).do(run, LOTERY_MASSACHUSETTS_AM)
+schedule.every().day.at(VARIABLES.OBJ_MA_PM['HORA']).do(run, LOTERY_MASSACHUSETTS_PM)
+
 
 clearConsole()
 while True:

@@ -149,6 +149,14 @@ def comprobar_pick3(arr):
     else:
         return False
 
+def comprobar_pick2(arr):
+    if(type(arr)==list):
+        if(len(arr)==2):
+            return f'{arr[0]}{arr[1]}'
+        return False
+    else:
+        return False
+
 def comprobar_pick4(arr):
     if(type(arr)==list):
         if(len(arr)==4):

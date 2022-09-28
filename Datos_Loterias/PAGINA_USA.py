@@ -13,3 +13,7 @@ P4_NU1 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/u
 P4_NU2 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[2]/span'
 P4_NU3 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[3]/span'
 P4_NU4 = '/html/body/main/div[3]/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div/ul/li[4]/span'
+
+MODALIDAD_PICK3_4           =   'PICK3_4'
+MODALIDAD_PICK2_3_4         =   'PICK2_3_4'
+MODALIDAD_PICK2             =   'PICK2'
