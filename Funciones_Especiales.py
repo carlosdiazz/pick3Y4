@@ -302,15 +302,20 @@ def Consultar_Numeros_BOT(modalidad, loteria, fecha):
                 'NUMEROS'   :   False
             }
 
-def saber_sorteo_picks(Nombre_Plataforma,sorteo,loteria):
+def saber_sorteo_picks(Nombre_Plataforma,sorteo,loteria, _3_or_4):
 
     if(Nombre_Plataforma == 'SANCHEZ'):
+        if(_3_or_4 == 'PICK3'):
+            _3_or_4='LOTO3'
+        if(_3_or_4 == 'PICK4'):
+            _3_or_4='LOTO4'
+
         if(sorteo == 'MIDDAY'):
-            return f'{loteria} MD'
+            return f'{_3_or_4} {loteria} MD'
         elif(sorteo == 'EVENING'):
-            return f'{loteria} PM'
+            return f'{_3_or_4} {loteria} PM'
         elif(sorteo == 'NIGHT'):
-            return f'{loteria} NIGHT'
+            return f'{_3_or_4} {loteria} NIGHT'
     else:
         if(sorteo == 'MIDDAY'):
             return f'{loteria} AM'
@@ -408,7 +413,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_FLORIDA_RD_PM['SORTEO'] and loteria == OBJ_FLORIDA_RD_PM['LOTERIA']):
             return 'FLORIDA PM'
         elif(sorteo == OBJ_ANGUILLA_PM['SORTEO'] and loteria == OBJ_ANGUILLA_PM['LOTERIA']):
-            return 'ANGUILA NOCHE'
+            return 'ANGUILA  NOCHE'
         else:
             return sorteo
     elif(namePlataforma == 'MEGALOTTERY'):
@@ -418,6 +423,10 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'GEORGIA PM'
         elif(sorteo == OBJ_GEORGIA_RD_NIGHT['SORTEO'] and loteria == OBJ_GEORGIA_RD_NIGHT['LOTERIA']):
             return 'GEORGIA NIGHT'
+        elif(sorteo == OBJ_NEW_JERSEY_AM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_AM_RD['LOTERIA']):
+            return 'NEW JERSEY AM'
+        elif(sorteo == OBJ_NEW_JERSEY_PM_RD['SORTEO'] and loteria == OBJ_NEW_JERSEY_PM_RD['LOTERIA']):
+            return 'NEW JERSEY PM'
         else:
             return sorteo
 
@@ -508,7 +517,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
 
         elif(sorteo == OBJ_NEW_YORK_RD_AM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_AM['LOTERIA']):
             return 'NEW YORK AM'
-        
+
         elif(sorteo == OBJ_NEW_YORK_RD_PM['SORTEO'] and loteria == OBJ_NEW_YORK_RD_PM['LOTERIA']):
             return 'NEW YORK PM'
 
@@ -577,15 +586,15 @@ def Convertir_nombre_loteria(namePlataforma,loteria):
 
 def Convertir_nombre_loteria_PICK3(namePlataforma,loteria):
 
-    if(namePlataforma == 'SANCHEZ'):
-        return f'LOTO3'
+    if(namePlataforma == 'MEGALOTTERY'):
+        return f'PICK 3'
     else:
         return loteria
 
 def Convertir_nombre_loteria_PICK4(namePlataforma,loteria):
 
-    if(namePlataforma == 'SANCHEZ'):
-        return f'LOTO4'
+    if(namePlataforma == 'MEGALOTTERY'):
+        return f'PICK 4'
     else:
         return loteria
 

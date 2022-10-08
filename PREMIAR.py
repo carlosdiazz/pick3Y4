@@ -16,9 +16,9 @@ class PREMIAR():
 
     def PUBLICAR_PICK3(self):
         OBJ_3 = {
-                'loteria'           :   Convertir_nombre_loteria_PICK3(self.PLATAFORMA['NAME'],'PICK 3'),
+                'loteria'           :   Convertir_nombre_loteria_PICK3(self.PLATAFORMA['NAME'],self.loteria),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria']),
+                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria'], 'PICK3'),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK3'],
                 'MODALIDAD'         :   self.MODALIDAD
                 }
@@ -27,9 +27,9 @@ class PREMIAR():
 
     def PUBLICAR_PICK4(self):
         arrp4 = {
-                'loteria'           :   Convertir_nombre_loteria_PICK4(self.PLATAFORMA['NAME'],'PICK 4'),
+                'loteria'           :   Convertir_nombre_loteria_PICK4(self.PLATAFORMA['NAME'],self.loteria),
                 'fecha'             :   self.loteria_a_publicar['fecha'],
-                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria']),
+                "sorteo"            :   saber_sorteo_picks(self.PLATAFORMA['NAME'],self.loteria_a_publicar['sorteo'], self.loteria_a_publicar['loteria'],"PICK4"),
                 'numeros_ganadores' :   self.loteria_a_publicar['numeros_ganadores']['PICK4'],
                 'MODALIDAD'         :   self.MODALIDAD
             }

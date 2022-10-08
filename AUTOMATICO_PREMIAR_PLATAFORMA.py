@@ -44,6 +44,8 @@ schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, KING_LOTTERY_PM_P
 schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_AM['HORA']).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
 schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_PM['HORA']).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
 schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_NIGHT['HORA']).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
+schedule.every().day.at(VARIABLES.OBJ_NEW_JERSEY_AM_RD['HORA']).do(run, NEW_JERSEY_AM_PLATAFORMA_MEGA)
+schedule.every().day.at(VARIABLES.OBJ_NEW_JERSEY_PM_RD['HORA']).do(run, NEW_JERSEY_PM_PLATAFORMA_MEGA)
 
 # OTRAS LOTERIA PARA PREMIAR EN LOTEDOM ---------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
