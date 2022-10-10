@@ -25,12 +25,12 @@ print("==>", PID)
 #  #! BUSCAR NUMEROS GANADORES
 #  #?BUSCAR LOTERIAS DOMINICANA AM ----------------------------------------------------------------------
 LOTERIAS_DOMINICANA_AM = [ 'LOTTERY_PRIMERA_AM', 'LOTTERY_KING_LOTTERY_AM', 'LOTTERY_LA_SUERTE', 'LOTTERY_REAL', 'LOTTERY_LOTEDOM', 'LOTTERY_GANAMAS', 'LOTTERY_ANGUILLA_AM', 'LOTTERY_ANGUILLA_MD']
-# schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
-# schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_AM)
-# schedule.every().day.at(hora_prueba).do(run, LOTTERY_LA_SUERTE)
-# schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
-# schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
-# schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
+#  schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
+#  schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTTERY_LA_SUERTE)
+#  schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
+#  schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
+#  schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_MD )
 #
@@ -57,7 +57,6 @@ LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_AM)
-
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_AM)
@@ -131,7 +130,7 @@ LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_
 #  schedule.every().day.at(hora_prueba).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 #  schedule.every().day.at(hora_prueba).do(run, KING_LOTTERY_AM_PLATATAFORMA_MEGA)
 #  schedule.every().day.at(hora_prueba).do(run, KING_LOTTERY_PM_PLATATAFORMA_MEGA)
-schedule.every().day.at(hora_prueba).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
+#  schedule.every().day.at(hora_prueba).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
 #  schedule.every().day.at(hora_prueba).do(run, GEORGIA_PM_PLATAFORMA_MEGA)
 #  schedule.every().day.at(hora_prueba).do(run, GEORGIA_NIGHT_PLATAFORMA_MEGA)
 #  schedule.every().day.at(hora_prueba).do(run, NEW_JERSEY_AM_PLATAFORMA_MEGA)
