@@ -65,6 +65,7 @@ def Validar_Fecha_Hoy(fecha_comprobar):
     fecha(f'Sorteo: %d de {mes_espanol} del %Y.'),
     fecha(f'{dia_espanol}, %d-%m-%Y'),
     fecha('Resultados %d/%m/%Y'),
+    fecha(f'{dia_espanol.capitalize()} %d de {mes_espanol} de %Y'),
     ANGUILA_MANANA,
     ANGUILA_MEDIO_DIA,
     ANGUILA_TARDE,
