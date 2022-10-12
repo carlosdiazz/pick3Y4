@@ -71,7 +71,7 @@ schedule.every().day.at(VARIABLES.OBJ_GA_PM['HORA']).do(run, SANCHEZ_GEORGIA_EVE
 schedule.every().day.at(VARIABLES.OBJ_ME_PM['HORA']).do(run, SANCHEZ_MAINE_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_VT_PM['HORA']).do(run, SANCHEZ_VERMOMT_EVENING )
 schedule.every().day.at(VARIABLES.OBJ_NH_PM['HORA']).do(run, SANCHEZ_NEW_HAMPSHIRE_EVENING )
-schedule.every().day.at(VARIABLES.OBJ_CA_PM['HORA']).do(run, SANCHEZ_CALIFORNIA_EVENING )
+#!schedule.every().day.at(VARIABLES.OBJ_CA_PM['HORA']).do(run, SANCHEZ_CALIFORNIA_EVENING )
 schedule.every().day.at(VARIABLES.OBJ_FL_PM['HORA']).do(run, SANCHEZ_FLORIDA_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_IL_PM['HORA']).do(run, SANCHEZ_ILLINOIS_EVENING)
 schedule.every().day.at(VARIABLES.OBJ_NY_PM['HORA']).do(run, SANCHEZ_NEW_YORK_EVENING)
@@ -142,8 +142,8 @@ schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run, SANCHEZ_
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, SANCHEZ_SP_NYPM_FLPM )
 
 #! LOTERIAS RARAS
-schedule.every().day.at(VARIABLES.OBJ_MA_AM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_AM )
-schedule.every().day.at(VARIABLES.OBJ_MA_PM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_PM )
+#!schedule.every().day.at(VARIABLES.OBJ_MA_AM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_AM )
+#!schedule.every().day.at(VARIABLES.OBJ_MA_PM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_PM )
 
 clearConsole()
 while True:
