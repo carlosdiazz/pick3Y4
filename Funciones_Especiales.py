@@ -415,7 +415,7 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
         elif(sorteo == OBJ_FLORIDA_RD_PM['SORTEO'] and loteria == OBJ_FLORIDA_RD_PM['LOTERIA']):
             return 'FLORIDA PM'
         elif(sorteo == OBJ_ANGUILLA_PM['SORTEO'] and loteria == OBJ_ANGUILLA_PM['LOTERIA']):
-            return 'ANGUILA  NOCHE'
+            return 'ANGUILA NOCHE'
         else:
             return sorteo
     elif(namePlataforma == 'MEGALOTTERY'):
