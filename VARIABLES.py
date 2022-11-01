@@ -792,7 +792,7 @@ OBJ_MA_AM = {
     'HORA'          :   '14:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False,
+    'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
 }
 
@@ -801,6 +801,6 @@ OBJ_MA_PM = {
     'HORA'          :   '21:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   False,
+    'MEZCLADA'      :   True,
     'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
 }
