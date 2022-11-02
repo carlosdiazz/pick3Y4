@@ -796,7 +796,25 @@ OBJ_MA_AM = {
     'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
 }
 
+OBJ_MA_AM_RD = {
+    'LOTERIA'       :   'MASSACHUSETTS',
+    'HORA'          :   '14:10:00',
+    "SORTEO"        :   MIDDAY,
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False,
+    'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
+}
+
 OBJ_MA_PM = {
+    'LOTERIA'       :   'MASSACHUSETTS',
+    'HORA'          :   '21:10:00',
+    "SORTEO"        :   EVENING,
+    "MODALIDAD"     :   MODALIDAD,
+    'MEZCLADA'      :   True,
+    'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
+}
+
+OBJ_MA_PM_RD = {
     'LOTERIA'       :   'MASSACHUSETTS',
     'HORA'          :   '21:10:00',
     "SORTEO"        :   EVENING,

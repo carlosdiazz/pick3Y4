@@ -142,7 +142,8 @@ schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_NACIONAL['HORA']).do(run, SANCHEZ_
 schedule.every().day.at(VARIABLES.OBJ_SP_NYPM_FLPM['HORA']).do(run, SANCHEZ_SP_NYPM_FLPM )
 
 #! LOTERIAS RARAS
-#!schedule.every().day.at(VARIABLES.OBJ_MA_AM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_AM )
+schedule.every().day.at(VARIABLES.OBJ_MA_AM_RD['HORA']).do(run, MASSACHUSETTS_SANCHEZ_AM )
+schedule.every().day.at(VARIABLES.OBJ_MA_PM_RD['HORA']).do(run, MASSACHUSETTS_SANCHEZ_PM )
 #!schedule.every().day.at(VARIABLES.OBJ_MA_PM['HORA']).do(run, SANCHEZ_MASSACHUSETTS_PM )
 
 clearConsole()

@@ -558,6 +558,10 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
 
         elif(sorteo == OBJ_SP_NYPM_FLPM['SORTEO'] and loteria == OBJ_SP_NYPM_FLPM['LOTERIA']):
             return 'SP NYPM FLPM'
+        elif(sorteo == OBJ_MA_AM_RD['SORTEO'] and loteria == OBJ_MA_AM_RD['LOTERIA']):
+                return 'MASSACHUSETTS MD'
+        elif(sorteo == OBJ_MA_PM_RD['SORTEO'] and loteria == OBJ_MA_PM_RD['LOTERIA']):
+                return 'MASSACHUSETTS PM'
 
         else:
             return sorteo
