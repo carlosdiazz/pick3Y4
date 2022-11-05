@@ -818,7 +818,7 @@ OBJ_MA_PM_RD = {
     'LOTERIA'       :   'MASSACHUSETTS',
     'HORA'          :   '21:10:00',
     "SORTEO"        :   EVENING,
-    "MODALIDAD"     :   MODALIDAD,
-    'MEZCLADA'      :   True,
+    "MODALIDAD"     :   MODALIDAD_RD,
+    'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   MASSACHUSETTS_TODO
 }

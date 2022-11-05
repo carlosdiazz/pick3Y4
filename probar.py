@@ -28,7 +28,7 @@ LOTERIAS_DOMINICANA_AM = [ 'LOTTERY_PRIMERA_AM', 'LOTTERY_KING_LOTTERY_AM', 'LOT
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_PRIMERA_AM )
 #  schedule.every().day.at(hora_prueba).do(run, LOTTERY_KING_LOTTERY_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTTERY_LA_SUERTE)
-schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
+#  schedule.every().day.at(hora_prueba).do(run,LOTTERY_REAL )
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_LOTEDOM )
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_GANAMAS )
 #  schedule.every().day.at(hora_prueba).do(run,LOTTERY_ANGUILLA_AM )
