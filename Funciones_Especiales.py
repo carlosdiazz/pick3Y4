@@ -491,10 +491,10 @@ def Convertir_nombre_sorteo(namePlataforma,sorteo, loteria):
             return 'GEORGIA MD'
 
         elif(sorteo == OBJ_GEORGIA_RD_PM['SORTEO'] and loteria == OBJ_GEORGIA_RD_PM['LOTERIA']):
-            return 'GEORGIA EV'
+            return 'GEORGIA PM'
 
         elif(sorteo == OBJ_GEORGIA_RD_NIGHT['SORTEO'] and loteria == OBJ_GEORGIA_RD_NIGHT['LOTERIA']):
-            return 'GEORGIA PM'
+            return 'GEORGIA NIGHT'
 
         elif(sorteo == OBJ_CALIFORNIA_RD_PM['SORTEO'] and loteria == OBJ_CALIFORNIA_RD_PM['LOTERIA']):
             return 'CALIFORNIA PM'
