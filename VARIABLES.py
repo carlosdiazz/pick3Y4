@@ -534,7 +534,7 @@ OBJ_ILLINOIS_AM_RD = {
 
 OBJ_ILLINOIS_PM_RD = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '22:30:00',
+    'HORA'          :   '23:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -734,7 +734,7 @@ OBJ_SP_NYAM_LOTEKA = {
 OBJ_SP_NYAM_GANAMAS = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK AM Y GANAMAS',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '15:50:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
