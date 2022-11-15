@@ -236,7 +236,7 @@ LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_
 
 
 
-
+#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CALIFORNIA_EVENING )
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
