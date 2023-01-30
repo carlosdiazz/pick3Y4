@@ -46,21 +46,21 @@ LOTERIAS_DOMINICANA_PM = ['LOTTERY_PRIMERA_PM','LOTTERY_KING_LOTTERY_PM','LOTTER
 #
 #  #?BUSCAR LOTERIAS AMERICANA PICKS AM ----------------------------------------------------------------
 LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_NEW_JERSEY_AM','LOTERY_CONNECTICUT_AM','LOTERY_VIRGINIA_AM','LOTERY_WASHINGTON_DC_AM','LOTERY_PENNSYLVANIA_AM','LOTERY_SOUTH_CAROLINA_AM','LOTERY_GEORGIA_AM','LOTERY_NORTH_CAROLINA_AM','LOTERY_MARYLAND_AM','LOTERY_VERMONT_AM','LOTERY_NEW_HAMPSHIRE_AM','LOTERY_MAINE_AM','LOTERY_ILLINOIS_AM']
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_FLORIDA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_YORK_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_JERSEY_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_CONNECTICUT_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_VIRGINIA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_WASHINGTON_DC_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_PENNSYLVANIA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_SOUTH_CAROLINA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_GEORGIA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_NORTH_CAROLINA_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_MARYLAND_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_VERMONT_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_NEW_HAMPSHIRE_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_MAINE_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_ILLINOIS_AM)
 #
 #  LOTERIAS AMERICANA__IC
 #  #?BUSCAR LOTERIAS AMERICANA PICKS PM --------------------------------------------------------------
@@ -225,18 +225,18 @@ LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_
 #  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NYPM_NACIONAL)
 #  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_SP_NYPM_FLPM )
 
-#schedule.every().sunday.at(hora_prueba).do(run, ANGUILA_PM_LOTEDOM)
+#  schedule.every().sunday.at(hora_prueba).do(run, ANGUILA_PM_LOTEDOM)
 
 #!PRUEBAS LOTERIAS NUEVAS DIFERENTES
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_AM)
-#schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_PM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_AM)
+#  schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_PM)
 
 
-#schedule.every().day.at(hora_prueba).do(run, MASSACHUSETTS_SANCHEZ_AM )
+#  schedule.every().day.at(hora_prueba).do(run, MASSACHUSETTS_SANCHEZ_AM )
 
 
 
-#schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CALIFORNIA_EVENING )
+#  schedule.every().day.at(hora_prueba).do(run, SANCHEZ_CALIFORNIA_EVENING )
 
 while True:
     fecha_actual = fecha('%d-%m-%Y || %H:%M:%S')
