@@ -229,7 +229,7 @@ OBJ_DC_PM = {
 #? ----------------------------------------
 OBJ_PA_AM = {
     'LOTERIA'       :   'PENNSYLVANIA',
-    'HORA'          :   '15:00:00',
+    'HORA'          :   '14:20:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -238,7 +238,7 @@ OBJ_PA_AM = {
 
 OBJ_PA_PM = {
     'LOTERIA'       :   'PENNSYLVANIA',
-    'HORA'          :   '20:00:00',
+    'HORA'          :   '19:40:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
