@@ -37,8 +37,8 @@ schedule.every().day.at(VARIABLES.OBJ_NY_PM['HORA']).do(run, NEW_YORK_EVENING)
 #schedule.every().day.at(VARIABLES.OBJ_MD_PM['HORA']).do(run, MARYLAND_EVENING)
 
 # LOTERIA DOMINIACANA EN MEGA Y RAPIDITA --------------------------------------------------------------0---
-schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
-schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
+#schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_MEGA)
+#schedule.every().day.at(VARIABLES.OBJ_PRIMERA_PM['HORA']).do(run, PRIMERA_PM_PLATATAFORMA_RAPI)
 schedule.every().day.at(VARIABLES.OBJ_KING_AM['HORA']).do(run, KING_LOTTERY_AM_PLATATAFORMA_MEGA)
 schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, KING_LOTTERY_PM_PLATATAFORMA_MEGA)
 #schedule.every().day.at(VARIABLES.OBJ_GEORGIA_RD_AM['HORA']).do(run, GEORGIA_AM_PLATAFORMA_MEGA)
