@@ -49,7 +49,11 @@ schedule.every().day.at(VARIABLES.OBJ_KING_PM['HORA']).do(run, KING_LOTTERY_PM_P
 
 # OTRAS LOTERIA PARA PREMIAR EN LOTEDOM ---------------------------------------------------------
 schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM)
+schedule.every().day.at(VARIABLES.OBJ_NEW_YORK_RD_PM['HORA']).do(run, NEW_YORK_PM_LOTEDOM_2)
+
 schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM)
+schedule.every().day.at(VARIABLES.OBJ_FLORIDA_RD_PM['HORA']).do(run, FLORIDA_PM_LOTEDOM_2)
+
 schedule.every().sunday.at(VARIABLES.OBJ_LOTEKA['HORA']).do(run, LOTEKA_PM_LOTEDOM)
 #schedule.every().sunday.at(VARIABLES.OBJ_ANGUILLA_PM['HORA']).do(run, ANGUILA_PM_LOTEDOM)
 

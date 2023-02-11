@@ -146,6 +146,11 @@ USER_LOTEDOM = {
     'PASS':'4040'
 }
 
+USER_LOTEDOM_2 = {
+    'USER':'premiacion@orkapi',
+    'PASS':'4040'
+}
+
 USER_SANCHEZ = {
     'USER':'premiar@orkapi',
     'PASS':'carlos1212'
