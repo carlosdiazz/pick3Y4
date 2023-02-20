@@ -230,7 +230,7 @@ LOTERIAS_AMERICANA_picks_am = ['LOTERY_FLORIDA_AM','LOTERY_NEW_YORK_AM','LOTERY_
 #!PRUEBAS LOTERIAS NUEVAS DIFERENTES
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_AM)
 #  schedule.every().day.at(hora_prueba).do(run, LOTERY_MASSACHUSETTS_PM)
-
+schedule.every().sunday.at(hora_prueba).do(run, PRIMERA_PM_LOTEDOM)
 
 #  schedule.every().day.at(hora_prueba).do(run, MASSACHUSETTS_SANCHEZ_AM )
 
