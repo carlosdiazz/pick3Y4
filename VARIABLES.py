@@ -48,7 +48,7 @@ ARREGLO         =   'ARREGLO_XPATH'
 #? ----------------------------------------
 OBJ_FL_AM = {
     'LOTERIA'       :   'FLORIDA',
-    'HORA'          :   '14:30:00',
+    'HORA'          :   '13:30:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -57,7 +57,7 @@ OBJ_FL_AM = {
 
 OBJ_FL_PM = {
     'LOTERIA'       :   'FLORIDA',
-    'HORA'          :   '22:50:00',
+    'HORA'          :   '21:50:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -67,7 +67,7 @@ OBJ_FL_PM = {
 OBJ_FLORIDA_RD_AM = {
     'LOTERIA'       :   'FLORIDA',
     'SORTEO'        :   MIDDAY,
-    'HORA'          :   '14:40:00',
+    'HORA'          :   '13:40:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
@@ -75,7 +75,7 @@ OBJ_FLORIDA_RD_AM = {
 OBJ_FLORIDA_RD_PM = {
     'LOTERIA'       :   'FLORIDA',
     'SORTEO'        :   EVENING,
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
@@ -83,7 +83,7 @@ OBJ_FLORIDA_RD_PM = {
 #? ----------------------------------------
 OBJ_NY_AM = {
     'LOTERIA'       :   'NEW YORK',
-    'HORA'          :   '15:35:00',
+    'HORA'          :   '14:35:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -92,7 +92,7 @@ OBJ_NY_AM = {
 
 OBJ_NY_PM = {
     'LOTERIA'       :   'NEW YORK',
-    'HORA'          :   '23:30:00',
+    'HORA'          :   '22:30:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -102,7 +102,7 @@ OBJ_NY_PM = {
 OBJ_NEW_YORK_RD_AM = {
     'LOTERIA'       :   'NEW YORK',
     'SORTEO'        :   MIDDAY,
-    'HORA'          :   '15:30:00',
+    'HORA'          :   '14:30:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
@@ -110,7 +110,7 @@ OBJ_NEW_YORK_RD_AM = {
 OBJ_NEW_YORK_RD_PM = {
     'LOTERIA'       :   'NEW YORK',
     'SORTEO'        :   EVENING,
-    'HORA'          :   '23:30:00',
+    'HORA'          :   '22:30:00',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False
 }
@@ -118,7 +118,7 @@ OBJ_NEW_YORK_RD_PM = {
 #? ----------------------------------------
 OBJ_NJ_AM = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -127,7 +127,7 @@ OBJ_NJ_AM = {
 
 OBJ_NJ_PM = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -136,7 +136,7 @@ OBJ_NJ_PM = {
 
 OBJ_NEW_JERSEY_AM_RD = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -145,7 +145,7 @@ OBJ_NEW_JERSEY_AM_RD = {
 
 OBJ_NEW_JERSEY_PM_RD = {
     'LOTERIA'       :   'NEW JERSEY',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -155,7 +155,7 @@ OBJ_NEW_JERSEY_PM_RD = {
 #? ----------------------------------------
 OBJ_CT_AM = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '15:00:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -164,7 +164,7 @@ OBJ_CT_AM = {
 
 OBJ_CT_PM = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -173,7 +173,7 @@ OBJ_CT_PM = {
 
 OBJ_CONNECTICUT_AM_RD = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '15:00:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -182,7 +182,7 @@ OBJ_CONNECTICUT_AM_RD = {
 
 OBJ_CONNECTICUT_PM_RD = {
     'LOTERIA'       :   'CONNECTICUT',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -193,7 +193,7 @@ OBJ_CONNECTICUT_PM_RD = {
 #? ----------------------------------------
 OBJ_VA_AM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '15:00:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -202,7 +202,7 @@ OBJ_VA_AM = {
 
 OBJ_VA_PM = {
     'LOTERIA'       :   'VIRGINIA',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -211,7 +211,7 @@ OBJ_VA_PM = {
 #? ----------------------------------------
 OBJ_DC_AM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '15:00:00',
+    'HORA'          :   '14:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -220,7 +220,7 @@ OBJ_DC_AM = {
 
 OBJ_DC_PM = {
     'LOTERIA'       :   'WASHINGTON D.C',
-    'HORA'          :   '21:00:00',
+    'HORA'          :   '20:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -229,7 +229,7 @@ OBJ_DC_PM = {
 #? ----------------------------------------
 OBJ_PA_AM = {
     'LOTERIA'       :   'PENNSYLVANIA',
-    'HORA'          :   '14:20:00',
+    'HORA'          :   '13:20:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -238,7 +238,7 @@ OBJ_PA_AM = {
 
 OBJ_PA_PM = {
     'LOTERIA'       :   'PENNSYLVANIA',
-    'HORA'          :   '19:40:00',
+    'HORA'          :   '18:40:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -247,7 +247,7 @@ OBJ_PA_PM = {
 #? ----------------------------------------
 OBJ_CA_PM = {
     'LOTERIA'       :   'CALIFORNIA',
-    'HORA'          :   '22:40:00',
+    'HORA'          :   '21:40:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -256,7 +256,7 @@ OBJ_CA_PM = {
 
 OBJ_CALIFORNIA_RD_PM = {
     'LOTERIA'       :   'CALIFORNIA',
-    'HORA'          :   '22:40:00',
+    'HORA'          :   '21:40:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
@@ -267,7 +267,7 @@ OBJ_CALIFORNIA_RD_PM = {
 #? ----------------------------------------
 OBJ_NC_AM = {
     'LOTERIA'       :   'NORTH CAROLINA',
-    'HORA'          :   '16:00:00',
+    'HORA'          :   '15:00:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -276,7 +276,7 @@ OBJ_NC_AM = {
 
 OBJ_NC_PM = {
     'LOTERIA'       :   'NORTH CAROLINA',
-    'HORA'          :   '23:30:00',
+    'HORA'          :   '22:30:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -285,7 +285,7 @@ OBJ_NC_PM = {
 #? ----------------------------------------
 OBJ_GA_AM = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '13:50:00',
+    'HORA'          :   '12:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -294,7 +294,7 @@ OBJ_GA_AM = {
 
 OBJ_GA_PM = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '20:00:00',
+    'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -302,7 +302,7 @@ OBJ_GA_PM = {
 }
 OBJ_GA_NIGHT = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '23:30:00',
+    'HORA'          :   '22:30:00',
     "SORTEO"        :   'NIGHT',
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -311,7 +311,7 @@ OBJ_GA_NIGHT = {
 
 OBJ_GEORGIA_RD_AM = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '13:50:00',
+    'HORA'          :   '12:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
@@ -320,7 +320,7 @@ OBJ_GEORGIA_RD_AM = {
 
 OBJ_GEORGIA_RD_PM = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '20:00:00',
+    'HORA'          :   '19:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
@@ -328,7 +328,7 @@ OBJ_GEORGIA_RD_PM = {
 }
 OBJ_GEORGIA_RD_NIGHT = {
     'LOTERIA'       :   'GEORGIA',
-    'HORA'          :   '23:30:00',
+    'HORA'          :   '22:30:00',
     "SORTEO"        :   'NIGHT',
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
@@ -338,7 +338,7 @@ OBJ_GEORGIA_RD_NIGHT = {
 #? ----------------------------------------
 OBJ_SC_AM2 = {
     'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -347,7 +347,7 @@ OBJ_SC_AM2 = {
 
 OBJ_SC_PM2 = {
     'LOTERIA'       :   'SOUTH CAROLINA',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   False,
@@ -356,7 +356,7 @@ OBJ_SC_PM2 = {
 #? ----------------------------------------
 OBJ_MD_AM = {
     'LOTERIA'       :   'MARYLAND',
-    'HORA'          :   '13:40:00',
+    'HORA'          :   '12:40:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -365,7 +365,7 @@ OBJ_MD_AM = {
 
 OBJ_MD_PM = {
     'LOTERIA'       :   'MARYLAND',
-    'HORA'          :   '21:10:00',
+    'HORA'          :   '20:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -374,7 +374,7 @@ OBJ_MD_PM = {
 
 OBJ_MARYLAND_AM_RD = {
     'LOTERIA'       :   'MARYLAND',
-    'HORA'          :   '13:40:00',
+    'HORA'          :   '12:40:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -383,7 +383,7 @@ OBJ_MARYLAND_AM_RD = {
 
 OBJ_MARYLAND_PM_RD = {
     'LOTERIA'       :   'MARYLAND',
-    'HORA'          :   '21:10:00',
+    'HORA'          :   '20:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -393,7 +393,7 @@ OBJ_MARYLAND_PM_RD = {
 #? ----------------------------------------
 OBJ_VT_AM = {
     'LOTERIA'       :   'VERMONT',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -402,7 +402,7 @@ OBJ_VT_AM = {
 
 OBJ_VT_PM = {
     'LOTERIA'       :   'VERMONT',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -411,7 +411,7 @@ OBJ_VT_PM = {
 
 OBJ_VERMONT_AM_RD = {
     'LOTERIA'       :   'VERMONT',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -420,7 +420,7 @@ OBJ_VERMONT_AM_RD = {
 
 OBJ_VERMONT_PM_RD = {
     'LOTERIA'       :   'VERMONT',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -431,7 +431,7 @@ OBJ_VERMONT_PM_RD = {
 #? ----------------------------------------
 OBJ_NH_AM = {
     'LOTERIA'       :   'NEW HAMPSHIRE',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -440,7 +440,7 @@ OBJ_NH_AM = {
 
 OBJ_NH_PM = {
     'LOTERIA'       :   'NEW HAMPSHIRE',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -449,7 +449,7 @@ OBJ_NH_PM = {
 
 OBJ_NEW_HAMPSHIRE_AM_RD = {
     'LOTERIA'       :   'NEW HAMPSHIRE',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -458,7 +458,7 @@ OBJ_NEW_HAMPSHIRE_AM_RD = {
 
 OBJ_NEW_HAMPSHIRE_PM_RD = {
     'LOTERIA'       :   'NEW HAMPSHIRE',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -469,7 +469,7 @@ OBJ_NEW_HAMPSHIRE_PM_RD = {
 #? ----------------------------------------
 OBJ_ME_AM = {
     'LOTERIA'       :   'MAINE',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -478,7 +478,7 @@ OBJ_ME_AM = {
 
 OBJ_ME_PM = {
     'LOTERIA'       :   'MAINE',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -487,7 +487,7 @@ OBJ_ME_PM = {
 
 OBJ_MAINE_AM_RD = {
     'LOTERIA'       :   'MAINE',
-    'HORA'          :   '14:10:00',
+    'HORA'          :   '13:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -496,7 +496,7 @@ OBJ_MAINE_AM_RD = {
 
 OBJ_MAINE_PM_RD = {
     'LOTERIA'       :   'MAINE',
-    'HORA'          :   '20:10:00',
+    'HORA'          :   '19:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -507,7 +507,7 @@ OBJ_MAINE_PM_RD = {
 #? ----------------------------------------
 OBJ_IL_AM = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '13:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -516,7 +516,7 @@ OBJ_IL_AM = {
 
 OBJ_IL_PM = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '22:30:00',
+    'HORA'          :   '21:30:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -525,7 +525,7 @@ OBJ_IL_PM = {
 
 OBJ_ILLINOIS_AM_RD = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '14:50:00',
+    'HORA'          :   '13:50:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -534,7 +534,7 @@ OBJ_ILLINOIS_AM_RD = {
 
 OBJ_ILLINOIS_PM_RD = {
     'LOTERIA'       :   'ILLINOIS',
-    'HORA'          :   '23:00:00',
+    'HORA'          :   '22:00:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   True,
@@ -698,7 +698,7 @@ OBJ_SP_REAL_PRIMERA = {
 OBJ_SP_NYAM_REAL = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK AM Y REAL',
-    'HORA'          :   '15:50:00',
+    'HORA'          :   '14:50:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -716,7 +716,7 @@ OBJ_SP_REAL_GANAMAS = {
 OBJ_SP_NYAM_FLAM = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK AM Y FLORIDA AM',
-    'HORA'          :   '15:50:00',
+    'HORA'          :   '14:50:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -770,7 +770,7 @@ OBJ_SP_LOTEKA_NACIONAL = {
 OBJ_SP_NYPM_NACIONAL = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK PM Y NACIONAL',
-    'HORA'          :   '23:40:00',
+    'HORA'          :   '22:40:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -779,7 +779,7 @@ OBJ_SP_NYPM_NACIONAL = {
 OBJ_SP_NYPM_FLPM = {
     'LOTERIA'       :   'SUPER PALE',
     'SORTEO'        :   'NEWYORK PM Y FLORIDA PM',
-    'HORA'          :   '23:40:00',
+    'HORA'          :   '22:40:00',
     'MODALIDAD'     :   MODALIDAD_PALE,
     'MEZCLADA'      :   False,
     'ARREGLO_XPATH' :   False
@@ -789,7 +789,7 @@ OBJ_SP_NYPM_FLPM = {
 
 OBJ_MA_AM = {
     'LOTERIA'       :   'MASSACHUSETTS',
-    'HORA'          :   '15:10:00',
+    'HORA'          :   '14:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -798,7 +798,7 @@ OBJ_MA_AM = {
 
 OBJ_MA_AM_RD = {
     'LOTERIA'       :   'MASSACHUSETTS',
-    'HORA'          :   '15:10:00',
+    'HORA'          :   '14:10:00',
     "SORTEO"        :   MIDDAY,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
@@ -807,7 +807,7 @@ OBJ_MA_AM_RD = {
 
 OBJ_MA_PM = {
     'LOTERIA'       :   'MASSACHUSETTS',
-    'HORA'          :   '22:10:00',
+    'HORA'          :   '21:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD,
     'MEZCLADA'      :   True,
@@ -816,7 +816,7 @@ OBJ_MA_PM = {
 
 OBJ_MA_PM_RD = {
     'LOTERIA'       :   'MASSACHUSETTS',
-    'HORA'          :   '22:10:00',
+    'HORA'          :   '21:10:00',
     "SORTEO"        :   EVENING,
     "MODALIDAD"     :   MODALIDAD_RD,
     'MEZCLADA'      :   False,
